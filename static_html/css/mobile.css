@@ -283,16 +283,6 @@ header#header #setting a img {
   color: #fdfdfd;
 }
 
-.posts, #postTimeline .posts, #setting_new, #userList, #userDetail header, section#userPosts h2, section#userPosts .posts, #detailPosts, #companys, #companyDetail header, section#companyUsersPosts h2 {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  padding: 15px;
-  background-color: #fdfdfd;
-  margin-bottom: 15px;
-}
-
 #postTimeline {
   width: 100%;
 }
