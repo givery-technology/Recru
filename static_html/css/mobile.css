@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, #detailPosts header {
+header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, #detailPosts header, #detailPosts .commentArea #commentForm, #detailPosts .commentArea .comments {
   overflow: hidden;
   *zoom: 1;
 }
@@ -574,7 +574,64 @@ section#userPosts #setting_new .commentArea ul li a, section#userPosts #userList
 }
 #detailPosts .commentArea {
   width: 100%;
-  margin-top: 10px;
-  padding-top: 10px;
+  margin-top: 15px;
+  padding-top: 15px;
   border-top: solid 1px #d9d9d9;
+}
+#detailPosts .commentArea #commentForm input[type="text"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 80%;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+}
+#detailPosts .commentArea #commentForm input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  height: 30px;
+  border: solid 1px #343434;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #fdfdfd;
+}
+#detailPosts .commentArea .comments {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: solid 1px #d9d9d9;
+}
+#detailPosts .commentArea .comments .commentUserIcon {
+  float: left;
+  width: 45px;
+  height: 45px;
+}
+#detailPosts .commentArea .comments .commentUserIcon img {
+  width: 100%;
+  height: auto;
+}
+#detailPosts .commentArea .comments .comment {
+  float: right;
+  width: 80%;
+  word-break: break-all;
+}
+#detailPosts .commentArea .comments .comment h4 {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+#detailPosts .commentArea .comments .comment div {
+  line-height: 120%;
 }

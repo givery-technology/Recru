@@ -509,11 +509,60 @@ section#userPosts{
   }
   .commentArea{
     width: 100%;
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
     border-top: solid 1px $gray;
     #commentForm{
-      input[type="text"]{}
+      @extend %clearfix;
+      input[type="text"]{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        float: left;
+        width: 80%;
+        height: 30px;
+        line-height: 30px;
+        border: none;
+      }
+      input[type="submit"]{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        float: left;
+        width: 20%;
+        height: 30px;
+        border: solid 1px $black;
+        @include border-radius(8px);
+        background-color: $white;
+      }
+    }
+    .comments{
+      @extend %clearfix;
+      @include box-sizing(border-box);
+      width: 100%;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: solid 1px $gray;
+      .commentUserIcon{
+        float: left;
+        width: 45px;
+        height: 45px;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .comment{
+        float: right;
+        width: 80%;
+        word-break: break-all;
+        h4{
+          display: inline-block;
+          margin-bottom: 5px;
+        }
+        div{
+          line-height: 120%;
+        }
+      }
+
     }
   }
 }
