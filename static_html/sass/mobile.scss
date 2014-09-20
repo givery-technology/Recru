@@ -1,0 +1,113 @@
+@charset "utf-8";
+@import "compass/reset";
+@import "compass";
+
+$black: #343434;
+$white: #fdfdfd;
+$fbColor: #3b5998;
+
+// extend clearfix
+%clearfix{
+  @include clearfix;
+}
+
+html{
+  height: 100%;
+  body{
+    height: 100%;
+  }
+}
+
+// top Style
+#wrapperImg{
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  min-height: 100%;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+#indexLogo,#indexWrapper{
+  position: absolute;
+  z-index: 2;
+}
+#indexLogo{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  top: 130px;
+  h1{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+#indexWrapper{
+  display: inline-block;
+  width: 100%;
+  bottom: 100px;
+  #indexForm{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    div{
+      width: 100%;
+      text-align: center;
+      input[type="text"],
+      input[type="password"]{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
+        margin-bottom: 20px;
+        border: none;
+        @include border-radius(8px);
+      }
+      input[type="submit"] {
+        @include appearance(none);
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 50px;
+        border: none;
+        @include border-radius(8px);
+        color: $white;
+        background-color: #efa531;
+      }
+    }
+  }
+  #fbLogin{
+    width: 250px;
+    margin: 0 auto;
+    height: 50px;
+    background-color: $fbColor;
+    @include box-shadow(0 5px #244886);
+    @include border-radius(8px);
+    a{
+      display: inline-block;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+}
+
+#indexWrapper + footer{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  z-index: 2;
+  font-size: 12px;
+  color: $white;
+}
