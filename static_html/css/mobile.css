@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #userList #friendList li a, #userDetail header {
+header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul {
   overflow: hidden;
   *zoom: 1;
 }
@@ -330,6 +330,7 @@ header#header #setting a img {
 }
 #postTimeline .posts .postDetails p, #postTimeline #setting_new .postDetails p, #postTimeline #userList .postDetails p, #postTimeline #userDetail header .postDetails p, #userDetail #postTimeline header .postDetails p, #postTimeline section#userPosts h2 .postDetails p, section#userPosts #postTimeline h2 .postDetails p {
   width: 100%;
+  line-height: 150%;
   word-break: break-all;
 }
 #postTimeline .posts .commentArea, #postTimeline #setting_new .commentArea, #postTimeline #userList .commentArea, #postTimeline #userDetail header .commentArea, #userDetail #postTimeline header .commentArea, #postTimeline section#userPosts h2 .commentArea, section#userPosts #postTimeline h2 .commentArea {
@@ -351,6 +352,7 @@ header#header #setting a img {
   height: 25px;
   line-height: 25px;
   text-decoration: none;
+  color: #343434;
 }
 
 #setting_new h2 {
@@ -502,4 +504,33 @@ section#userPosts h2 {
   margin-bottom: 5px;
   border-bottom: solid 1px #19B5FE;
   margin-bottom: 15px;
+}
+section#userPosts #setting_new .companyName, section#userPosts #userList .companyName, section#userPosts #userDetail header .companyName, #userDetail section#userPosts header .companyName, section#userPosts h2 .companyName, section#userPosts .posts .companyName {
+  margin-bottom: 10px;
+}
+section#userPosts #setting_new p, section#userPosts #userList p, section#userPosts #userDetail header p, #userDetail section#userPosts header p, section#userPosts h2 p, section#userPosts .posts p {
+  width: 100%;
+  line-height: 150%;
+  word-break: break-all;
+}
+section#userPosts #setting_new .commentArea, section#userPosts #userList .commentArea, section#userPosts #userDetail header .commentArea, #userDetail section#userPosts header .commentArea, section#userPosts h2 .commentArea, section#userPosts .posts .commentArea {
+  width: 100%;
+}
+section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul {
+  margin-top: 15px;
+  border-top: solid 1px #d9d9d9;
+}
+section#userPosts #setting_new .commentArea ul li, section#userPosts #userList .commentArea ul li, section#userPosts #userDetail header .commentArea ul li, #userDetail section#userPosts header .commentArea ul li, section#userPosts h2 .commentArea ul li, section#userPosts .posts .commentArea ul li {
+  text-align: center;
+  float: left;
+  width: 50%;
+  margin-top: 8px;
+}
+section#userPosts #setting_new .commentArea ul li a, section#userPosts #userList .commentArea ul li a, section#userPosts #userDetail header .commentArea ul li a, #userDetail section#userPosts header .commentArea ul li a, section#userPosts h2 .commentArea ul li a, section#userPosts .posts .commentArea ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  color: #343434;
+  text-decoration: none;
 }
