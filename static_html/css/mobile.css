@@ -55,7 +55,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, #detailPosts header, #detailPosts .commentArea #commentForm, #detailPosts .commentArea .comments {
+header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline #companys header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #postTimeline #companys .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, section#userPosts #companys .commentArea ul, #detailPosts header, #detailPosts .commentArea #commentForm, #detailPosts .commentArea .comments, #companys #companyList li a {
   overflow: hidden;
   *zoom: 1;
 }
@@ -283,7 +283,7 @@ header#header #setting a img {
   color: #fdfdfd;
 }
 
-.posts, #postTimeline .posts, #setting_new, #userList, #userDetail header, section#userPosts h2, section#userPosts .posts, #detailPosts {
+.posts, #postTimeline .posts, #setting_new, #userList, #userDetail header, section#userPosts h2, section#userPosts .posts, #detailPosts, #companys {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -296,57 +296,57 @@ header#header #setting a img {
 #postTimeline {
   width: 100%;
 }
-#postTimeline .posts header h2, #postTimeline #setting_new header h2, #postTimeline #userList header h2, #postTimeline #userDetail header header h2, #userDetail #postTimeline header header h2, #postTimeline section#userPosts h2 header h2, section#userPosts #postTimeline h2 header h2, #postTimeline #detailPosts header h2 {
+#postTimeline .posts header h2, #postTimeline #setting_new header h2, #postTimeline #userList header h2, #postTimeline #userDetail header header h2, #userDetail #postTimeline header header h2, #postTimeline section#userPosts h2 header h2, section#userPosts #postTimeline h2 header h2, #postTimeline #detailPosts header h2, #postTimeline #companys header h2 {
   float: left;
   width: 70px;
   height: 70px;
   overflow: hidden;
 }
-#postTimeline .posts header h2 img, #postTimeline #setting_new header h2 img, #postTimeline #userList header h2 img, #postTimeline #userDetail header header h2 img, #userDetail #postTimeline header header h2 img, #postTimeline section#userPosts h2 header h2 img, section#userPosts #postTimeline h2 header h2 img, #postTimeline #detailPosts header h2 img {
+#postTimeline .posts header h2 img, #postTimeline #setting_new header h2 img, #postTimeline #userList header h2 img, #postTimeline #userDetail header header h2 img, #userDetail #postTimeline header header h2 img, #postTimeline section#userPosts h2 header h2 img, section#userPosts #postTimeline h2 header h2 img, #postTimeline #detailPosts header h2 img, #postTimeline #companys header h2 img {
   width: 70px;
   height: auto;
 }
-#postTimeline .posts header .userInfo, #postTimeline #setting_new header .userInfo, #postTimeline #userList header .userInfo, #postTimeline #userDetail header header .userInfo, #userDetail #postTimeline header header .userInfo, #postTimeline section#userPosts h2 header .userInfo, section#userPosts #postTimeline h2 header .userInfo, #postTimeline #detailPosts header .userInfo {
+#postTimeline .posts header .userInfo, #postTimeline #setting_new header .userInfo, #postTimeline #userList header .userInfo, #postTimeline #userDetail header header .userInfo, #userDetail #postTimeline header header .userInfo, #postTimeline section#userPosts h2 header .userInfo, section#userPosts #postTimeline h2 header .userInfo, #postTimeline #detailPosts header .userInfo, #postTimeline #companys header .userInfo {
   display: inline-block;
   height: 70px;
   float: left;
   margin-left: 20px;
   position: relative;
 }
-#postTimeline .posts header .userInfo h3, #postTimeline #setting_new header .userInfo h3, #postTimeline #userList header .userInfo h3, #postTimeline #userDetail header header .userInfo h3, #userDetail #postTimeline header header .userInfo h3, #postTimeline section#userPosts h2 header .userInfo h3, section#userPosts #postTimeline h2 header .userInfo h3, #postTimeline #detailPosts header .userInfo h3 {
+#postTimeline .posts header .userInfo h3, #postTimeline #setting_new header .userInfo h3, #postTimeline #userList header .userInfo h3, #postTimeline #userDetail header header .userInfo h3, #userDetail #postTimeline header header .userInfo h3, #postTimeline section#userPosts h2 header .userInfo h3, section#userPosts #postTimeline h2 header .userInfo h3, #postTimeline #detailPosts header .userInfo h3, #postTimeline #companys header .userInfo h3 {
   margin-bottom: 10px;
 }
-#postTimeline .posts header .userInfo time, #postTimeline #setting_new header .userInfo time, #postTimeline #userList header .userInfo time, #postTimeline #userDetail header header .userInfo time, #userDetail #postTimeline header header .userInfo time, #postTimeline section#userPosts h2 header .userInfo time, section#userPosts #postTimeline h2 header .userInfo time, #postTimeline #detailPosts header .userInfo time {
+#postTimeline .posts header .userInfo time, #postTimeline #setting_new header .userInfo time, #postTimeline #userList header .userInfo time, #postTimeline #userDetail header header .userInfo time, #userDetail #postTimeline header header .userInfo time, #postTimeline section#userPosts h2 header .userInfo time, section#userPosts #postTimeline h2 header .userInfo time, #postTimeline #detailPosts header .userInfo time, #postTimeline #companys header .userInfo time {
   display: inline-block;
   position: absolute;
   bottom: 20px;
 }
-#postTimeline .posts .postDetails, #postTimeline #setting_new .postDetails, #postTimeline #userList .postDetails, #postTimeline #userDetail header .postDetails, #userDetail #postTimeline header .postDetails, #postTimeline section#userPosts h2 .postDetails, section#userPosts #postTimeline h2 .postDetails, #postTimeline #detailPosts .postDetails {
+#postTimeline .posts .postDetails, #postTimeline #setting_new .postDetails, #postTimeline #userList .postDetails, #postTimeline #userDetail header .postDetails, #userDetail #postTimeline header .postDetails, #postTimeline section#userPosts h2 .postDetails, section#userPosts #postTimeline h2 .postDetails, #postTimeline #detailPosts .postDetails, #postTimeline #companys .postDetails {
   width: 100%;
   margin-top: 10px;
 }
-#postTimeline .posts .postDetails .companyName, #postTimeline #setting_new .postDetails .companyName, #postTimeline #userList .postDetails .companyName, #postTimeline #userDetail header .postDetails .companyName, #userDetail #postTimeline header .postDetails .companyName, #postTimeline section#userPosts h2 .postDetails .companyName, section#userPosts #postTimeline h2 .postDetails .companyName, #postTimeline #detailPosts .postDetails .companyName {
+#postTimeline .posts .postDetails .companyName, #postTimeline #setting_new .postDetails .companyName, #postTimeline #userList .postDetails .companyName, #postTimeline #userDetail header .postDetails .companyName, #userDetail #postTimeline header .postDetails .companyName, #postTimeline section#userPosts h2 .postDetails .companyName, section#userPosts #postTimeline h2 .postDetails .companyName, #postTimeline #detailPosts .postDetails .companyName, #postTimeline #companys .postDetails .companyName {
   margin-bottom: 10px;
 }
-#postTimeline .posts .postDetails p, #postTimeline #setting_new .postDetails p, #postTimeline #userList .postDetails p, #postTimeline #userDetail header .postDetails p, #userDetail #postTimeline header .postDetails p, #postTimeline section#userPosts h2 .postDetails p, section#userPosts #postTimeline h2 .postDetails p, #postTimeline #detailPosts .postDetails p {
+#postTimeline .posts .postDetails p, #postTimeline #setting_new .postDetails p, #postTimeline #userList .postDetails p, #postTimeline #userDetail header .postDetails p, #userDetail #postTimeline header .postDetails p, #postTimeline section#userPosts h2 .postDetails p, section#userPosts #postTimeline h2 .postDetails p, #postTimeline #detailPosts .postDetails p, #postTimeline #companys .postDetails p {
   width: 100%;
   line-height: 150%;
   word-break: break-all;
 }
-#postTimeline .posts .commentArea, #postTimeline #setting_new .commentArea, #postTimeline #userList .commentArea, #postTimeline #userDetail header .commentArea, #userDetail #postTimeline header .commentArea, #postTimeline section#userPosts h2 .commentArea, section#userPosts #postTimeline h2 .commentArea, #postTimeline #detailPosts .commentArea {
+#postTimeline .posts .commentArea, #postTimeline #setting_new .commentArea, #postTimeline #userList .commentArea, #postTimeline #userDetail header .commentArea, #userDetail #postTimeline header .commentArea, #postTimeline section#userPosts h2 .commentArea, section#userPosts #postTimeline h2 .commentArea, #postTimeline #detailPosts .commentArea, #postTimeline #companys .commentArea {
   width: 100%;
 }
-#postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul {
+#postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #postTimeline #companys .commentArea ul {
   margin-top: 15px;
   border-top: solid 1px #d9d9d9;
 }
-#postTimeline .posts .commentArea ul li, #postTimeline #setting_new .commentArea ul li, #postTimeline #userList .commentArea ul li, #postTimeline #userDetail header .commentArea ul li, #userDetail #postTimeline header .commentArea ul li, #postTimeline section#userPosts h2 .commentArea ul li, section#userPosts #postTimeline h2 .commentArea ul li, #postTimeline #detailPosts .commentArea ul li {
+#postTimeline .posts .commentArea ul li, #postTimeline #setting_new .commentArea ul li, #postTimeline #userList .commentArea ul li, #postTimeline #userDetail header .commentArea ul li, #userDetail #postTimeline header .commentArea ul li, #postTimeline section#userPosts h2 .commentArea ul li, section#userPosts #postTimeline h2 .commentArea ul li, #postTimeline #detailPosts .commentArea ul li, #postTimeline #companys .commentArea ul li {
   text-align: center;
   float: left;
   width: 50%;
   margin-top: 8px;
 }
-#postTimeline .posts .commentArea ul li a, #postTimeline #setting_new .commentArea ul li a, #postTimeline #userList .commentArea ul li a, #postTimeline #userDetail header .commentArea ul li a, #userDetail #postTimeline header .commentArea ul li a, #postTimeline section#userPosts h2 .commentArea ul li a, section#userPosts #postTimeline h2 .commentArea ul li a, #postTimeline #detailPosts .commentArea ul li a {
+#postTimeline .posts .commentArea ul li a, #postTimeline #setting_new .commentArea ul li a, #postTimeline #userList .commentArea ul li a, #postTimeline #userDetail header .commentArea ul li a, #userDetail #postTimeline header .commentArea ul li a, #postTimeline section#userPosts h2 .commentArea ul li a, section#userPosts #postTimeline h2 .commentArea ul li a, #postTimeline #detailPosts .commentArea ul li a, #postTimeline #companys .commentArea ul li a {
   display: inline-block;
   width: 100%;
   height: 25px;
@@ -505,28 +505,28 @@ section#userPosts h2 {
   border-bottom: solid 1px #19B5FE;
   margin-bottom: 15px;
 }
-section#userPosts #setting_new .companyName, section#userPosts #userList .companyName, section#userPosts #userDetail header .companyName, #userDetail section#userPosts header .companyName, section#userPosts h2 .companyName, section#userPosts .posts .companyName, section#userPosts #detailPosts .companyName {
+section#userPosts #setting_new .companyName, section#userPosts #userList .companyName, section#userPosts #userDetail header .companyName, #userDetail section#userPosts header .companyName, section#userPosts h2 .companyName, section#userPosts .posts .companyName, section#userPosts #detailPosts .companyName, section#userPosts #companys .companyName {
   margin-bottom: 10px;
 }
-section#userPosts #setting_new p, section#userPosts #userList p, section#userPosts #userDetail header p, #userDetail section#userPosts header p, section#userPosts h2 p, section#userPosts .posts p, section#userPosts #detailPosts p {
+section#userPosts #setting_new p, section#userPosts #userList p, section#userPosts #userDetail header p, #userDetail section#userPosts header p, section#userPosts h2 p, section#userPosts .posts p, section#userPosts #detailPosts p, section#userPosts #companys p {
   width: 100%;
   line-height: 150%;
   word-break: break-all;
 }
-section#userPosts #setting_new .commentArea, section#userPosts #userList .commentArea, section#userPosts #userDetail header .commentArea, #userDetail section#userPosts header .commentArea, section#userPosts h2 .commentArea, section#userPosts .posts .commentArea, section#userPosts #detailPosts .commentArea {
+section#userPosts #setting_new .commentArea, section#userPosts #userList .commentArea, section#userPosts #userDetail header .commentArea, #userDetail section#userPosts header .commentArea, section#userPosts h2 .commentArea, section#userPosts .posts .commentArea, section#userPosts #detailPosts .commentArea, section#userPosts #companys .commentArea {
   width: 100%;
 }
-section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul {
+section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, section#userPosts #companys .commentArea ul {
   margin-top: 15px;
   border-top: solid 1px #d9d9d9;
 }
-section#userPosts #setting_new .commentArea ul li, section#userPosts #userList .commentArea ul li, section#userPosts #userDetail header .commentArea ul li, #userDetail section#userPosts header .commentArea ul li, section#userPosts h2 .commentArea ul li, section#userPosts .posts .commentArea ul li, section#userPosts #detailPosts .commentArea ul li {
+section#userPosts #setting_new .commentArea ul li, section#userPosts #userList .commentArea ul li, section#userPosts #userDetail header .commentArea ul li, #userDetail section#userPosts header .commentArea ul li, section#userPosts h2 .commentArea ul li, section#userPosts .posts .commentArea ul li, section#userPosts #detailPosts .commentArea ul li, section#userPosts #companys .commentArea ul li {
   text-align: center;
   float: left;
   width: 50%;
   margin-top: 8px;
 }
-section#userPosts #setting_new .commentArea ul li a, section#userPosts #userList .commentArea ul li a, section#userPosts #userDetail header .commentArea ul li a, #userDetail section#userPosts header .commentArea ul li a, section#userPosts h2 .commentArea ul li a, section#userPosts .posts .commentArea ul li a, section#userPosts #detailPosts .commentArea ul li a {
+section#userPosts #setting_new .commentArea ul li a, section#userPosts #userList .commentArea ul li a, section#userPosts #userDetail header .commentArea ul li a, #userDetail section#userPosts header .commentArea ul li a, section#userPosts h2 .commentArea ul li a, section#userPosts .posts .commentArea ul li a, section#userPosts #detailPosts .commentArea ul li a, section#userPosts #companys .commentArea ul li a {
   display: inline-block;
   width: 100%;
   height: 25px;
@@ -634,4 +634,60 @@ section#userPosts #setting_new .commentArea ul li a, section#userPosts #userList
 }
 #detailPosts .commentArea .comments .comment div {
   line-height: 120%;
+}
+
+#companys h2 {
+  margin-bottom: 15px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border-bottom: solid 1px #19B5FE;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+#companys #companyList li {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+}
+#companys #companyList li a {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  text-decoration: none;
+  color: #343434;
+}
+#companys #companyList li a #companyIcon {
+  float: left;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  overflow: hidden;
+}
+#companys #companyList li a #companyIcon img {
+  width: 100%;
+  height: auto;
+}
+#companys #companyList li a #companyInfo {
+  float: left;
+  display: inline-block;
+  width: 150px;
+  height: 70px;
+  margin-left: 20px;
+  position: relative;
+}
+#companys #companyList li a #companyInfo h3 {
+  position: absolute;
+  top: 10px;
+}
+#companys #companyList li a #companyInfo #category {
+  position: absolute;
+  bottom: 10px;
+}
+#companys #companyList li + li {
+  border-top: solid 1px #343434;
 }
