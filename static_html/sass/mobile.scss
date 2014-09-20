@@ -8,6 +8,7 @@ $gray: #d9d9d9;
 $black: #343434;
 $white: #fdfdfd;
 $fbColor: #3b5998;
+$font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
 // extend clearfix
 %clearfix{
@@ -16,6 +17,8 @@ $fbColor: #3b5998;
 
 html{
   height: 100%;
+  font-size: 13px;
+  font-family: $font;
   body{
     height: 100%;
     background: $gray;
@@ -287,6 +290,7 @@ header#header{
     margin-bottom: 15px;
     @include box-sizing(border-box);
     border-bottom: solid 1px $main;
+    font-size: 15px;
     padding-bottom: 5px;
   }
   form{
@@ -331,5 +335,101 @@ header#header{
       @include border-radius(8px);
       border: none;
     }
+  }
+}
+#userList{
+  @extend .posts;
+  h2{
+    margin-bottom: 15px;
+    @include box-sizing(border-box);
+    border-bottom: solid 1px $main;
+    font-size: 15px;
+    padding-bottom: 5px;
+  }
+  #friendList{
+    li{
+      @include box-sizing(border-box);
+      width: 100%;
+      padding: 10px;
+      a{
+        @extend %clearfix;
+        @include box-sizing(border-box);
+        display: inline-block;
+        width: 100%;
+        text-decoration: none;
+        color: $black;
+        #userIcon{
+          float: left;
+          width: 70px;
+          height: 70px;
+          overflow: hidden;
+          img{
+            width: 100%;
+            height: auto;
+          }
+        }
+        #userInfo{
+          float: left;
+          display: inline-block;
+          width: 150px;
+          height: 70px;
+          margin-left: 20px;
+          position: relative;
+          h3{
+            position: absolute;
+            top: 10px;
+          }
+          #school{
+            position: absolute;
+            bottom: 10px;
+          }
+        }
+      }
+      & + li{
+        border-top: solid 1px $black;
+      }
+    }
+  }
+}
+
+#userDetail{
+  header{
+    @extend .posts;
+    @extend %clearfix;
+    h2{
+      margin-bottom: 15px;
+      @include box-sizing(border-box);
+      border-bottom: solid 1px $main;
+      font-size: 15px;
+      padding-bottom: 5px;
+    }
+    #userIcon{
+      float: left;
+      width: 45%;
+      height: 45%;
+      overflow: hidden;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    #userInfo{
+      float: right;
+      width: 50%;
+      div{
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+section#userPosts{
+  h2{
+    @extend .posts;
+    margin-bottom: 5px;
+    border-bottom: solid 1px $main;
+    margin-bottom: 15px;
+  }
+  .posts{
+    @extend .posts;
   }
 }
