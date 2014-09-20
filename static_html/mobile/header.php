@@ -8,9 +8,7 @@
 </head>
 <body>
 
-<header>
-  <div id="headerWrap">
-    <h1><a href="#">logo</a></h1>
-    <div id="setting"><a href="#"><img src="img/setting.png" alt="setting" /></a></div>
-  </div>
+<header id="header">
+  <h1><a href="#">logo</a></h1>
+  <div id="setting"><a href="#"><img src="img/setting-white.png" alt="setting" /></a></div>
 </header>

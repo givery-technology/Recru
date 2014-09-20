@@ -2,6 +2,9 @@
 @import "compass/reset";
 @import "compass";
 
+$main: #19B5FE;
+$attention: #F9BF3B;
+$gray: #d9d9d9;
 $black: #343434;
 $white: #fdfdfd;
 $fbColor: #3b5998;
@@ -15,6 +18,7 @@ html{
   height: 100%;
   body{
     height: 100%;
+    background: $gray;
   }
 }
 
@@ -110,4 +114,168 @@ html{
   z-index: 2;
   font-size: 12px;
   color: $white;
+}
+footer{
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  background-color: $black;
+  color: $white;
+}
+
+// logined user Style
+header#header{
+  @extend %clearfix;
+  background-color: $main;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 10px;
+  h1{
+    float: left;
+    width: 100px;
+    height: 50px;
+    margin-left: 5px;
+    line-height: 50px;
+    a{
+      display: inline-block;
+      width: 100px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  #setting{
+    float: right;
+    @include box-sizing(border-box);
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    padding: 10px;
+    a{
+      @include box-sizing(border-box);
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+#wrapper{
+  width: 96%;
+  margin: 0 auto;
+}
+
+// time line page style
+#sendPost{
+  @include box-sizing(border-box);
+  width: 100%;
+  padding: 10px;
+  background-color: $white;
+  margin-bottom: 15px;
+  #postText{
+    width: 100%;
+    height: 100px;
+    textarea{
+      @include appearance(none);
+      @include box-sizing(border-box);
+      border: solid 1px $black;
+      @include border-radius(8px);
+      padding: 5px;
+      width: 100%;
+      height: 100px;
+    }
+  }
+  #sendBtn{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    input[type="submit"]{
+      @include appearance(none);
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: none;
+      @include border-radius(8px);
+      background-color: $main;
+      color: $white;
+    }
+  }
+}
+#postTimeline{
+  width: 100%;
+  .posts{
+    @include box-sizing(border-box);
+    width: 100%;
+    padding: 15px;
+    background-color: $white;
+    margin-bottom: 15px;
+    header{
+      @extend %clearfix;
+      h2{
+        float: left;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        img{
+          width: 70px;
+          height: auto;
+        }
+      }
+      .userInfo{
+        display: inline-block;
+        height: 70px;
+        float: left;
+        margin-left: 20px;
+        position: relative;
+        h3{
+          margin-bottom: 10px;
+        }
+        time{
+          display: inline-block;
+          position: absolute;
+          bottom: 20px;
+        }
+      }
+    }
+    .postDetails{
+      width: 100%;
+      margin-top: 10px;
+      .companyName{
+        margin-bottom: 10px;
+      }
+      p{
+        width: 100%;
+        word-break: break-all;
+      }
+    }
+    .commentArea{
+      width: 100%;
+      ul{
+        @extend %clearfix;
+        margin-top: 15px;
+        border-top: solid 1px $gray;
+        li{
+          text-align: center;
+          float: left;
+          width: 50%;
+          margin-top: 8px;
+          a{
+            display: inline-block;
+            width: 100%;
+            height: 25px;
+            line-height: 25px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+  }
 }
