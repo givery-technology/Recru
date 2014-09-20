@@ -40,7 +40,7 @@ html{
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  top: 150px;
+  top: 130px;
   h1{
     width: 70%;
     margin: 0 auto;
@@ -50,7 +50,39 @@ html{
 #indexWrapper{
   display: inline-block;
   width: 100%;
-  bottom: 10 d0px;
+  bottom: 100px;
+  #indexForm{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    div{
+      width: 100%;
+      text-align: center;
+      input[type="text"],
+      input[type="password"]{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        padding: 5px;
+        margin-bottom: 20px;
+        border: none;
+        @include border-radius(8px);
+      }
+      input[type="submit"] {
+        @include appearance(none);
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        margin-bottom: 50px;
+        border: none;
+        @include border-radius(8px);
+        color: $white;
+        background-color: #efa531;
+      }
+    }
+  }
   #fbLogin{
     width: 250px;
     margin: 0 auto;

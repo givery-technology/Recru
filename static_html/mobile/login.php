@@ -16,6 +16,14 @@
 </header>
 
 <div id="indexWrapper">
+  <!-- <div id="indexForm">
+    <form action="#" method="post">
+      <div id="userid"><input type="text" name="user_id" placeholder="User ID"></div>
+      <div id="pass"><input type="password" name="user_pass" placeholder="Password"></div>
+      <div id="submit"><input type="submit" name="send" value="ログイン"></div>
+    </form>
+  </div> -->
+
   <section id="fbLogin">
     <a href="#">Facebook で始める</a>
   </section>
