@@ -16,7 +16,7 @@
         </select>
         <div>ユーザーアイコン</div>
         <div id="userIcon"><img src="img/masaki.jpg" alt="userIcon" /></div>
-        <input type="submit" name="send_setting" value="登録する">
+        <input type="submit" name="send_setting" value="保存する">
       </form>
     </article>
   </section>
