@@ -1,7 +1,7 @@
 <? require_once "header.php"; ?>
 
 <section id="wrapper">
-  <form id="sendPost" action="index.html" method="post">
+  <form id="sendPost" action="timeline_post" method="post">
     <div id="postText">
       <select name="category">
 	<option value="">企業名を選択</option>
