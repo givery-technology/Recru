@@ -1,0 +1,762 @@
+@charset "UTF-8";
+/* line 5, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../Users/tak723sio/.rbenv/versions/2.1.2/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 22, ../sass/style.scss */
+header #headerWrap, #wrapper, #timeline #postForm form, #timeline .posts, #timeline .posts #commentForm form, #timeline .posts .comments, #timeline .companyList a .companyPosts .user {
+  overflow: hidden;
+  *zoom: 1;
+}
+
+/* line 26, ../sass/style.scss */
+html {
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+/* line 31, ../sass/style.scss */
+html body {
+  height: 100%;
+  max-height: 100%;
+  min-height: 100%;
+  background: #d9d9d9;
+}
+
+/* line 39, ../sass/style.scss */
+header {
+  display: inline-block;
+  width: 100%;
+  height: 60px;
+  background-color: #19B5FE;
+}
+/* line 44, ../sass/style.scss */
+header #headerWrap {
+  width: 1200px;
+  height: 50px;
+  margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+/* line 51, ../sass/style.scss */
+header #headerWrap h1 {
+  float: left;
+  width: 300px;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 56, ../sass/style.scss */
+header #headerWrap h1 a {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 60, ../sass/style.scss */
+header #headerWrap h1 a img {
+  width: auto;
+  height: 50px;
+}
+/* line 66, ../sass/style.scss */
+header #headerWrap nav {
+  float: right;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 70, ../sass/style.scss */
+header #headerWrap nav ul {
+  display: inline-block;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 74, ../sass/style.scss */
+header #headerWrap nav ul li {
+  float: left;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+}
+/* line 79, ../sass/style.scss */
+header #headerWrap nav ul li a {
+  display: inline-block;
+  width: 120px;
+  height: 50px;
+  line-height: 50px;
+  color: #fdfdfd;
+  text-decoration: none;
+  text-align: center;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+/* line 88, ../sass/style.scss */
+header #headerWrap nav ul li a:hover {
+  background-color: rgba(255, 255, 255, 0.46);
+}
+/* line 90, ../sass/style.scss */
+header #headerWrap nav ul li a:hover + #subNav {
+  display: block !important;
+}
+/* line 94, ../sass/style.scss */
+header #headerWrap nav ul li a + #subNav {
+  position: absolute;
+  z-index: 30;
+  display: none;
+}
+/* line 98, ../sass/style.scss */
+header #headerWrap nav ul li a + #subNav:hover {
+  display: block;
+}
+/* line 101, ../sass/style.scss */
+header #headerWrap nav ul li a + #subNav li {
+  display: block;
+  float: none;
+  height: 40px;
+  line-height: 40px;
+  color: #fdfdfd;
+  background-color: #19B5FE;
+}
+/* line 108, ../sass/style.scss */
+header #headerWrap nav ul li a + #subNav li a {
+  height: 40px;
+  line-height: 40px;
+}
+
+/* line 121, ../sass/style.scss */
+#wrapper {
+  width: 1200px;
+  margin: 20px auto;
+}
+
+/* line 127, ../sass/style.scss */
+#timelineSide {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 250px;
+  padding: 15px;
+  background-color: #fdfdfd;
+}
+/* line 133, ../sass/style.scss */
+#timelineSide .sideList {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+/* line 137, ../sass/style.scss */
+#timelineSide .sideList h4 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+  font-size: 16px;
+}
+/* line 144, ../sass/style.scss */
+#timelineSide .sideList ul li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+/* line 149, ../sass/style.scss */
+#timelineSide .sideList ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #343434;
+  text-decoration: none;
+  text-indent: 1em;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+/* line 158, ../sass/style.scss */
+#timelineSide .sideList ul li a:hover {
+  background-color: rgba(25, 190, 255, 0.6);
+}
+/* line 164, ../sass/style.scss */
+#timelineSide .sideList .read {
+  margin-top: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+/* line 171, ../sass/style.scss */
+#timeline {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 900px;
+}
+/* line 175, ../sass/style.scss */
+#timeline .companyIcon {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 181, ../sass/style.scss */
+#timeline .companyIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 186, ../sass/style.scss */
+#timeline .companyPost {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+/* line 192, ../sass/style.scss */
+#timeline .companyPost h3 {
+  font-size: 18px;
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 199, ../sass/style.scss */
+#timeline #postForm {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fdfdfd;
+  padding: 15px;
+}
+/* line 204, ../sass/style.scss */
+#timeline #postForm form {
+  width: 100%;
+}
+/* line 208, ../sass/style.scss */
+#timeline #postForm form #postInfo select {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-bottom: solid 1px #d9d9d9;
+}
+/* line 218, ../sass/style.scss */
+#timeline #postForm form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  border: none;
+}
+/* line 225, ../sass/style.scss */
+#timeline #postForm form input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 30%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+  border: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 302, ../sass/style.scss */
+#timeline .posts {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+/* line 240, ../sass/style.scss */
+#timeline .posts .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 246, ../sass/style.scss */
+#timeline .posts .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 251, ../sass/style.scss */
+#timeline .posts .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 255, ../sass/style.scss */
+#timeline .posts .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 260, ../sass/style.scss */
+#timeline .posts .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 269, ../sass/style.scss */
+#timeline .posts #detailTitle {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+/* line 275, ../sass/style.scss */
+#timeline .posts .category {
+  float: right;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 279, ../sass/style.scss */
+#timeline .posts .category select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+}
+/* line 287, ../sass/style.scss */
+#timeline .posts .commentsArea {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  text-align: right;
+}
+/* line 293, ../sass/style.scss */
+#timeline .posts .commentsArea span {
+  margin-right: 20px;
+  color: #9d9d9d;
+}
+/* line 297, ../sass/style.scss */
+#timeline .posts .commentsArea time {
+  color: #9d9d9d;
+}
+/* line 307, ../sass/style.scss */
+#timeline .posts #commentForm {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: solid 1px #d9d9d9;
+}
+/* line 311, ../sass/style.scss */
+#timeline .posts #commentForm form {
+  width: 100%;
+  text-align: right;
+}
+/* line 315, ../sass/style.scss */
+#timeline .posts #commentForm form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+}
+/* line 320, ../sass/style.scss */
+#timeline .posts #commentForm form input[type="submit"] {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+  border: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 331, ../sass/style.scss */
+#timeline .posts a {
+  display: inline-block;
+  width: 100%;
+}
+/* line 240, ../sass/style.scss */
+#timeline .posts a .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 246, ../sass/style.scss */
+#timeline .posts a .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 251, ../sass/style.scss */
+#timeline .posts a .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 255, ../sass/style.scss */
+#timeline .posts a .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 260, ../sass/style.scss */
+#timeline .posts a .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 269, ../sass/style.scss */
+#timeline .posts a #detailTitle {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+/* line 275, ../sass/style.scss */
+#timeline .posts a .category {
+  float: right;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 279, ../sass/style.scss */
+#timeline .posts a .category select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+}
+/* line 287, ../sass/style.scss */
+#timeline .posts a .commentsArea {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  text-align: right;
+}
+/* line 293, ../sass/style.scss */
+#timeline .posts a .commentsArea span {
+  margin-right: 20px;
+  color: #9d9d9d;
+}
+/* line 297, ../sass/style.scss */
+#timeline .posts a .commentsArea time {
+  color: #9d9d9d;
+}
+/* line 336, ../sass/style.scss */
+#timeline .posts .comments {
+  clear: both;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #d9d9d9;
+}
+/* line 342, ../sass/style.scss */
+#timeline .posts .comments .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 348, ../sass/style.scss */
+#timeline .posts .comments .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 353, ../sass/style.scss */
+#timeline .posts .comments .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 357, ../sass/style.scss */
+#timeline .posts .comments .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 362, ../sass/style.scss */
+#timeline .posts .comments .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 374, ../sass/style.scss */
+#timeline .userList a {
+  color: #343434;
+  text-decoration: none;
+}
+/* line 377, ../sass/style.scss */
+#timeline .userList a .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 383, ../sass/style.scss */
+#timeline .userList a .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 388, ../sass/style.scss */
+#timeline .userList a .userInfo {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* line 394, ../sass/style.scss */
+#timeline .userList a .userInfo h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 400, ../sass/style.scss */
+#timeline .userList a .userPosts {
+  display: inline-block;
+  width: 500px;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 407, ../sass/style.scss */
+#timeline .userList a .userPosts h4 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+}
+/* line 417, ../sass/style.scss */
+#timeline .companyList a {
+  color: #343434;
+  text-decoration: none;
+}
+/* line 420, ../sass/style.scss */
+#timeline .companyList a .companyIcon {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 426, ../sass/style.scss */
+#timeline .companyList a .companyIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 431, ../sass/style.scss */
+#timeline .companyList a .companyInfo {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* line 437, ../sass/style.scss */
+#timeline .companyList a .companyInfo h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 443, ../sass/style.scss */
+#timeline .companyList a .companyPosts {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+/* line 452, ../sass/style.scss */
+#timeline .companyList a .companyPosts h4 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+}
+/* line 458, ../sass/style.scss */
+#timeline .companyList a .companyPosts .user {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  margin-bottom: 10px;
+}
+/* line 464, ../sass/style.scss */
+#timeline .companyList a .companyPosts .user img {
+  float: left;
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+}
+
+/* line 476, ../sass/style.scss */
+#setting h3 {
+  width: 100%;
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: solid 1px #19B5FE;
+}
+/* line 483, ../sass/style.scss */
+#setting table {
+  width: 70%;
+  margin: 0 auto;
+}
+/* line 486, ../sass/style.scss */
+#setting table tr {
+  height: 50px;
+}
+/* line 488, ../sass/style.scss */
+#setting table tr th {
+  width: 30%;
+}
+/* line 493, ../sass/style.scss */
+#setting table tr td label input[type="text"] {
+  display: inline-block;
+  width: 80%;
+  height: 20px;
+  line-height: 20px;
+  padding: 5px;
+}
+/* line 501, ../sass/style.scss */
+#setting table tr td select {
+  font-size: 16px;
+  border: none;
+  height: 50px;
+  width: 80%;
+}
+/* line 506, ../sass/style.scss */
+#setting table tr td select option {
+  padding: 5px;
+}
+/* line 510, ../sass/style.scss */
+#setting table tr td div {
+  width: 80%;
+  text-align: center;
+}
+/* line 513, ../sass/style.scss */
+#setting table tr td div img {
+  width: 180px;
+  height: auto;
+}
+/* line 521, ../sass/style.scss */
+#setting .send {
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
+}
+/* line 525, ../sass/style.scss */
+#setting .send input[type="submit"] {
+  width: 200px;
+  height: 35px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+  border: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+
+/* line 537, ../sass/style.scss */
+footer {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+}

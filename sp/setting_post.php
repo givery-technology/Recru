@@ -10,13 +10,18 @@ mb_http_output("utf-8");
 require 'facebook-php-sdk/src/facebook.php';
 require 'constant.php';
 
+try {
+  $facebook = new Facebook(array(
+    'appId'  => $fb_id,
+    'secret' => $fb_pwd,
+  ));
+} catch(Exception $e){
+  echo $e->getMessage();
+}
 
-$facebook = new Facebook(array(
-  'appId'  => $fb_id,
-  'secret' => $fb_pwd,
-));
-
-$user = $facebook->api('/me');
+$uid = $facebook->getUser();
+$user = $facebook->api('/'.$uid);
+//$user = $facebook->api('/me');
 
 $name = $user['name'];
 $fb_id = $user['id'];

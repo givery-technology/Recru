@@ -10,7 +10,7 @@
 
 <header id="header">
   <div id="sideMenuBtn"><label for="side"><img src="img/side.png" alt="side" /></label></div>
-  <h1><a href="#">logo</a></h1>
+  <h1><a href="index.php"><img src="img/recru_logo_s.png" alt="" /></a></h1>
   <div id="setting"><a href="#"><img src="img/setting-white.png" alt="setting" /></a></div>
 </header>
 
