@@ -7,6 +7,8 @@ mb_internal_encoding("utf-8");
 mb_http_input("auto");
 mb_http_output("utf-8");
 
+require "constant.php";
+
 $name = $_POST['user_name'];
 //$fb_id = $_POST['facebook_id'];
 //$img = $_POST['img'];
@@ -17,7 +19,7 @@ $grad_year = $_POST['year'];
 //$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
 $sql = "INSERT INTO user (name,  univ, grad_year) VALUES('$name',  '$univ', $grad_year)";
 
-$link = new mysqli("localhost", "root", "root", "techad");
+$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
 
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
@@ -26,7 +28,7 @@ if (!mysqli_set_charset($link, "utf8")) {
 }
 
 if($link->query($sql)){
-  echo 'yes';
+  
 } else if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
   exit();

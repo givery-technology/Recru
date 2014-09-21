@@ -6,12 +6,13 @@ mb_language("uni");
 mb_internal_encoding("utf-8");
 mb_http_input("auto");
 mb_http_output("utf-8");
+require 'constant.php';
 
 
 
 $sql = "SELECT company.name as company_name, company.url, industry_type.name as industry_name, company.img FROM company INNER JOIN industry_type ON company.industry_id = industry_type.id";
 
-$link = new mysqli("localhost", "root", "root", "recru");
+$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
 
 if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
