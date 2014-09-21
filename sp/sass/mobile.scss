@@ -314,7 +314,7 @@ aside {
 #postTimeline{
   width: 100%;
   .posts{
-    @include posts;
+    @extend .posts;
     header{
       @extend %clearfix;
       h2{
@@ -359,7 +359,7 @@ aside {
   }
 }
 #setting_new{
-  @include posts;
+  @extend .posts;
   h2{
     margin-bottom: 15px;
     @include box-sizing(border-box);
@@ -412,7 +412,7 @@ aside {
   }
 }
 #userList{
-  @include posts;
+  @extend .posts;
   h2{
     margin-bottom: 15px;
     @include box-sizing(border-box);
@@ -468,7 +468,7 @@ aside {
 
 #userDetail{
   header{
-    @include posts;
+    @extend .posts;
     @extend %clearfix;
     h2{
       margin-bottom: 15px;
@@ -498,13 +498,13 @@ aside {
 }
 section#userPosts{
   h2{
-    @include posts;
+    @extend .posts;
     margin-bottom: 5px;
     border-bottom: solid 1px $main;
     margin-bottom: 15px;
   }
   .posts{
-    @include posts;
+    @extend .posts;
     .companyName{
       margin-bottom: 10px;
     }
@@ -517,7 +517,7 @@ section#userPosts{
   }
 }
 #detailPosts{
-  @include posts;
+  @extend .posts;
   header{
     @extend %clearfix;
     h2{
@@ -621,7 +621,7 @@ section#userPosts{
 
 // company style
 #companys{
-  @include posts;
+  @extend .posts;
   h2{
     margin-bottom: 15px;
     @include box-sizing(border-box);
@@ -678,7 +678,7 @@ section#userPosts{
 
 #companyDetail{
   header{
-    @include posts;
+    @extend .posts;
     @extend %clearfix;
     h2{
       margin-bottom: 15px;
@@ -708,7 +708,7 @@ section#userPosts{
 }
 section#companyUsersPosts{
   h2{
-    @include posts;
+    @extend .posts;
     margin-bottom: 5px;
     margin-bottom: 15px;
   }

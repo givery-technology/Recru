@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 22, ../sass/style.scss */
-header #headerWrap, #wrapper, #timeline #postForm form, #timeline .posts {
+header #headerWrap, #wrapper, #timeline #postForm form, #timeline .posts, #timeline .posts #commentForm form, #timeline .posts .comments {
   overflow: hidden;
   *zoom: 1;
 }
@@ -300,7 +300,7 @@ header #headerWrap nav ul li a + #subNav li a {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 210, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 #timeline .posts {
   width: 100%;
   -moz-box-sizing: border-box;
@@ -310,12 +310,94 @@ header #headerWrap nav ul li a + #subNav li a {
   padding: 15px;
   margin-top: 15px;
 }
-/* line 214, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
+#timeline .posts .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 217, ../sass/style.scss */
+#timeline .posts .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 222, ../sass/style.scss */
+#timeline .posts .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 226, ../sass/style.scss */
+#timeline .posts .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 231, ../sass/style.scss */
+#timeline .posts .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 240, ../sass/style.scss */
+#timeline .posts .commentsArea {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  text-align: right;
+}
+/* line 246, ../sass/style.scss */
+#timeline .posts .commentsArea span {
+  margin-right: 20px;
+  color: #9d9d9d;
+}
+/* line 250, ../sass/style.scss */
+#timeline .posts .commentsArea time {
+  color: #9d9d9d;
+}
+/* line 260, ../sass/style.scss */
+#timeline .posts #commentForm {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: solid 1px #d9d9d9;
+}
+/* line 264, ../sass/style.scss */
+#timeline .posts #commentForm form {
+  width: 100%;
+  text-align: right;
+}
+/* line 268, ../sass/style.scss */
+#timeline .posts #commentForm form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+}
+/* line 273, ../sass/style.scss */
+#timeline .posts #commentForm form input[type="submit"] {
+  width: 100px;
+  height: 30px;
+  margin-top: 10px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+  border: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 284, ../sass/style.scss */
 #timeline .posts a {
   display: inline-block;
   width: 100%;
 }
-/* line 217, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 #timeline .posts a .userIcon {
   display: inline-block;
   float: left;
@@ -323,24 +405,24 @@ header #headerWrap nav ul li a + #subNav li a {
   height: 100px;
   overflow: hidden;
 }
-/* line 223, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 #timeline .posts a .userIcon img {
   width: 100%;
   height: auto;
 }
-/* line 228, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 #timeline .posts a .userPost {
   display: inline-block;
   float: right;
   width: 750px;
 }
-/* line 232, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #timeline .posts a .userPost h3 {
   color: #343434;
   margin-bottom: 15px;
   font-size: 18px;
 }
-/* line 237, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 #timeline .posts a .userPost div {
   display: inline-block;
   width: 100%;
@@ -349,7 +431,7 @@ header #headerWrap nav ul li a + #subNav li a {
   line-height: 150%;
   font-size: 15px;
 }
-/* line 246, ../sass/style.scss */
+/* line 240, ../sass/style.scss */
 #timeline .posts a .commentsArea {
   display: inline-block;
   clear: both;
@@ -357,17 +439,57 @@ header #headerWrap nav ul li a + #subNav li a {
   margin-top: 10px;
   text-align: right;
 }
-/* line 252, ../sass/style.scss */
+/* line 246, ../sass/style.scss */
 #timeline .posts a .commentsArea span {
   margin-right: 20px;
   color: #9d9d9d;
 }
-/* line 256, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 #timeline .posts a .commentsArea time {
   color: #9d9d9d;
 }
+/* line 289, ../sass/style.scss */
+#timeline .posts .comments {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: solid 1px #d9d9d9;
+}
+/* line 294, ../sass/style.scss */
+#timeline .posts .comments .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 300, ../sass/style.scss */
+#timeline .posts .comments .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 305, ../sass/style.scss */
+#timeline .posts .comments .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 309, ../sass/style.scss */
+#timeline .posts .comments .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 314, ../sass/style.scss */
+#timeline .posts .comments .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
 
-/* line 265, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 footer {
   width: 100%;
   height: 30px;
