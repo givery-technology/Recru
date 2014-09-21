@@ -11,10 +11,11 @@ require "constant.php";
 
 $cont_id = $_POST['contribution_id'];
 $reaction = $_POST['text'];
+$user_id = $_POST['user_id'];
 
 
 //$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
-$sql = "INSERT INTO reaction (cont_id,  reaction, created_at) VALUES($cont_id, '$reaction', now())";
+$sql = "INSERT INTO reaction (cont_id,  reaction, user_id, created_at) VALUES($cont_id, '$reaction', $user_id, now())";
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
