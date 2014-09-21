@@ -3,7 +3,7 @@
   <section id="wrapper">
     <article id="setting_new">
       <h2>アカウント設定</h2>
-      <form action="setting_post.php" method="post">
+      <form action="setting_new_post.php" method="post">
         <div>名前</div>
         <input type="text" name="user_name" placeholder="名前">
         <div>学校名</div>
