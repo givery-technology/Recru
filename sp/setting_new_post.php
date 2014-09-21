@@ -34,6 +34,8 @@ $sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
+$link->set_charset('utf8');
+
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
 } else {
