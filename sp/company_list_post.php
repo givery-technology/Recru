@@ -14,7 +14,7 @@ $sql = "SELECT company.name as company_name, company.url, industry_type.name as 
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
-mysql_set_charset('utf8');
+$link->set_charset('utf8');
 
 if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
