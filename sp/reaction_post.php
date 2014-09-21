@@ -15,7 +15,7 @@ require "constant.php";
 if(isset($_GET['id'])){
   $cont_id = $_GET['id'];
 }
-$sql = "SELECT contribution.id, user.name, reaction.reaction, reaction.created_at FROM reaction INNER JOIN user ON reaction.user_id = user.id INNER JOIN contribution ON reaction.cont_id = contribution.id WHERE contribution.id=".$cont_id." ORDER BY created_at";
+$sql = "SELECT contribution.id, user.name, user.img, reaction.reaction, reaction.created_at FROM reaction INNER JOIN user ON reaction.user_id = user.id INNER JOIN contribution ON reaction.cont_id = contribution.id WHERE contribution.id=".$cont_id." ORDER BY created_at";
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
