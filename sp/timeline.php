@@ -1,7 +1,7 @@
 <? require_once "header.php"; ?>
 
 <section id="wrapper">
-  <form id="sendPost" action="index.html" method="post">
+  <form id="sendPost" action="timeline_post" method="post">
     <div id="postText">
       <textarea name="postText" rows="8" cols="40" placeholder="この会社どんな感じ？"></textarea>
     </div>
