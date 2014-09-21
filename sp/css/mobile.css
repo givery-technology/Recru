@@ -321,13 +321,31 @@ aside ul li a {
   width: 100%;
   height: 100px;
 }
+#sendPost #postText select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 30px;
+  line-height: 30px;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: 5px;
+  border: none;
+  border-bottom: solid 1px #d9d9d9;
+  text-align: center;
+}
 #sendPost #postText textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  border: solid 1px #343434;
+  border: solid 1px #d9d9d9;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -336,7 +354,7 @@ aside ul li a {
   height: 100px;
 }
 #sendPost #sendBtn {
-  margin-top: 10px;
+  margin-top: 40px;
   width: 100%;
   height: 40px;
   line-height: 40px;
