@@ -85,7 +85,7 @@ html body {
 header {
   display: inline-block;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: #19B5FE;
 }
 /* line 40, ../sass/style.scss */
@@ -93,46 +93,47 @@ header #headerWrap {
   width: 1200px;
   height: 50px;
   margin: 0 auto;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
-/* line 45, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 header #headerWrap h1 {
   float: left;
   width: 300px;
   height: 50px;
   line-height: 50px;
 }
-/* line 50, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 header #headerWrap h1 a {
   display: inline-block;
-  width: 300px;
   height: 50px;
   line-height: 50px;
 }
-/* line 55, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 header #headerWrap h1 a img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 50px;
 }
-/* line 61, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 header #headerWrap nav {
   float: right;
   height: 50px;
   line-height: 50px;
 }
-/* line 65, ../sass/style.scss */
+/* line 66, ../sass/style.scss */
 header #headerWrap nav ul {
   display: inline-block;
   height: 50px;
   line-height: 50px;
 }
-/* line 69, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 header #headerWrap nav ul li {
   float: left;
   width: 120px;
   height: 50px;
   line-height: 50px;
 }
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 header #headerWrap nav ul li a {
   display: inline-block;
   width: 120px;
@@ -146,25 +147,25 @@ header #headerWrap nav ul li a {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-/* line 83, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 header #headerWrap nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.46);
 }
-/* line 85, ../sass/style.scss */
+/* line 86, ../sass/style.scss */
 header #headerWrap nav ul li a:hover + #subNav {
   display: block !important;
 }
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav {
   position: absolute;
   z-index: 30;
   display: none;
 }
-/* line 93, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav:hover {
   display: block;
 }
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav li {
   display: block;
   float: none;
@@ -173,19 +174,19 @@ header #headerWrap nav ul li a + #subNav li {
   color: #fdfdfd;
   background-color: #19B5FE;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav li a {
   height: 40px;
   line-height: 40px;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #wrapper {
   width: 1200px;
   margin: 20px auto;
 }
 
-/* line 122, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 #timelineSide {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -195,27 +196,27 @@ header #headerWrap nav ul li a + #subNav li a {
   padding: 15px;
   background-color: #fdfdfd;
 }
-/* line 128, ../sass/style.scss */
+/* line 129, ../sass/style.scss */
 #timelineSide .sideList {
   width: 100%;
   padding-bottom: 20px;
   margin-bottom: 20px;
 }
-/* line 132, ../sass/style.scss */
+/* line 133, ../sass/style.scss */
 #timelineSide .sideList h4 {
   margin-bottom: 10px;
   padding-bottom: 10px;
   border-bottom: solid 1px #19B5FE;
   font-size: 16px;
 }
-/* line 139, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 #timelineSide .sideList ul li {
   width: 100%;
   height: 40px;
   line-height: 40px;
   font-size: 14px;
 }
-/* line 144, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 #timelineSide .sideList ul li a {
   display: inline-block;
   width: 100%;
@@ -229,18 +230,18 @@ header #headerWrap nav ul li a + #subNav li a {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-/* line 153, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #timelineSide .sideList ul li a:hover {
   background-color: rgba(25, 190, 255, 0.6);
 }
-/* line 159, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 #timelineSide .sideList .read {
   margin-top: 20px;
   width: 100%;
   text-align: right;
 }
 
-/* line 166, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 #timeline {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -248,7 +249,35 @@ header #headerWrap nav ul li a + #subNav li a {
   float: right;
   width: 900px;
 }
-/* line 170, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
+#timeline .companyIcon {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 177, ../sass/style.scss */
+#timeline .companyIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 182, ../sass/style.scss */
+#timeline .companyPost {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+/* line 188, ../sass/style.scss */
+#timeline .companyPost h3 {
+  font-size: 18px;
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 195, ../sass/style.scss */
 #timeline #postForm {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -257,11 +286,11 @@ header #headerWrap nav ul li a + #subNav li a {
   background-color: #fdfdfd;
   padding: 15px;
 }
-/* line 175, ../sass/style.scss */
+/* line 200, ../sass/style.scss */
 #timeline #postForm form {
   width: 100%;
 }
-/* line 179, ../sass/style.scss */
+/* line 204, ../sass/style.scss */
 #timeline #postForm form #postInfo select {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -272,7 +301,7 @@ header #headerWrap nav ul li a + #subNav li a {
   border: none;
   border-bottom: solid 1px #d9d9d9;
 }
-/* line 189, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 #timeline #postForm form textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -282,7 +311,7 @@ header #headerWrap nav ul li a + #subNav li a {
   margin-top: 10px;
   border: none;
 }
-/* line 196, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 #timeline #postForm form input[type="submit"] {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -300,7 +329,7 @@ header #headerWrap nav ul li a + #subNav li a {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 255, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 #timeline .posts {
   width: 100%;
   -moz-box-sizing: border-box;
@@ -310,7 +339,7 @@ header #headerWrap nav ul li a + #subNav li a {
   padding: 15px;
   margin-top: 15px;
 }
-/* line 211, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 #timeline .posts .userIcon {
   display: inline-block;
   float: left;
@@ -318,24 +347,24 @@ header #headerWrap nav ul li a + #subNav li a {
   height: 100px;
   overflow: hidden;
 }
-/* line 217, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 #timeline .posts .userIcon img {
   width: 100%;
   height: auto;
 }
-/* line 222, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 #timeline .posts .userPost {
   display: inline-block;
   float: right;
   width: 750px;
 }
-/* line 226, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 #timeline .posts .userPost h3 {
   color: #343434;
   margin-bottom: 15px;
   font-size: 18px;
 }
-/* line 231, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 #timeline .posts .userPost div {
   display: inline-block;
   width: 100%;
@@ -344,7 +373,31 @@ header #headerWrap nav ul li a + #subNav li a {
   line-height: 150%;
   font-size: 15px;
 }
-/* line 240, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
+#timeline .posts #detailTitle {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+/* line 271, ../sass/style.scss */
+#timeline .posts .category {
+  float: right;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 275, ../sass/style.scss */
+#timeline .posts .category select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+}
+/* line 283, ../sass/style.scss */
 #timeline .posts .commentsArea {
   display: inline-block;
   clear: both;
@@ -352,27 +405,27 @@ header #headerWrap nav ul li a + #subNav li a {
   margin-top: 10px;
   text-align: right;
 }
-/* line 246, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 #timeline .posts .commentsArea span {
   margin-right: 20px;
   color: #9d9d9d;
 }
-/* line 250, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 #timeline .posts .commentsArea time {
   color: #9d9d9d;
 }
-/* line 260, ../sass/style.scss */
+/* line 303, ../sass/style.scss */
 #timeline .posts #commentForm {
   margin-top: 15px;
   padding-top: 15px;
   border-top: solid 1px #d9d9d9;
 }
-/* line 264, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 #timeline .posts #commentForm form {
   width: 100%;
   text-align: right;
 }
-/* line 268, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 #timeline .posts #commentForm form textarea {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -380,7 +433,7 @@ header #headerWrap nav ul li a + #subNav li a {
   width: 100%;
   height: 70px;
 }
-/* line 273, ../sass/style.scss */
+/* line 316, ../sass/style.scss */
 #timeline .posts #commentForm form input[type="submit"] {
   width: 100px;
   height: 30px;
@@ -392,12 +445,12 @@ header #headerWrap nav ul li a + #subNav li a {
   -webkit-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 284, ../sass/style.scss */
+/* line 327, ../sass/style.scss */
 #timeline .posts a {
   display: inline-block;
   width: 100%;
 }
-/* line 211, ../sass/style.scss */
+/* line 236, ../sass/style.scss */
 #timeline .posts a .userIcon {
   display: inline-block;
   float: left;
@@ -405,24 +458,24 @@ header #headerWrap nav ul li a + #subNav li a {
   height: 100px;
   overflow: hidden;
 }
-/* line 217, ../sass/style.scss */
+/* line 242, ../sass/style.scss */
 #timeline .posts a .userIcon img {
   width: 100%;
   height: auto;
 }
-/* line 222, ../sass/style.scss */
+/* line 247, ../sass/style.scss */
 #timeline .posts a .userPost {
   display: inline-block;
   float: right;
   width: 750px;
 }
-/* line 226, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 #timeline .posts a .userPost h3 {
   color: #343434;
   margin-bottom: 15px;
   font-size: 18px;
 }
-/* line 231, ../sass/style.scss */
+/* line 256, ../sass/style.scss */
 #timeline .posts a .userPost div {
   display: inline-block;
   width: 100%;
@@ -431,7 +484,31 @@ header #headerWrap nav ul li a + #subNav li a {
   line-height: 150%;
   font-size: 15px;
 }
-/* line 240, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
+#timeline .posts a #detailTitle {
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+/* line 271, ../sass/style.scss */
+#timeline .posts a .category {
+  float: right;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+/* line 275, ../sass/style.scss */
+#timeline .posts a .category select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 120px;
+  height: 30px;
+  padding: 5px;
+}
+/* line 283, ../sass/style.scss */
 #timeline .posts a .commentsArea {
   display: inline-block;
   clear: both;
@@ -439,22 +516,23 @@ header #headerWrap nav ul li a + #subNav li a {
   margin-top: 10px;
   text-align: right;
 }
-/* line 246, ../sass/style.scss */
+/* line 289, ../sass/style.scss */
 #timeline .posts a .commentsArea span {
   margin-right: 20px;
   color: #9d9d9d;
 }
-/* line 250, ../sass/style.scss */
+/* line 293, ../sass/style.scss */
 #timeline .posts a .commentsArea time {
   color: #9d9d9d;
 }
-/* line 289, ../sass/style.scss */
+/* line 332, ../sass/style.scss */
 #timeline .posts .comments {
+  clear: both;
   margin-top: 20px;
   padding-top: 20px;
   border-top: solid 1px #d9d9d9;
 }
-/* line 294, ../sass/style.scss */
+/* line 338, ../sass/style.scss */
 #timeline .posts .comments .userIcon {
   display: inline-block;
   float: left;
@@ -462,24 +540,24 @@ header #headerWrap nav ul li a + #subNav li a {
   height: 100px;
   overflow: hidden;
 }
-/* line 300, ../sass/style.scss */
+/* line 344, ../sass/style.scss */
 #timeline .posts .comments .userIcon img {
   width: 100%;
   height: auto;
 }
-/* line 305, ../sass/style.scss */
+/* line 349, ../sass/style.scss */
 #timeline .posts .comments .userPost {
   display: inline-block;
   float: right;
   width: 750px;
 }
-/* line 309, ../sass/style.scss */
+/* line 353, ../sass/style.scss */
 #timeline .posts .comments .userPost h3 {
   color: #343434;
   margin-bottom: 15px;
   font-size: 18px;
 }
-/* line 314, ../sass/style.scss */
+/* line 358, ../sass/style.scss */
 #timeline .posts .comments .userPost div {
   display: inline-block;
   width: 100%;
@@ -488,8 +566,106 @@ header #headerWrap nav ul li a + #subNav li a {
   line-height: 150%;
   font-size: 15px;
 }
+/* line 370, ../sass/style.scss */
+#timeline .userList a {
+  color: #343434;
+  text-decoration: none;
+}
+/* line 373, ../sass/style.scss */
+#timeline .userList a .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 379, ../sass/style.scss */
+#timeline .userList a .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 384, ../sass/style.scss */
+#timeline .userList a .userInfo {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* line 390, ../sass/style.scss */
+#timeline .userList a .userInfo h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 396, ../sass/style.scss */
+#timeline .userList a .userPosts {
+  display: inline-block;
+  width: 500px;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 403, ../sass/style.scss */
+#timeline .userList a .userPosts h4 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+}
+/* line 413, ../sass/style.scss */
+#timeline .companyList a {
+  color: #343434;
+  text-decoration: none;
+}
+/* line 416, ../sass/style.scss */
+#timeline .companyList a .companyIcon {
+  display: inline-block;
+  float: left;
+  width: 300px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 422, ../sass/style.scss */
+#timeline .companyList a .companyIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 427, ../sass/style.scss */
+#timeline .companyList a .companyInfo {
+  display: inline-block;
+  float: left;
+  width: 160px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+/* line 433, ../sass/style.scss */
+#timeline .companyList a .companyInfo h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 439, ../sass/style.scss */
+#timeline .companyList a .companyPosts {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+/* line 448, ../sass/style.scss */
+#timeline .companyList a .companyPosts h4 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+}
 
-/* line 328, ../sass/style.scss */
+/* line 460, ../sass/style.scss */
 footer {
   width: 100%;
   height: 30px;

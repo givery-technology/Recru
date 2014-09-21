@@ -35,13 +35,15 @@ html{
 header{
   display: inline-block;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: $main;
   #headerWrap{
     @extend %clearfix;
     width: 1200px;
     height: 50px;
     margin: 0 auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
     h1{
       float: left;
       width: 300px;
@@ -49,12 +51,11 @@ header{
       line-height: 50px;
       a{
         display: inline-block;
-        width: 300px;
         height: 50px;
         line-height: 50px;
         img{
-          width: 100%;
-          height: auto;
+          width: auto;
+          height: 50px;
         }
       }
     }
@@ -167,6 +168,30 @@ header{
   @include box-sizing(border-box);
   float: right;
   width: 900px;
+  .companyIcon{
+    display: inline-block;
+    float: left;
+    width: 300px;
+    height: 100px;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+  .companyPost{
+    display: inline-block;
+    float: left;
+    width: 160px;
+    margin-top: 20px;
+    margin-left: 30px;
+    h3{
+      font-size: 18px;
+      color: $black;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+  }
   #postForm{
     @include box-sizing(border-box);
     width: 100%;
@@ -237,6 +262,24 @@ header{
         font-size: 15px;
       }
     }
+    #detailTitle{
+      float: left;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 10px;
+    }
+    .category{
+      float: right;
+      display: inline-block;
+      margin-bottom: 10px;
+      select{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        width: 120px;
+        height: 30px;
+        padding: 5px;
+      }
+    }
     .commentsArea{
       display: inline-block;
       clear:both;
@@ -288,6 +331,7 @@ header{
     }
     .comments{
       @extend %clearfix;
+      clear:both;
       margin-top: 20px;
       padding-top: 20px;
       border-top: solid 1px $gray;
@@ -318,6 +362,94 @@ header{
           color: $black;
           line-height: 150%;
           font-size: 15px;
+        }
+      }
+    }
+  }
+  .userList{
+    a{
+      color: $black;
+      text-decoration: none;
+      .userIcon{
+        display: inline-block;
+        float: left;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .userInfo{
+        display: inline-block;
+        float: left;
+        width: 160px;
+        margin-top: 20px;
+        margin-left: 20px;
+        h3{
+          color: $black;
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+      }
+      .userPosts{
+        display: inline-block;
+        width: 500px;
+        word-break: break-all;
+        color: $black;
+        line-height: 150%;
+        font-size: 15px;
+        h4{
+          font-size: 17px;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          border-bottom: solid 1px $main;
+        }
+      }
+    }
+  }
+  .companyList{
+    a{
+      color: $black;
+      text-decoration: none;
+      .companyIcon{
+        display: inline-block;
+        float: left;
+        width: 300px;
+        height: 100px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .companyInfo{
+        display: inline-block;
+        float: left;
+        width: 160px;
+        margin-top: 20px;
+        margin-left: 20px;
+        h3{
+          color: $black;
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+      }
+      .companyPosts{
+        display: inline-block;
+        clear: both;
+        width: 100%;
+        word-break: break-all;
+        color: $black;
+        line-height: 150%;
+        margin-top: 10px;
+        font-size: 15px;
+        h4{
+          font-size: 17px;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          border-bottom: solid 1px $main;
         }
       }
     }
