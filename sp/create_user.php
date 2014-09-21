@@ -25,7 +25,7 @@ $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
 } else {
-      printf("Current character set: %s\n", mysqli_character_set_name($link));
+      //printf("Current character set: %s\n", mysqli_character_set_name($link));
 }
 
 $sql = "SELECT id FROM user WHERE facebook_id = ".$uid;
@@ -33,7 +33,7 @@ $sql = "SELECT id FROM user WHERE facebook_id = ".$uid;
 $result = mysqli_query($link, $sql);
 $user= array();
 
-if (count($result) > 0) {
+if ($result->num_rows > 0) {
 while ($row = mysqli_fetch_object($result)){
     $user[] = array(
     'id' => $row->id
