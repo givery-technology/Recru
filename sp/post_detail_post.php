@@ -9,7 +9,7 @@ mb_http_output("utf-8");
 
 require "constant.php";
     
-$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
+$link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 $sql = "SELECT id, user_id, company_id, category_id, comment, created_at FROM contribution ORDER BY created_at";
 

@@ -19,7 +19,7 @@ $grad_year = $_POST['year'];
 //$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
 $sql = "INSERT INTO user (name,  univ, grad_year) VALUES('$name',  '$univ', $grad_year)";
 
-$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
+$link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
