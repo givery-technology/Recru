@@ -1,4 +1,12 @@
 <? require_once "header.php"; ?>
+<?
+  //?id=ほげほげ　で指定する！
+  if(isset($_GET['id'])){
+    $usr_id = $_GET['id'];
+  }
+  require_once "user_list_post.php";
+  $json = json_decode($json);
+?>
 
 <section id="wrapper">
   <section id="userList">

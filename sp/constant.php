@@ -1,12 +1,12 @@
 <?
-$env = "aaa";
+$env = "dev";
 
 if($env == "dev"){
 
   $fb_id = "1491174614467856";
   $fb_pwd = "13420debbf3a27366142794a8480f920";
 
-  $timeline_url = "http://localhost:8888/techa/timeline_hoge.php";
+  $timeline_url = "http://localhost/techa/timeline.php";
 
   $db_usr = "root";
   $db_pwd = "root";

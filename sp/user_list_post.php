@@ -9,11 +9,6 @@ mb_http_output("utf-8");
 
 require "constant.php";
 
-//?id=ほげほげ　で指定する！
-if(isset($_GET['id'])){
-  $usr_id = $_GET['id'];
-}
-
 $sql = "SELECT user.name, user.img, user.univ FROM user_friend INNER JOIN user ON user_friend.user_id = user.id WHERE user_friend.user_id=".$usr_id;
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
@@ -36,7 +31,7 @@ if($result = mysqli_query($link, $sql)){
   mysqli_free_result($result);
 }
 // header('Content-type: application/json');
-echo json_encode($user);
+$json = json_encode($user);
 
 mysqli_close($link);
 

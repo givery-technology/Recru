@@ -1,29 +1,47 @@
 <? require_once "header.php"; ?>
 
+<?
+  //?user_id=ほげほげ　で指定する！
+  if(isset($_GET['user_id'])){
+    $usr_id = $_GET['user_id'];
+  }
+  require_once "user_detail_post.php";
+  $json = json_decode($json);
+  $count = json_decode($count);
+  $json_cont = json_decode($json_cont);
+?>
   <section id="wrapper">
     <article id="userDetail">
+      <? foreach($json as $j):
+        foreach($count as $c): ?>
       <header>
-        <h2>正木　貴大</h2>
-        <div id="userIcon"><img src="img/masaki.jpg" alt="" /></div>
+        <h2><?= $j->name; ?></h2>
+        <div id="userIcon"><img src="<?= $j->img; ?>" alt="user_icon" /></div>
         <div id="userInfo">
-          <div id="school">法政大学 16卒</div>
-          <div id="postCount">投稿数 : 9</div>
+          <div id="school"><?= $j->univ; ?> 16卒</div>
+          <div id="postCount">投稿数 : <?= $c->count; ?></div>
         </div>
       </header>
+      <?
+        endforeach;
+        endforeach;
+      ?>
     </article>
     <section id="userPosts">
       <h2>最近の投稿</h2>
 
+      <? foreach($json_cont as $cont): ?>
       <article class="posts">
-        <div class="companyName"><a href="#">株式会社ギブリー</a></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="companyName"><a href="company_detail.php?id=<?= $cont->company; ?>"><?= $cont->name; ?></a></div>
+        <p><?= $cont->comment; ?></p>
         <section class="commentArea">
           <ul>
-            <li><a href="#">コメントする</a></li>
-            <li><a href="#">詳細</a></li>
+            <li><a href="post_detail.php?id=<?= $cont->id; ?>">コメントする</a></li>
+            <li><a href="post_detail.php?id=<?= $cont->id; ?>">詳細</a></li>
           </ul>
         </section>
       </article>
+      <? endforeach; ?>
 
     </section>
   </section>
