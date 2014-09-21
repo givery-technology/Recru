@@ -7,19 +7,27 @@ mb_internal_encoding("utf-8");
 mb_http_input("auto");
 mb_http_output("utf-8");
 
-require "constant.php";
+require 'facebook-php-sdk/src/facebook.php';
+require 'constant.php';
 
-$name = $_POST['user_name'];
-//$fb_id = $_POST['facebook_id'];
-//$img = $_POST['img'];
+
+$facebook = new Facebook(array(
+  'appId'  => $fb_id,
+  'secret' => $fb_pwd,
+));
+
+$user = $facebook->api('/me');
+
+$name = $user['name'];
+$fb_id = $user['id'];
+$img = "http://graph.facebook.com/".$user['id']."/picture?type=normal";
 $univ = $_POST['school_name'];
 $grad_year = $_POST['year'];
 
 
-//$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
-$sql = "INSERT INTO user (name,  univ, grad_year) VALUES('$name',  '$univ', $grad_year)";
+$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
 
-$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
+$link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
@@ -35,4 +43,5 @@ if($link->query($sql)){
 }
 
 mysqli_close($link);
+ 
 ?>
