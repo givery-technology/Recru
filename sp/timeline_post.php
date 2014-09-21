@@ -13,7 +13,7 @@ require "constant.php";
 $sql = "SELECT id, user_id, company_id, category_id, comment, created_at FROM contribution ORDER BY created_at";
 //$sql = "SELECT id, user_id, company_id, category_id, comment, created_at FROM contribution ORDER BY created_at DESC LIMIT 20";
 
-$link = new mysqli("localhost", "$db_id", "$db_pwd", "$db_name");
+$link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
