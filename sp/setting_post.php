@@ -7,46 +7,38 @@ mb_internal_encoding("utf-8");
 mb_http_input("auto");
 mb_http_output("utf-8");
 
-require 'facebook-php-sdk/src/facebook.php';
-require 'constant.php';
+require "constant.php";
 
-try {
-  $facebook = new Facebook(array(
-    'appId'  => $fb_id,
-    'secret' => $fb_pwd,
-  ));
-} catch(Exception $e){
-  echo $e->getMessage();
+//?id=ほげほげ　で指定する！
+if(isset($_GET['id'])){
+  $usr_id = $_GET['id'];
 }
 
-$uid = $facebook->getUser();
-$user = $facebook->api('/'.$uid);
-//$user = $facebook->api('/me');
-
-$name = $user['name'];
-$fb_id = $user['id'];
-$img = "http://graph.facebook.com/".$user['id']."/picture?type=normal";
-$univ = $_POST['school_name'];
-$grad_year = $_POST['year'];
-
-
-$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
-
+$sql = "SELECT name, univ, grad_year, img FROM user WHERE id=".$usr_id;
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
-if (!mysqli_set_charset($link, "utf8")) {
-      printf("Error loading character set utf8: %s\n", mysqli_error($link));
-} else {
-      printf("Current character set: %s\n", mysqli_character_set_name($link));
-}
+$link->set_charset('utf8');
 
-if($link->query($sql)){
-  
-} else if(mysqli_connect_errno()) {
+if(mysqli_connect_errno()) {
   printf("connect failed: %s\n", $link->connect_error());
   exit();
 }
 
+$user= array();
+if($result = mysqli_query($link, $sql)){
+  while ($row = mysqli_fetch_object($result)){
+    $user[] = array(
+      'name' => $row->name
+      ,'univ'=> $row->univ
+      ,'grad_year'=> $row->grad_year
+      ,'img'=> $row->img
+    );
+  }
+  mysqli_free_result($result);
+}
+// header('Content-type: application/json');
+echo json_encode($user);
+
 mysqli_close($link);
- 
+
 ?>
