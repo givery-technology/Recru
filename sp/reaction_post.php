@@ -9,10 +9,11 @@ mb_http_output("utf-8");
 
 require "constant.php";
 
-
-$sql = "SELECT contribution.id, user.name, reaction.reaction, reaction.created_at FROM reaction INNER JOIN user ON reaction.user_id = user.id INNER JOIN contribution ON reaction.cont_id = contribution.id";
-//$sql = "SELECT id, user_id, company_id, category_id, comment, created_at FROM contribution ORDER BY created_at DESC LIMIT 20";
-
+//?id=ほげほげ　で指定する！
+if(isset($_GET['id'])){
+  $cont_id = $_GET['id'];
+}
+$sql = "SELECT contribution.id, user.name, reaction.reaction, reaction.created_at FROM reaction INNER JOIN user ON reaction.user_id = user.id INNER JOIN contribution ON reaction.cont_id = contribution.id WHERE contribution.id=".$cont_id." ORDER BY created_at";
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 $link->set_charset('utf8');
