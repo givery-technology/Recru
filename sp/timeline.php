@@ -3,6 +3,13 @@
 <section id="wrapper">
   <form id="sendPost" action="index.html" method="post">
     <div id="postText">
+      <input type="text" name="company" size="60" placeholder="企業名"></textarea>
+      <select name="category">
+	<option value="">場面を選択してください</option>
+	<option value="test1">test1</option>
+	<option value="test2">test2</option>
+	<option value="test3">test3</option>
+      </select>
       <textarea name="postText" rows="8" cols="40" placeholder="この会社どんな感じ？"></textarea>
     </div>
     <div id="sendBtn">
