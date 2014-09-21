@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin-bottom: 15px;
 }
 
-header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline #companys header, #postTimeline #companyDetail header header, #companyDetail #postTimeline header header, #postTimeline section#companyUsersPosts h2 header, section#companyUsersPosts #postTimeline h2 header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #postTimeline #companys .commentArea ul, #postTimeline #companyDetail header .commentArea ul, #companyDetail #postTimeline header .commentArea ul, #postTimeline section#companyUsersPosts h2 .commentArea ul, section#companyUsersPosts #postTimeline h2 .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, section#userPosts #companys .commentArea ul, section#userPosts #companyDetail header .commentArea ul, #companyDetail section#userPosts header .commentArea ul, section#userPosts section#companyUsersPosts h2 .commentArea ul, section#companyUsersPosts section#userPosts h2 .commentArea ul, #detailPosts header, #detailPosts .commentArea #commentForm, #detailPosts .commentArea .comments, #companys #companyList li a, #companyDetail header, section#companyUsersPosts header, section#companyUsersPosts .commentArea ul {
+#section3, header#header, #postTimeline .posts header, #postTimeline #setting_new header, #postTimeline #userList header, #postTimeline #userDetail header header, #userDetail #postTimeline header header, #postTimeline section#userPosts h2 header, section#userPosts #postTimeline h2 header, #postTimeline #detailPosts header, #postTimeline #companys header, #postTimeline #companyDetail header header, #companyDetail #postTimeline header header, #postTimeline section#companyUsersPosts h2 header, section#companyUsersPosts #postTimeline h2 header, #postTimeline .posts .commentArea ul, #postTimeline #setting_new .commentArea ul, #postTimeline #userList .commentArea ul, #postTimeline #userDetail header .commentArea ul, #userDetail #postTimeline header .commentArea ul, #postTimeline section#userPosts h2 .commentArea ul, section#userPosts #postTimeline h2 .commentArea ul, #postTimeline #detailPosts .commentArea ul, #postTimeline #companys .commentArea ul, #postTimeline #companyDetail header .commentArea ul, #companyDetail #postTimeline header .commentArea ul, #postTimeline section#companyUsersPosts h2 .commentArea ul, section#companyUsersPosts #postTimeline h2 .commentArea ul, #userList #friendList li a, #userDetail header, section#userPosts #setting_new .commentArea ul, section#userPosts #userList .commentArea ul, section#userPosts #userDetail header .commentArea ul, #userDetail section#userPosts header .commentArea ul, section#userPosts h2 .commentArea ul, section#userPosts .posts .commentArea ul, section#userPosts #detailPosts .commentArea ul, section#userPosts #companys .commentArea ul, section#userPosts #companyDetail header .commentArea ul, #companyDetail section#userPosts header .commentArea ul, section#userPosts section#companyUsersPosts h2 .commentArea ul, section#companyUsersPosts section#userPosts h2 .commentArea ul, #detailPosts header, #detailPosts .commentArea #commentForm, #detailPosts .commentArea .comments, #companys #companyList li a, #companyDetail header, section#companyUsersPosts header, section#companyUsersPosts .commentArea ul {
   overflow: hidden;
   *zoom: 1;
 }
@@ -82,112 +82,169 @@ html body {
   z-index: 100;
 }
 
-#wrapperImg {
-  width: 100%;
-  height: 100%;
-  min-height: 100%;
-  min-height: 100%;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-}
-#wrapperImg img {
-  width: 100%;
-  height: auto;
-}
-
-#indexLogo, #indexWrapper {
-  position: absolute;
-  z-index: 2;
-}
-
-#indexLogo {
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-  top: 130px;
-}
-#indexLogo h1 {
-  width: 70%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-#indexWrapper {
-  display: inline-block;
-  width: 100%;
-  bottom: 100px;
-}
-#indexWrapper #indexForm {
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-#indexWrapper #indexForm div {
-  width: 100%;
-  text-align: center;
-}
-#indexWrapper #indexForm div input[type="text"],
-#indexWrapper #indexForm div input[type="password"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+#indexHeader {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
-  padding: 5px;
-  margin-bottom: 20px;
-  border: none;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-#indexWrapper #indexForm div input[type="submit"] {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 40px;
-  line-height: 40px;
-  margin-bottom: 50px;
-  border: none;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-  color: #fdfdfd;
-  background-color: #efa531;
-}
-#indexWrapper #fbLogin {
-  width: 250px;
-  margin: 0 auto;
-  height: 50px;
-  background-color: #3b5998;
-  -moz-box-shadow: 0 5px #244886;
-  -webkit-box-shadow: 0 5px #244886;
-  box-shadow: 0 5px #244886;
-  -moz-border-radius: 8px;
-  -webkit-border-radius: 8px;
-  border-radius: 8px;
-}
-#indexWrapper #fbLogin a {
-  display: inline-block;
-  width: 100%;
   height: 50px;
   line-height: 50px;
   text-align: center;
-  text-decoration: none;
-  color: #fdfdfd;
+  background-color: #19B5FE;
+}
+#indexHeader h1#logo {
+  padding: 5px;
+}
+#indexHeader h1#logo a {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+}
+#indexHeader h1#logo a img {
+  width: auto;
+  height: 40px;
 }
 
-#indexWrapper + footer {
+#main {
+  width: 100%;
+  height: 395px;
+}
+#main div#mainVisual {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
+#main div#mainVisual img {
+  width: 100%;
+  height: auto;
+}
+#main #mainContent {
   width: 100%;
   text-align: center;
   position: absolute;
-  bottom: 0px;
   z-index: 2;
-  font-size: 12px;
+}
+#main #mainContent h1#mainLogo {
+  display: inline-block;
+  margin-top: 20px;
+}
+#main #mainContent h2 {
+  font-size: 18px;
   color: #fdfdfd;
+}
+#main #mainContent a {
+  display: inline-block;
+}
+#main #mainContent a#face {
+  height: 38px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#section2 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: #daeaf4;
+}
+#section2 h2 {
+  color: #34a8e1;
+  font-size: 20px;
+}
+#section2 p {
+  line-height: 150%;
+}
+#section2 ul {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#section2 ul li {
+  margin-bottom: 30px;
+  color: #6e6e6e;
+}
+#section2 ul li h3 {
+  margin: 10px 0;
+  line-height: 150%;
+  font-size: 18px;
+}
+
+#section3 {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+}
+#section3 #left {
+  width: 60%;
+  float: left;
+  margin-left: 10px;
+}
+#section3 #left h3 {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 18px;
+}
+#section3 #left h3 img {
+  float: left;
+  width: 40px;
+  height: auto;
+}
+#section3 #left p {
+  margin-top: 20px;
+  text-align: left;
+  line-height: 170%;
+  margin-bottom: 20px;
+}
+#section3 #right {
+  float: right;
+  margin-top: 20px;
+}
+
+#section4 {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#section4 h3 {
+  line-height: 150%;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+#section5 {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #6abee3;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#section5 a {
+  width: auto;
+  height: 38px;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+#section5 + footer {
+  clear: both;
+  background-color: #19B5FE;
 }
 
 footer {
