@@ -16,7 +16,9 @@ $facebook = new Facebook(array(
   'secret' => $fb_pwd,
 ));
 
-$user = $facebook->api('/me');
+$uid = $facebook->getUser();
+$user = $facebook->api('/'.$uid);
+//$user = $facebook->api('/me');
 
 $name = $user['name'];
 $fb_id = $user['id'];
