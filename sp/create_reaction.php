@@ -14,7 +14,7 @@ $reaction = $_POST['text'];
 
 
 //$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
-$sql = "INSERT INTO reaction (cont_id,  reaction, created_at) VALUES($cont_id, '$reaction' now())";
+$sql = "INSERT INTO reaction (cont_id,  reaction) VALUES($cont_id, '$reaction')";
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 

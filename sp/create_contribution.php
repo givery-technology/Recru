@@ -18,7 +18,7 @@ $text = $_POST['text'];
 
 
 //$sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
-$sql = "INSERT INTO contribution (user_id, category_id, company_id, comment, created_at) VALUES($uid, $category_id, $company_id, '$text', now())";
+$sql = "INSERT INTO contribution (user_id, category_id, company_id, comment) VALUES($uid, $category_id, $company_id, '$text')";
 
 $link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
