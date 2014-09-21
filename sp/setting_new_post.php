@@ -32,7 +32,7 @@ $grad_year = $_POST['year'];
 
 $sql = "INSERT INTO user (name, facebook_id, img, univ, grad_year) VALUES('$name', $fb_id, '$img', '$univ', $grad_year)";
 
-$link = new mysqli("http://dev.cpla.jp/", "$db_usr", "$db_pwd", "$db_name");
+$link = new mysqli("localhost", "$db_usr", "$db_pwd", "$db_name");
 
 if (!mysqli_set_charset($link, "utf8")) {
       printf("Error loading character set utf8: %s\n", mysqli_error($link));
