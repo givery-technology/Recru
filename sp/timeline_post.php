@@ -25,6 +25,7 @@ if($result = mysqli_query($link, $sql)){
   while ($row = mysqli_fetch_object($result)){
     $user[] = array(
     'id' => $row->id
+    ,'name'=> $row->name
     ,'img'=> $row->img
     ,'company_name'=> $row->company_name
     ,'category_name' => $row->category_name
