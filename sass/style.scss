@@ -10,6 +10,14 @@ $white: #fdfdfd;
 $fbColor: #3b5998;
 $font: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 
+//mixin
+@mixin posts(){
+  @include box-sizing(border-box);
+  background-color: $white;
+  padding: 15px;
+  margin-top: 15px;
+}
+
 // extend clearfix
 %clearfix{
   @include clearfix;
@@ -106,9 +114,151 @@ header{
 }
 
 #wrapper{
+  @extend %clearfix;
   width: 1200px;
   margin: 20px auto;
+}
 
+#timelineSide{
+  @include box-sizing(border-box);
+  float: left;
+  width: 250px;
+  padding: 15px;
+  background-color: $white;
+  .sideList{
+    width: 100%;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    h4{
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: solid 1px $main;
+      font-size: 16px;
+    }
+    ul{
+      li{
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 14px;
+        a{
+          display: inline-block;
+          width: 100%;
+          height: 45px;
+          line-height: 45px;
+          color: $black;
+          text-decoration: none;
+          text-indent: 1em;
+          @include transition(background-color 0.3s);
+          &:hover{
+            background-color: rgba(25, 190, 255, 0.6);
+          }
+        }
+      }
+    }
+    .read{
+      margin-top: 20px;
+      width: 100%;
+      text-align: right;
+    }
+  }
+}
+#timeline{
+  @include box-sizing(border-box);
+  float: right;
+  width: 900px;
+  #postForm{
+    @include box-sizing(border-box);
+    width: 100%;
+    background-color: $white;
+    padding: 15px;
+    form{
+      @extend %clearfix;
+      width: 100%;
+      #postInfo{
+        select{
+          @include box-sizing(border-box);
+          float: left;
+          width: 50%;
+          height: 30px;
+          border: none;
+          border-bottom: solid 1px $gray;
+
+        }
+      }
+      textarea{
+        @include box-sizing(border-box);
+        width: 100%;
+        height: 100px;
+        margin-top: 10px;
+        border: none;
+      }
+      input[type="submit"]{
+        @include appearance(none);
+        @include box-sizing(border-box);
+        float: right;
+        width: 30%;
+        height: 40px;
+        margin-top: 10px;
+        background-color: $main;
+        color: $white;
+        border: none;
+        @include border-radius(8px);
+      }
+    }
+  }
+  .posts{
+    @extend %clearfix;
+    width: 100%;
+    @include posts();
+    a{
+      display: inline-block;
+      width: 100%;
+      .userIcon{
+        display: inline-block;
+        float: left;
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: auto;
+        }
+      }
+      .userPost{
+        display: inline-block;
+        float: right;
+        width: 750px;
+        h3{
+          color: $black;
+          margin-bottom: 15px;
+          font-size: 18px;
+        }
+        div{
+          display: inline-block;
+          width: 100%;
+          word-break: break-all;
+          color: $black;
+          line-height: 150%;
+          font-size: 15px;
+        }
+      }
+      .commentsArea{
+        display: inline-block;
+        clear:both;
+        width: 100%;
+        margin-top: 10px;
+        text-align: right;
+        span{
+          margin-right: 20px;
+          color: $gray - #3c3c3c;
+        }
+        time{
+          color: $gray - #3c3c3c;
+        }
+      }
+    }
+  }
 }
 
 

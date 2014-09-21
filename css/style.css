@@ -64,75 +64,75 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
-/* line 14, ../sass/style.scss */
-header #headerWrap {
+/* line 22, ../sass/style.scss */
+header #headerWrap, #wrapper, #timeline #postForm form, #timeline .posts {
   overflow: hidden;
   *zoom: 1;
 }
 
-/* line 18, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 html {
   height: 100%;
   font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
-/* line 21, ../sass/style.scss */
+/* line 29, ../sass/style.scss */
 html body {
   height: 100%;
   background: #d9d9d9;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 header {
   display: inline-block;
   width: 100%;
   height: 50px;
   background-color: #19B5FE;
 }
-/* line 32, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 header #headerWrap {
   width: 1200px;
   height: 50px;
   margin: 0 auto;
 }
-/* line 37, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 header #headerWrap h1 {
   float: left;
   width: 300px;
   height: 50px;
   line-height: 50px;
 }
-/* line 42, ../sass/style.scss */
+/* line 50, ../sass/style.scss */
 header #headerWrap h1 a {
   display: inline-block;
   width: 300px;
   height: 50px;
   line-height: 50px;
 }
-/* line 47, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 header #headerWrap h1 a img {
   width: 100%;
   height: auto;
 }
-/* line 53, ../sass/style.scss */
+/* line 61, ../sass/style.scss */
 header #headerWrap nav {
   float: right;
   height: 50px;
   line-height: 50px;
 }
-/* line 57, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 header #headerWrap nav ul {
   display: inline-block;
   height: 50px;
   line-height: 50px;
 }
-/* line 61, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 header #headerWrap nav ul li {
   float: left;
   width: 120px;
   height: 50px;
   line-height: 50px;
 }
-/* line 66, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 header #headerWrap nav ul li a {
   display: inline-block;
   width: 120px;
@@ -146,25 +146,25 @@ header #headerWrap nav ul li a {
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
 }
-/* line 75, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 header #headerWrap nav ul li a:hover {
   background-color: rgba(255, 255, 255, 0.46);
 }
-/* line 77, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 header #headerWrap nav ul li a:hover + #subNav {
   display: block !important;
 }
-/* line 81, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav {
   position: absolute;
   z-index: 30;
   display: none;
 }
-/* line 85, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav:hover {
   display: block;
 }
-/* line 88, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav li {
   display: block;
   float: none;
@@ -173,19 +173,201 @@ header #headerWrap nav ul li a + #subNav li {
   color: #fdfdfd;
   background-color: #19B5FE;
 }
-/* line 95, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 header #headerWrap nav ul li a + #subNav li a {
   height: 40px;
   line-height: 40px;
 }
 
-/* line 108, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 #wrapper {
   width: 1200px;
   margin: 20px auto;
 }
 
-/* line 115, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
+#timelineSide {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 250px;
+  padding: 15px;
+  background-color: #fdfdfd;
+}
+/* line 128, ../sass/style.scss */
+#timelineSide .sideList {
+  width: 100%;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+/* line 132, ../sass/style.scss */
+#timelineSide .sideList h4 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #19B5FE;
+  font-size: 16px;
+}
+/* line 139, ../sass/style.scss */
+#timelineSide .sideList ul li {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+}
+/* line 144, ../sass/style.scss */
+#timelineSide .sideList ul li a {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  color: #343434;
+  text-decoration: none;
+  text-indent: 1em;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+/* line 153, ../sass/style.scss */
+#timelineSide .sideList ul li a:hover {
+  background-color: rgba(25, 190, 255, 0.6);
+}
+/* line 159, ../sass/style.scss */
+#timelineSide .sideList .read {
+  margin-top: 20px;
+  width: 100%;
+  text-align: right;
+}
+
+/* line 166, ../sass/style.scss */
+#timeline {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 900px;
+}
+/* line 170, ../sass/style.scss */
+#timeline #postForm {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fdfdfd;
+  padding: 15px;
+}
+/* line 175, ../sass/style.scss */
+#timeline #postForm form {
+  width: 100%;
+}
+/* line 179, ../sass/style.scss */
+#timeline #postForm form #postInfo select {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: left;
+  width: 50%;
+  height: 30px;
+  border: none;
+  border-bottom: solid 1px #d9d9d9;
+}
+/* line 189, ../sass/style.scss */
+#timeline #postForm form textarea {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  margin-top: 10px;
+  border: none;
+}
+/* line 196, ../sass/style.scss */
+#timeline #postForm form input[type="submit"] {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  float: right;
+  width: 30%;
+  height: 40px;
+  margin-top: 10px;
+  background-color: #19B5FE;
+  color: #fdfdfd;
+  border: none;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+}
+/* line 210, ../sass/style.scss */
+#timeline .posts {
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #fdfdfd;
+  padding: 15px;
+  margin-top: 15px;
+}
+/* line 214, ../sass/style.scss */
+#timeline .posts a {
+  display: inline-block;
+  width: 100%;
+}
+/* line 217, ../sass/style.scss */
+#timeline .posts a .userIcon {
+  display: inline-block;
+  float: left;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+/* line 223, ../sass/style.scss */
+#timeline .posts a .userIcon img {
+  width: 100%;
+  height: auto;
+}
+/* line 228, ../sass/style.scss */
+#timeline .posts a .userPost {
+  display: inline-block;
+  float: right;
+  width: 750px;
+}
+/* line 232, ../sass/style.scss */
+#timeline .posts a .userPost h3 {
+  color: #343434;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+/* line 237, ../sass/style.scss */
+#timeline .posts a .userPost div {
+  display: inline-block;
+  width: 100%;
+  word-break: break-all;
+  color: #343434;
+  line-height: 150%;
+  font-size: 15px;
+}
+/* line 246, ../sass/style.scss */
+#timeline .posts a .commentsArea {
+  display: inline-block;
+  clear: both;
+  width: 100%;
+  margin-top: 10px;
+  text-align: right;
+}
+/* line 252, ../sass/style.scss */
+#timeline .posts a .commentsArea span {
+  margin-right: 20px;
+  color: #9d9d9d;
+}
+/* line 256, ../sass/style.scss */
+#timeline .posts a .commentsArea time {
+  color: #9d9d9d;
+}
+
+/* line 265, ../sass/style.scss */
 footer {
   width: 100%;
   height: 30px;
