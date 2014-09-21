@@ -4,7 +4,7 @@
   <form id="sendPost" action="index.html" method="post">
     <div id="postText">
       <select name="category">
-        <option value="">企業を選択</option>
+	<option value="">企業名を選択</option>
         <option value="company1">givery Inc.</option>
         <option value="company2">company2</option>
         <option value="company3">company3</option>
