@@ -1,0 +1,248 @@
+/*全体のCSS*/
+*{	margin:0px;
+	padding:0px;
+	}
+
+/*1段落目のCSS*/
+header{
+	width:100%;
+	background-color:#39A8E0;
+	}
+#wrapper1{
+	width:1200px;
+	height:77px;
+	margin:0 auto;
+}
+
+h1{ float:left;
+	margin-top:10px;
+	}
+	
+#nav1{ float:right; }
+
+#list{ list-style:none; }
+
+#list li { float:left;
+	margin:25px 30px 0px 0px;
+	color:#FFFFFF;
+	}
+
+/*2段落目のCSS*/
+#wrapper2{
+	clear:both;
+	position: relative;
+	height:470px;
+}
+
+/*img要素*/
+#bgImage {
+	width:100%;
+	position:absolute;
+	z-index:0;
+	}
+
+#center{
+	position: absolute;
+	top:35px;
+	width:100%;
+	text-align: center;
+	z-index: 1:
+}
+	
+#z1{
+	/*position:absolute;
+	/*top:110px;
+	left:165px;*/
+	z-index: 1;
+	font-family:"Times New Roman", "游明朝", YuMincho, "Hiragino Mincho ProN", Meiryo, serif;
+	font-size:53pt;
+	color:#FFFFFF;
+	letter-spacing:0.00001em;
+}
+
+#z2{
+	/*position:absolute;
+	top:110px;
+	left:165px;*/
+	margin-top:-10px;
+	font-size:23pt;
+	color:#FFFFFF;
+	z-index: 1;
+	}
+	
+#z3{
+	/*position:absolute;
+	/*top:110px;
+	left:165px;*/
+	margin-top:50px;
+	width:352px;
+	height:58px;
+	z-index: 1;
+	}
+
+/*3段落目のCSS*/
+#wrapper3{
+	width:100%;
+	background-color:#D8EAF4;
+	position: relative;
+}
+	
+
+		#copywrite{
+			text-align: center;
+			padding:30px;
+		}
+	
+		#copywrite h2{
+			color:#39A8E0;
+			font-size: 40px;
+		}
+	
+		#copywrite p{
+			color:#5C5C5C;
+			font-size: 25px;
+		}
+
+
+		#wrapper4{
+			width:1200px;
+			height:580px;
+			text-align: center;
+			margin:0 auto;
+		}
+			
+		table{
+			margin-top:-130px;
+		}
+		
+		.list{ list-style:none; }
+
+
+/*4段落目のボックス*/
+
+#wrapper5{
+	position:relative;
+	height:530px;
+	width:100%;
+	}
+
+	/*手に持ったカバー画像*/
+	#section3_img{
+		width:100%;
+		position:absolute;
+		z-index: 0;
+		}
+	
+		/*左の画像とテキスト*/
+		#wrapper6{
+			position: absolute;
+			top:45px;
+			left:125px;
+			z-index: 1:	
+		}
+	
+			#vertical_logo{
+				float:left;
+				width:68px;
+				height: 68px;
+			}
+	
+			#wrapper6 h2{
+				font-size:30pt;
+				color:#FFFFFF;
+				margin-top:5px;
+				margin-left:85px;
+				margin-bottom:50px;
+			}
+		
+			#wrapper6 p{
+				clear:both;
+				font-size:20pt;
+				color:#FFFFFF;
+			}
+	
+			/*wrapper6内のアプリDLボタン*/
+			#available_Button{
+				margin-top:50px;
+			}
+	
+	
+/*wrapper7*/
+#wrapper7{
+	width:100%;
+	height:475px;
+}
+	
+	#wrapper7 h2{
+		text-align: center;
+		font-size:30pt;
+		color:#5C5C5C;
+		margin-top:20px;
+	}
+	
+	#smartphone{
+		width:1000px;
+		height:400px;
+		margin:0 auto;
+	}
+	
+		#smartphone_img{
+			float:left;
+			margin-top:50px;
+		}
+		
+		#smartphone_explain{
+			float:right;
+			margin-top:80px;
+		}
+
+/*wrapper8*/
+#wrapper8{
+	clear:both;
+	position:relative;
+	height:170px;
+	width:100%;
+}
+	/*白熊の背景画像*/
+	#section6_img{
+		position:absolute;
+		width:100%;
+		height:180px;
+		z-index: 1;
+	}
+		#wrapper9{
+			position:absolute;
+			top:30px;
+			z-index: 2;
+			width:100%;
+			text-align:center;
+			
+		}
+		
+			/*テキスト*/
+			#wrapper9 h3{
+				font-size:18pt;
+				color:#FFFFFF;
+			}
+			/*イメージ*/
+			#wrapper9 img{
+				margin-top:15px;
+			}
+			
+/*フッター*/
+footer{
+	width:100%;
+	background-color:#39A8E0;
+}
+	#wrapper10{
+		width:100%;
+		height:50px;
+	}
+
+	#wrapper10 p{
+		padding-top:20px;
+		text-align: center;
+		color:#FFFFFF;
+		}
+
+

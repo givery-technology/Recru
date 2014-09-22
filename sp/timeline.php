@@ -47,17 +47,13 @@ $(function(){
 <section id="wrapper">
   <form id="sendPost" action="timeline_post" method="post">
     <div id="postText">
-      <select name="category">
+      <select name="company">
       	<option value="">企業名を選択</option>
-        <option value="company1">givery Inc.</option>
-        <option value="company2">company2</option>
-        <option value="company3">company3</option>
+        <option value="company">givery Inc.</option>
       </select>
       <select name="category">
       	<option value="">場面を選択してください</option>
-      	<option value="test1">test1</option>
-      	<option value="test2">test2</option>
-      	<option value="test3">test3</option>
+      	<option value="test">書類選考について(sp)</option>
       </select>
       <textarea id="timelineText" name="postText" rows="8" cols="40" placeholder="この会社どんな感じ？"></textarea>
     </div>
