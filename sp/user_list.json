@@ -1,0 +1,28 @@
+{
+  "id":"3",
+  "name":"西村 拓馬",
+  "img":"img/user/icon1.jpg",
+  "univ":"HAL東京",
+  "grad":"2015"
+},
+{
+  "id":"4",
+  "name":"田中 義朗",
+  "img":"img/user/icon2.jpg",
+  "univ":"早稲田大学",
+  "grad":"2014"
+},
+{
+  "id":"5",
+  "name":"村上 友章",
+  "img":"img/user/icon3.jpg",
+  "univ":"東京薬科大学",
+  "grad":""
+},
+{
+  "id":"6",
+  "name":"新田　章太",
+  "img":"img/user/icon1.jpg",
+  "univ":"HAL東京",
+  "grad":"2015"
+}

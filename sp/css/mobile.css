@@ -420,7 +420,10 @@ aside ul li a {
   height: 40px;
   line-height: 40px;
 }
-#sendPost #sendBtn input[type="submit"] {
+#sendPost #sendBtn input[type="submit"],
+#sendPost #sendBtn a {
+  display: inline-block;
+  text-decoration: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   width: 100%;
