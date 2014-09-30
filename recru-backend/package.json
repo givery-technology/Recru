@@ -1,0 +1,20 @@
+{
+  "name": "RECRU",
+  "version": "0.0.0",
+  "description": "A service for new graduates in Japan to maximize their chances of employment.",
+  "main": "app.js",
+  "author": "Givery Technology <>",
+  "contributors": [{
+    "name": "",
+    "email": ""
+  }, {
+    "name": "",
+    "email": ""
+  }],
+  "dependencies": {
+    "express": "*",
+    "mongoose": "*",
+    "nconf": "*",
+    "winston": "*"
+  }
+}
