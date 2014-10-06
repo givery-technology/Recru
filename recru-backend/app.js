@@ -1,8 +1,21 @@
 var express = require('express'),
     nconf = require('nconf'),
     app = express(),
-    routes = require('./routes')(app);
+    mongoose = require('mongoose'),
+    routes = require('./routes')(app),
+    server;
 
 nconf.file({ file: 'config/settings.json' });
 
-app.listen(nconf.get('port'));
+// mongoose.connect(nconf.get('database:host'));
+
+function error(err, req, res, next) {
+  res.status(err.status || 500);
+  res.send({ error: err.message });
+}
+
+app.use(error);
+
+server = app.listen(nconf.get('port'), function() {
+  console.log('RECRU Server listening on port %d', server.address().port);
+});
