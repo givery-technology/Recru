@@ -14,6 +14,11 @@ function error(err, req, res, next) {
   res.send({ error: err.message });
 }
 
+app.use(function(req, res, next) {
+	console.log('%s %s %s', Date.now(), req.method, req.url);
+	next();
+});
+
 app.use(error);
 
 server = app.listen(nconf.get('port'), function() {

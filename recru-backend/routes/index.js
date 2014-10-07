@@ -1,5 +1,5 @@
 module.exports = function (app) {
-  app.route('/api')
+  app.route('/')
     .get(function(req, res, next) {
       // res.send('GET Recru!');
       res.json({
@@ -7,10 +7,12 @@ module.exports = function (app) {
       });
     })
     .post(function(req, res, next) {
-      res.send('POST Recru!');
+      // res.send(req.params);
+      res.send('Request recieved!');
+      // res.send('POST Recru!');
     });
 
-  app.route('/reviews')
+  app.route('/api')
     .get(function(req, res, next) {
       // res.send('GET Recru!');
       res.json({
