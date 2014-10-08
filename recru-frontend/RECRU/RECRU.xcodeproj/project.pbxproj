@@ -16,6 +16,9 @@
 		D32AD38719E2C98200FA6610 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32AD38519E2C98200FA6610 /* LaunchScreen.xib */; };
 		D32AD39319E2C98200FA6610 /* RECRUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD39219E2C98200FA6610 /* RECRUTests.m */; };
 		D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */; };
+		D3F201DC19E389F200B9EEC8 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F201DB19E389F200B9EEC8 /* PostViewController.m */; };
+		D3F201DF19E3CC7500B9EEC8 /* AddReviewForm.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F201DE19E3CC7500B9EEC8 /* AddReviewForm.m */; };
+		D3F201E219E3CE1400B9EEC8 /* AddReviewFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F201E119E3CE1400B9EEC8 /* AddReviewFormViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,12 @@
 		D32AD39219E2C98200FA6610 /* RECRUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RECRUTests.m; sourceTree = "<group>"; };
 		D3ACF1D019E2D80A0013D91C /* RecruAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecruAPIClient.h; path = "Web Services/RecruAPIClient.h"; sourceTree = "<group>"; };
 		D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecruAPIClient.m; path = "Web Services/RecruAPIClient.m"; sourceTree = "<group>"; };
+		D3F201DA19E389F200B9EEC8 /* PostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostViewController.h; path = "View Controllers/PostViewController.h"; sourceTree = "<group>"; };
+		D3F201DB19E389F200B9EEC8 /* PostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostViewController.m; path = "View Controllers/PostViewController.m"; sourceTree = "<group>"; };
+		D3F201DD19E3CC7500B9EEC8 /* AddReviewForm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddReviewForm.h; path = Models/AddReviewForm.h; sourceTree = "<group>"; };
+		D3F201DE19E3CC7500B9EEC8 /* AddReviewForm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddReviewForm.m; path = Models/AddReviewForm.m; sourceTree = "<group>"; };
+		D3F201E019E3CE1400B9EEC8 /* AddReviewFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AddReviewFormViewController.h; path = "View Controllers/AddReviewFormViewController.h"; sourceTree = "<group>"; };
+		D3F201E119E3CE1400B9EEC8 /* AddReviewFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AddReviewFormViewController.m; path = "View Controllers/AddReviewFormViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +159,12 @@
 		D3ACF1C819E2CC660013D91C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3F201DA19E389F200B9EEC8 /* PostViewController.h */,
+				D3F201DB19E389F200B9EEC8 /* PostViewController.m */,
 				D32AD37D19E2C98200FA6610 /* ViewController.h */,
 				D32AD37E19E2C98200FA6610 /* ViewController.m */,
+				D3F201E019E3CE1400B9EEC8 /* AddReviewFormViewController.h */,
+				D3F201E119E3CE1400B9EEC8 /* AddReviewFormViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -159,6 +172,8 @@
 		D3ACF1C919E2D1A60013D91C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D3F201DD19E3CC7500B9EEC8 /* AddReviewForm.h */,
+				D3F201DE19E3CC7500B9EEC8 /* AddReviewForm.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -310,7 +325,10 @@
 				D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */,
 				D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */,
 				D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */,
+				D3F201E219E3CE1400B9EEC8 /* AddReviewFormViewController.m in Sources */,
 				D32AD37919E2C98200FA6610 /* main.m in Sources */,
+				D3F201DC19E389F200B9EEC8 /* PostViewController.m in Sources */,
+				D3F201DF19E3CC7500B9EEC8 /* AddReviewForm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

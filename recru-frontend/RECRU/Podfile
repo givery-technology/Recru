@@ -5,6 +5,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 
 target "RECRU" do
 pod 'AFNetworking'
+pod 'FXForms'
 end
 
 target "RECRUTests" do

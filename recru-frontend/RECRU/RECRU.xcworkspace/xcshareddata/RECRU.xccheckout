@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A3C735BA-F788-4E2C-9D1C-A845BA2AD9A3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RECRU</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>4CA6E21F07981679EB3085361C20ADCEC4B1A6FC</key>
+		<string>https://github.com/givery-technology/Recru.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>recru-frontend/RECRU/RECRU.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>4CA6E21F07981679EB3085361C20ADCEC4B1A6FC</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/givery-technology/Recru.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>4CA6E21F07981679EB3085361C20ADCEC4B1A6FC</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>4CA6E21F07981679EB3085361C20ADCEC4B1A6FC</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Recru</string>
+		</dict>
+	</array>
+</dict>
+</plist>

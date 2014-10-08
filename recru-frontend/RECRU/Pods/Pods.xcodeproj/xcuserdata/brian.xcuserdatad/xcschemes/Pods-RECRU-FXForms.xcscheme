@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "15C42B8C0F892F82B36D6680"
-               BuildableName = "libPods-RECRU-AFNetworking.a"
-               BlueprintName = "Pods-RECRU-AFNetworking"
+               BlueprintIdentifier = "260D01D91C3D9328104CF11E"
+               BuildableName = "libPods-RECRU-FXForms.a"
+               BlueprintName = "Pods-RECRU-FXForms"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

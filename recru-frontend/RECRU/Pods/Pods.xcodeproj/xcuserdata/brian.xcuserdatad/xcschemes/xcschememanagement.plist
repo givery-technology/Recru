@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RECRU-FXForms.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RECRU.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>E99943D9312B19465B9D36CC</key>
+		<key>107B29BC20333205CDA81004</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>ED101DBDBD17306E109ADDE7</key>
+		<key>15C42B8C0F892F82B36D6680</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>260D01D91C3D9328104CF11E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

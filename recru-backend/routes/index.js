@@ -8,7 +8,7 @@ module.exports = function (app) {
     })
     .post(function(req, res, next) {
       // res.send(req.params);
-      res.send('Request recieved!');
+      res.send('This is new stuff!');
       // res.send('POST Recru!');
     });
 
