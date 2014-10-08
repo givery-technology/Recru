@@ -7,7 +7,7 @@
 //
 
 #import "AddReviewFormViewController.h"
-#import "AddreviewForm.h"
+#import "AddReviewForm.h"
 
 @interface AddReviewFormViewController ()
 
@@ -33,17 +33,39 @@
 
 //- (void)addReview:(UITableViewCell<FXFormFieldCell> *)cell {
 - (void)addReview {
-    NSString *post = [[NSString alloc] initWithFormat:@"{\"name\":\"test\"}"];
+    AddReviewForm *form = self.formController.form;
+    NSLog(@"%@", form.jobField);
+    NSDictionary *data = @{
+                           @"jobPosition" : form.position,
+                           @"additionalInformation" : form.additionalInformation};
+    NSData *jsonBody;
+    NSError *error1 = nil;
+    if ([NSJSONSerialization isValidJSONObject:data]) {
+        jsonBody = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error1];
+        
+        if (jsonBody != nil && error1 == nil) {
+            NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
+            
+            NSLog(@"JSON: %@", jsonString);
+//            [jsonString release];
+        }
+        
+    }
+
+//    NSString *post = [[NSString alloc] initWithFormat:@"{\"jobPosition\":\"test\",\"additionalInformation\":\"None\"}"];
     NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
-    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+//    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+//    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
     [request setURL:url];
     [request setHTTPMethod:@"POST"];
-    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setHTTPBody:postData];
+//    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [request setValue:[NSString stringWithFormat:@"%d", [(NSData *)jsonBody length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:jsonBody];
+//    [request setHTTPBody:postData];
     NSError *error = [[NSError alloc] init];
     NSHTTPURLResponse *response = nil;
     

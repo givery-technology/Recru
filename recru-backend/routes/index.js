@@ -9,6 +9,7 @@ module.exports = function (app) {
       });
     })
     .post(function(req, res, next) {
+      console.log(req.body);
       var review = new Review({
         jobPosition: req.body.jobPosition,
         additionalInformation: req.body.additionalInformation
