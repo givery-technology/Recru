@@ -2,12 +2,14 @@ var express = require('express'),
     nconf = require('nconf'),
     app = express(),
     mongoose = require('mongoose'),
+    bodyParser = require('body-parser'),
+    multer = require('multer'),
     routes,
     server;
 
 nconf.file({ file: 'config/settings.json' });
 
-// mongoose.connect(nconf.get('database:host'));
+mongoose.connect('mongodb://localhost:27017');
 
 function error(err, req, res, next) {
   res.status(err.status || 500);
@@ -19,6 +21,9 @@ app.use(function(req, res, next) {
 	next();
 });
 
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(multer());
 app.use(error);
 
 routes = require('./routes')(app);
