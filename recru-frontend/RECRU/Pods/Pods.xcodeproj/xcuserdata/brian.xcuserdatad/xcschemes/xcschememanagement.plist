@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-RECRU-Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-RECRU-FXForms.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>107B29BC20333205CDA81004</key>
+		<key>3BB08DA739FA464E45286ABF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>15C42B8C0F892F82B36D6680</key>
+		<key>D3BD98DA16322557359AB346</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>260D01D91C3D9328104CF11E</key>
+		<key>D533FA0ACA6F6957DBC0480A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D66F92A1A5C388DDE2821475</key>
 		<dict>
 			<key>primary</key>
 			<true/>

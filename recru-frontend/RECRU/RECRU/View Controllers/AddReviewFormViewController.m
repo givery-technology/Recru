@@ -33,57 +33,73 @@
 
 //- (void)addReview:(UITableViewCell<FXFormFieldCell> *)cell {
 - (void)addReview {
+    // New
     AddReviewForm *form = self.formController.form;
     NSLog(@"%@", form.jobField);
-    NSDictionary *data = @{
+    NSDictionary *newData = @{
                            @"jobPosition" : form.position,
-                           @"additionalInformation" : form.additionalInformation};
+                           @"additionalInformation" : form.additionalInformation,
+                           @"format" : @"json"};
     NSData *jsonBody;
     NSError *error1 = nil;
-    if ([NSJSONSerialization isValidJSONObject:data]) {
-        jsonBody = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error1];
+    if ([NSJSONSerialization isValidJSONObject:newData]) {
+        jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
         
         if (jsonBody != nil && error1 == nil) {
             NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
             
             NSLog(@"JSON: %@", jsonString);
-//            [jsonString release];
         }
         
     }
-
-//    NSString *post = [[NSString alloc] initWithFormat:@"{\"jobPosition\":\"test\",\"additionalInformation\":\"None\"}"];
-    NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
-//    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
-//    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setURL:url];
-    [request setHTTPMethod:@"POST"];
-//    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-//    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [request setValue:[NSString stringWithFormat:@"%d", [(NSData *)jsonBody length]] forHTTPHeaderField:@"Content-Length"];
-    [request setHTTPBody:jsonBody];
-//    [request setHTTPBody:postData];
-    NSError *error = [[NSError alloc] init];
-    NSHTTPURLResponse *response = nil;
-    
-    NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
-    
-    NSLog(@"Response code: %ld", (long)[response statusCode]);
-    
-    if ([response statusCode] >= 200 && [response statusCode] < 300) {
-        NSLog(@"OK");
-        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
-        NSLog(@"Response: %@", responseData);
-        [[[UIAlertView alloc] initWithTitle:@"Login Form Submitted"
-                                    message:responseData
-                                   delegate:nil
-                          cancelButtonTitle:nil
-                          otherButtonTitles:@"OK", nil] show];
-//        self.inputField.text = responseData;
-    }
+    RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
+    client.delegate = self;
+    [client submitNewReview:newData];
+    // End new
+//    AddReviewForm *form = self.formController.form;
+//    NSLog(@"%@", form.jobField);
+//    NSDictionary *data = @{
+//                           @"jobPosition" : form.position,
+//                           @"additionalInformation" : form.additionalInformation};
+//    NSData *jsonBody;
+//    NSError *error1 = nil;
+//    if ([NSJSONSerialization isValidJSONObject:data]) {
+//        jsonBody = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error1];
+//        
+//        if (jsonBody != nil && error1 == nil) {
+//            NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
+//            
+//            NSLog(@"JSON: %@", jsonString);
+//        }
+//        
+//    }
+//
+//    NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//    [request setURL:url];
+//    [request setHTTPMethod:@"POST"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+//    [request setValue:[NSString stringWithFormat:@"%d", [(NSData *)jsonBody length]] forHTTPHeaderField:@"Content-Length"];
+//    [request setHTTPBody:jsonBody];
+//    NSError *error = [[NSError alloc] init];
+//    NSHTTPURLResponse *response = nil;
+//    
+//    NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//    
+//    NSLog(@"Response code: %ld", (long)[response statusCode]);
+//    
+//    if ([response statusCode] >= 200 && [response statusCode] < 300) {
+//        NSLog(@"OK");
+//        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+//        NSLog(@"Response: %@", responseData);
+//        [[[UIAlertView alloc] initWithTitle:@"Login Form Submitted"
+//                                    message:responseData
+//                                   delegate:nil
+//                          cancelButtonTitle:nil
+//                          otherButtonTitles:@"OK", nil] show];
+////        self.inputField.text = responseData;
+//    }
 }
 /*
 #pragma mark - Navigation
@@ -94,5 +110,23 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)recruAPIClient:(RecruAPIClient *)client didSuccessfullyAddReview:(id)review {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Great Success!"
+                                                        message:@"Your review was successfully submitted!"
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
+
+- (void)recruAPIClient:(RecruAPIClient *)client didFailWithError:(NSError *)error {
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Submitting Review"
+                                                        message:[NSString stringWithFormat:@"%@", error]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+}
 
 @end

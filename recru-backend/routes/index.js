@@ -24,7 +24,7 @@ module.exports = function (app) {
         }
       });
 
-      res.send('Request received!');
+      res.send({ "result" : "success" });
 
       // var body = '';
 
@@ -59,7 +59,7 @@ module.exports = function (app) {
     .get(function(req, res, next) {
       // res.send('GET Recru!');
       res.json({
-        "message": "test"
+        "message": "this is api"
       });
     })
     .post(function(req, res, next) {
