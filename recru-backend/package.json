@@ -12,8 +12,10 @@
     "email": ""
   }],
   "dependencies": {
+    "body-parser": "*",
     "express": "*",
     "mongoose": "*",
+    "multer": "*",
     "nconf": "*",
     "winston": "*"
   }
