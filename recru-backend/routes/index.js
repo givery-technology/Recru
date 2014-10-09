@@ -1,5 +1,6 @@
 var Review = require('../models/review');
 
+// Todo: modularize routes
 module.exports = function (app) {
   app.route('/review')
     .get(function(req, res, next) {
@@ -19,7 +20,7 @@ module.exports = function (app) {
         jobField: req.body.jobField,
         additionalInformation: req.body.additionalInformation,
         interviewProcess: req.body.additionalInformation,
-        difficulty: req.body.diffficulty,
+        difficulty: req.body.difficulty,
         overallExperience: req.body.overallExperience,
         interviewOutcome: req.body.interviewOutcome,
         recommendEmployer: req.body.recommendEmployer
