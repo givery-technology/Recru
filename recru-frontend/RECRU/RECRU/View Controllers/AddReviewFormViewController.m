@@ -39,15 +39,16 @@
 //                              @"location" : [NSNumber numberWithInteger:form.location],
     NSDictionary *newData = @{
                               @"company" : form.company,
-                              @"location" : form.location,
+                              @"location" : [NSNumber numberWithInteger:form.location],
                            @"jobPosition" : form.jobPosition,
                               @"jobField" : form.jobField,
                               @"additionalInformation" : form.additionalInformation,
-                    @"interviewProcess" : form.interviewProcess,
-                              @"difficulty" : form.difficulty,
-                              @"overallExperience" : form.overallExperience,
-                              @"interviewOutcome" : form.interviewOutcome,
-                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]};
+//                    @"interviewProcess" : form.interviewProcess,
+                              @"difficulty" : @1, // form.difficulty,
+                              @"overallExperience" : @1, // form.overallExperience,
+//                              @"interviewOutcome" : form.interviewOutcome,
+//                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
+                              };
     NSData *jsonBody;
     NSError *error1 = nil;
     if ([NSJSONSerialization isValidJSONObject:newData]) {

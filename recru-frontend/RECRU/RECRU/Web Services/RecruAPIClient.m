@@ -34,7 +34,7 @@ static NSString * const RecruURLString = @"http://localhost:3000/";
 }
 
 - (void)submitNewReview:(NSDictionary *)review {
-    [self POST:@"/" parameters:review success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self POST:@"/review" parameters:review success:^(NSURLSessionDataTask *task, id responseObject) {
         //
         if ([self.delegate respondsToSelector:@selector(recruAPIClient:didSuccessfullyAddReview:)]) {
             NSLog(@"Success: Delegate responds to selector.");

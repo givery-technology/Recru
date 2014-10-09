@@ -18,6 +18,8 @@
                   FXFormFieldTitle: @"Company"},
                 
                 @{FXFormFieldKey: @"location",
+                  // Hard-coded for now, we'll move these out later
+                  FXFormFieldOptions: @[@"Tokyo", @"Yokohama", @"Saitama", @"Kyoto", @"Osaka"],
                   FXFormFieldPlaceholder: @"None",
                   FXFormFieldCell: [FXFormOptionPickerCell class]},
                 
@@ -27,7 +29,7 @@
                 @{FXFormFieldKey: @"jobField",
                   FXFormFieldTitle: @"Job Field"},
                 
-                @{FXFormFieldKey: @"",
+                @{FXFormFieldKey: @"additionalInformation",
                   FXFormFieldTitle: @"Additional Information",
                   FXFormFieldType: FXFormFieldTypeLongText},
                 
@@ -35,21 +37,6 @@
                   FXFormFieldAction: @"addReview"}];
     
     return _fields;
-//    return @[
-//             @"company",
-//             @{FXFormFieldKey: @"location",
-//               FXFormFieldOptions: @[@"Tokyo", @"Yokohama", @"Saitama", @"Kyoto", @"Osaka"],
-//               FXFormFieldPlaceholder: @"None",
-//               FXFormFieldCell: [FXFormOptionPickerCell class]},
-//             @"position",
-//             @"jobField",
-//             @{FXFormFieldKey: @"additionalInformation",
-//               FXFormFieldType: FXFormFieldTypeLongText,
-//               FXFormFieldTitle: @"Additional Information"},
-//             @{FXFormFieldTitle: @"Add Review",
-//               FXFormFieldHeader: @"",
-//               FXFormFieldAction: @"addReview"}
-//             ];
 };
 
 @end

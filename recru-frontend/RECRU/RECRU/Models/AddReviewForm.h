@@ -9,14 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <FXForms.h>
 
-typedef NS_ENUM(NSInteger, Location)
-{
-    LocationTokyo = 0,
-    LocationYokohama,
-    LocationSaitama,
-    LocationKyoto,
-    LocationOsaka
-};
+//typedef NS_ENUM(NSInteger, Location)
+//{
+//    LocationTokyo = 0,
+//    LocationYokohama,
+//    LocationSaitama,
+//    LocationKyoto,
+//    LocationOsaka
+//};
 
 typedef NS_ENUM(NSInteger, JobField) {
     Business = 0,
@@ -26,7 +26,7 @@ typedef NS_ENUM(NSInteger, JobField) {
 @interface AddReviewForm : NSObject <FXForm>
 
 @property (nonatomic, copy) NSString *company;
-@property (nonatomic, assign) Location location;
+//@property (nonatomic, assign) Location location;
 @property (nonatomic, copy) NSString *position;
 @property (nonatomic, copy) NSString *jobField;
 @property (nonatomic, copy) NSString *additionalInformation;

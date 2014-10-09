@@ -9,12 +9,22 @@
 #import <Foundation/Foundation.h>
 #import <FXForms.h>
 
+// Hard-coded for now, we'll fix this later
+typedef NS_ENUM(NSInteger, Location)
+{
+    LocationTokyo = 0,
+    LocationYokohama,
+    LocationSaitama,
+    LocationKyoto,
+    LocationOsaka
+};
+
 @interface Review : NSObject <FXForm>
 
 @property (nonatomic, strong, readonly) NSArray *fields;
 
 @property (nonatomic, copy) NSString *company;
-@property (nonatomic, copy) NSString *location;
+@property (nonatomic, assign) Location location;
 @property (nonatomic, copy) NSString *jobPosition;
 @property (nonatomic, copy) NSString *jobField;
 @property (nonatomic, copy) NSString *additionalInformation;

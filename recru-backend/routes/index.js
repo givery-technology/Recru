@@ -19,7 +19,7 @@ module.exports = function (app) {
         jobField: req.body.jobField,
         additionalInformation: req.body.additionalInformation,
         interviewProcess: req.body.additionalInformation,
-        difficulty: req.body.diffficulty,
+        difficulty: req.body.difficulty,
         overallExperience: req.body.overallExperience,
         interviewOutcome: req.body.interviewOutcome,
         recommendEmployer: req.body.recommendEmployer
