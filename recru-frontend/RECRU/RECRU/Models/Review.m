@@ -21,6 +21,12 @@
                   FXFormFieldPlaceholder: @"None",
                   FXFormFieldCell: [FXFormOptionPickerCell class]},
                 
+                @{FXFormFieldKey: @"jobPosition",
+                  FXFormFieldTitle: @"Job Position"},
+
+                @{FXFormFieldKey: @"jobField",
+                  FXFormFieldTitle: @"Job Field"},
+                
                 @{FXFormFieldKey: @"",
                   FXFormFieldTitle: @"Additional Information",
                   FXFormFieldType: FXFormFieldTypeLongText},

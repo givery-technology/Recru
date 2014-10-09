@@ -8,6 +8,7 @@
 
 #import "AddReviewFormViewController.h"
 #import "AddReviewForm.h"
+#import "Review.h"
 
 @interface AddReviewFormViewController ()
 
@@ -19,7 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.formController.form = [[Review alloc] init];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,19 +29,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)awakeFromNib {
-    self.formController.form = [[AddReviewForm alloc] init];
-}
-
 //- (void)addReview:(UITableViewCell<FXFormFieldCell> *)cell {
 - (void)addReview {
     // New
-    AddReviewForm *form = self.formController.form;
+    // AddReviewForm *form = self.formController.form;
+    
+    Review *form = self.formController.form;
     NSLog(@"%@", form.jobField);
     NSDictionary *newData = @{
                               @"company" : form.company,
-                              @"location" : [NSNumber numberWithInteger:form.location],
-                           @"jobPosition" : form.position,
+//                              @"location" : [NSNumber numberWithInteger:form.location],
+                              @"location" : form.location,
+                           @"jobPosition" : form.jobPosition,
                               @"jobField" : form.jobField,
                            @"additionalInformation" : form.additionalInformation};
     NSData *jsonBody;
