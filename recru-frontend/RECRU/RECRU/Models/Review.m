@@ -17,10 +17,10 @@
     _fields = @[@{FXFormFieldKey: @"company",
                   FXFormFieldTitle: @"Company"},
                 
+                // Hard-coded for now, we'll move these out later
                 @{FXFormFieldKey: @"location",
-                  // Hard-coded for now, we'll move these out later
                   FXFormFieldOptions: @[@"Tokyo", @"Yokohama", @"Saitama", @"Kyoto", @"Osaka"],
-                  FXFormFieldPlaceholder: @"None",
+                  FXFormFieldPlaceholder: @"Tokyo",
                   FXFormFieldCell: [FXFormOptionPickerCell class]},
                 
                 @{FXFormFieldKey: @"jobPosition",

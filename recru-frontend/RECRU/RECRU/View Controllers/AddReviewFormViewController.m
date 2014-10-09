@@ -31,39 +31,58 @@
 
 //- (void)addReview:(UITableViewCell<FXFormFieldCell> *)cell {
 - (void)addReview {
-    // New
-    // AddReviewForm *form = self.formController.form;
-    
     Review *form = self.formController.form;
-    NSLog(@"%@", form.jobField);
-//                              @"location" : [NSNumber numberWithInteger:form.location],
-    NSDictionary *newData = @{
-                              @"company" : form.company,
-                              @"location" : [NSNumber numberWithInteger:form.location],
-                           @"jobPosition" : form.jobPosition,
-                              @"jobField" : form.jobField,
-                              @"additionalInformation" : form.additionalInformation,
-//                    @"interviewProcess" : form.interviewProcess,
-                              @"difficulty" : @1, // form.difficulty,
-                              @"overallExperience" : @1, // form.overallExperience,
-//                              @"interviewOutcome" : form.interviewOutcome,
-//                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
-                              };
-    NSData *jsonBody;
-    NSError *error1 = nil;
-    if ([NSJSONSerialization isValidJSONObject:newData]) {
-        jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
-        
-        if (jsonBody != nil && error1 == nil) {
-            NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
+    
+    if (!form.company.length) {
+        [[[UIAlertView alloc] initWithTitle:@"No company entered!"
+                                    message:@"Enter a company name!"
+                                   delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"OK", nil] show];
+    } else if (!form.jobPosition.length) {
+        [[[UIAlertView alloc] initWithTitle:@"No job position entered!"
+                                    message:@"Enter a job position!"
+                                   delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"OK", nil] show];
+    } else if (!form.jobField.length) {
+        [[[UIAlertView alloc] initWithTitle:@"No job field entered!"
+                                    message:@"Enter a job field!"
+                                   delegate:nil
+                          cancelButtonTitle:nil
+                          otherButtonTitles:@"OK", nil] show];
+    } else {
+        NSLog(@"%@", form.jobField);
+        //                              @"location" : [NSNumber numberWithInteger:form.location],
+        NSDictionary *newData = @{
+                                  @"company" : form.company,
+                                  @"location" : [NSNumber numberWithInteger:form.location],
+                                  @"jobPosition" : form.jobPosition,
+                                  @"jobField" : form.jobField,
+                                  @"additionalInformation" : form.additionalInformation,
+                                  //                    @"interviewProcess" : form.interviewProcess,
+                                  @"difficulty" : @1, // form.difficulty,
+                                  @"overallExperience" : @1, // form.overallExperience,
+                                  //                              @"interviewOutcome" : form.interviewOutcome,
+                                  //                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
+                                  };
+        NSData *jsonBody;
+        NSError *error1 = nil;
+        if ([NSJSONSerialization isValidJSONObject:newData]) {
+            jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
             
-            NSLog(@"JSON: %@", jsonString);
+            if (jsonBody != nil && error1 == nil) {
+                NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
+                
+                NSLog(@"JSON: %@", jsonString);
+            }
+            
         }
-        
+        RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
+        client.delegate = self;
+        [client submitNewReview:newData];
     }
-    RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
-    client.delegate = self;
-    [client submitNewReview:newData];
+
     // End new
 //    AddReviewForm *form = self.formController.form;
 //    NSLog(@"%@", form.jobField);
