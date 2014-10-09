@@ -36,13 +36,18 @@
     
     Review *form = self.formController.form;
     NSLog(@"%@", form.jobField);
+//                              @"location" : [NSNumber numberWithInteger:form.location],
     NSDictionary *newData = @{
                               @"company" : form.company,
-//                              @"location" : [NSNumber numberWithInteger:form.location],
                               @"location" : form.location,
                            @"jobPosition" : form.jobPosition,
                               @"jobField" : form.jobField,
-                           @"additionalInformation" : form.additionalInformation};
+                              @"additionalInformation" : form.additionalInformation,
+                    @"interviewProcess" : form.interviewProcess,
+                              @"difficulty" : form.difficulty,
+                              @"overallExperience" : form.overallExperience,
+                              @"interviewOutcome" : form.interviewOutcome,
+                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]};
     NSData *jsonBody;
     NSError *error1 = nil;
     if ([NSJSONSerialization isValidJSONObject:newData]) {

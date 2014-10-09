@@ -22,5 +22,6 @@
 @property (nonatomic, copy) NSString *difficulty;
 @property (nonatomic, copy) NSString *overallExperience;
 @property (nonatomic, copy) NSString *interviewOutcome;
+@property (nonatomic) BOOL recommendEmployer;
 
 @end
