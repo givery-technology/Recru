@@ -16,6 +16,10 @@ schema = mongoose.Schema({
     recommendEmployer: Boolean  
 });
 
+schema.statics.findByCompany = function(companyName, cb) {
+  return this.model('Review').find({ 'company': companyName });
+};
+
 Review = mongoose.model('Review', schema);
 
 module.exports = Review;

@@ -1,8 +1,15 @@
 {
   "database": {
-  "name": "development",
-  "host": "localhost",
-  "port": "27017"
+    "development": {
+      "host": "localhost",
+      "port": "27017",
+      "uri": "mongodb://localhost:27017"
+    },
+    "production": {
+      "host": "",
+      "port": "",
+      "uri": ""
+    }
   },
   "port": 3000
 }
