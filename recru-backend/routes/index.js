@@ -1,18 +1,28 @@
 var Review = require('../models/review');
 
 module.exports = function (app) {
-  app.route('/')
+  app.route('/review')
     .get(function(req, res, next) {
-      // res.send('GET Recru!');
       res.json({
         "message": "test"
       });
     })
+
     .post(function(req, res, next) {
       console.log(req.body);
+      
       var review = new Review({
+        // author: req.session.user,
+        company: req.body.company,
+        location: req.body.location,
         jobPosition: req.body.jobPosition,
-        additionalInformation: req.body.additionalInformation
+        jobField: req.body.jobField,
+        additionalInformation: req.body.additionalInformation,
+        interviewProcess: req.body.additionalInformation,
+        difficulty: req.body.diffficulty,
+        overallExperience: req.body.overallExperience,
+        interviewOutcome: req.body.interviewOutcome,
+        recommendEmployer: req.body.recommendEmployer
       });
 
       review.save(function(err) {
@@ -25,41 +35,13 @@ module.exports = function (app) {
       });
 
       res.send({ "result" : "success" });
-
-      // var body = '';
-
-      // req.on('data', function (data) {
-      //   body += data;
-      // });
-
-      // req.on('end', function() {
-      //   console.log('done');
-      //   console.log(body);
-
-      //   var review = new Review({
-      //     name: 'Test',
-      //     jobPosition: body["jobPosition"],
-      //     additionalInformation: body["additionalInformation"]
-      //   });
-
-      //   review.save(function(err) {
-      //     if (err) {
-      //       console.log('Error saving!');
-      //       console.log(err);
-      //     } else {
-      //       console.log('Save OK!');
-      //     }
-      //   });
-      //   res.send('Request recieved!');
-      //   // res.send('POST Recru!');
-      // });
     });
 
-  app.route('/api')
+  app.route('/')
     .get(function(req, res, next) {
       // res.send('GET Recru!');
       res.json({
-        "message": "this is api"
+        "message": "this is test"
       });
     })
     .post(function(req, res, next) {
