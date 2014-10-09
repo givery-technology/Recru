@@ -18,6 +18,11 @@ typedef NS_ENUM(NSInteger, Location)
     LocationOsaka
 };
 
+typedef NS_ENUM(NSInteger, JobField) {
+    Business = 0,
+    Sports = 1
+};
+
 @interface AddReviewForm : NSObject <FXForm>
 
 @property (nonatomic, copy) NSString *company;

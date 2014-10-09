@@ -37,9 +37,11 @@
     AddReviewForm *form = self.formController.form;
     NSLog(@"%@", form.jobField);
     NSDictionary *newData = @{
+                              @"company" : form.company,
+                              @"location" : [NSNumber numberWithInteger:form.location],
                            @"jobPosition" : form.position,
-                           @"additionalInformation" : form.additionalInformation,
-                           @"format" : @"json"};
+                              @"jobField" : form.jobField,
+                           @"additionalInformation" : form.additionalInformation};
     NSData *jsonBody;
     NSError *error1 = nil;
     if ([NSJSONSerialization isValidJSONObject:newData]) {

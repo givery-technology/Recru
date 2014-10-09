@@ -10,8 +10,7 @@
 
 @implementation AddReviewForm
 
-- (NSArray *)fields
-{
+- (NSArray *)fields {
     return @[
              @"company",
              @{FXFormFieldKey: @"location",
@@ -20,7 +19,9 @@
                FXFormFieldCell: [FXFormOptionPickerCell class]},
              @"position",
              @"jobField",
-             @"additionalInformation",
+             @{FXFormFieldKey: @"additionalInformation",
+               FXFormFieldType: FXFormFieldTypeLongText,
+               FXFormFieldTitle: @"Additional Information"},
              @{FXFormFieldTitle: @"Add Review",
                FXFormFieldHeader: @"",
                FXFormFieldAction: @"addReview"}
