@@ -53,5 +53,40 @@ static NSString * const RecruURLString = @"http://localhost:3000/";
     }];
 }
 
+- (BFTask *)getReview:(NSString *)reviewId {
+    BFTaskCompletionSource *task2 = [BFTaskCompletionSource taskCompletionSource];
+    NSDictionary *parameters = @{@"id":reviewId};
+    
+    [self GET:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        // success handler
+        [task2 setResult:responseObject];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // failure handler
+        [task2 setError:error];
+    }];
+    return task2.task;
+}
+
+- (BFTask *)submitReivew:(NSDictionary *)parameters {
+    BFTaskCompletionSource *asyncTask = [BFTaskCompletionSource taskCompletionSource];
+    [self POST:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        // sucess hanlder
+        [asyncTask setResult:responseObject];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        // failure handler
+        [asyncTask setError:error];
+    }];
+    return asyncTask.task;
+}
+
+//- (NSDictionary *)retrieveReview:(NSInteger *)reviewId {
+//    NSDictionary *test;
+//    [self GET:@"/review" parameters:test success:^(NSURLSessionDataTask *task, id responseObject) {
+//        // success handler
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        // failure handler
+//    }];
+//    return test;
+//}
 
 @end

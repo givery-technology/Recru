@@ -19,6 +19,32 @@ typedef NS_ENUM(NSInteger, Location)
     LocationOsaka
 };
 
+typedef NS_ENUM(NSInteger, OverallExperience) {
+    Positive = 0,
+    Neutral,
+    Negative
+};
+
+typedef NS_ENUM(NSInteger, InterviewLength) {
+    FourtyToSixty = 0
+};
+
+typedef NS_ENUM(NSInteger, Difficulty) {
+    VeryHard = 0,
+    Hard,
+    Average,
+    Easy,
+    VeryEasy
+};
+
+typedef NS_ENUM(NSInteger, Competitiveness) {
+    Uncompetitive = 0,
+    SomewhatUncompetitive,
+    MildyComopetitive,
+    SomewhatCompetitive,
+    VeryCompetitive
+};
+
 @interface Review : NSObject <FXForm>
 
 @property (nonatomic, strong, readonly) NSArray *fields;

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3EAC67716081B3D578723D79 /* libPods-RECRU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A6256DE91FD08B2A9457B /* libPods-RECRU.a */; };
+		D321196D19F0ACAC0048ACF8 /* RecruAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = D321196C19F0ACAC0048ACF8 /* RecruAsync.m */; };
 		D32AD37919E2C98200FA6610 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37819E2C98200FA6610 /* main.m */; };
 		D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37B19E2C98200FA6610 /* AppDelegate.m */; };
 		D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37E19E2C98200FA6610 /* ViewController.m */; };
@@ -15,6 +16,7 @@
 		D32AD38419E2C98200FA6610 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32AD38319E2C98200FA6610 /* Images.xcassets */; };
 		D32AD38719E2C98200FA6610 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32AD38519E2C98200FA6610 /* LaunchScreen.xib */; };
 		D32AD39319E2C98200FA6610 /* RECRUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD39219E2C98200FA6610 /* RECRUTests.m */; };
+		D341F2D019F5388F00530F65 /* InterviewReviewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D341F2CF19F5388F00530F65 /* InterviewReviewDetailViewController.m */; };
 		D386576119E660F0009CE996 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = D386576019E660F0009CE996 /* Review.m */; };
 		D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */; };
 		D3F201DC19E389F200B9EEC8 /* PostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F201DB19E389F200B9EEC8 /* PostViewController.m */; };
@@ -36,6 +38,8 @@
 		61A5CB6379600237DB2F2BA7 /* Pods-RECRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RECRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RECRU/Pods-RECRU.debug.xcconfig"; sourceTree = "<group>"; };
 		798A6256DE91FD08B2A9457B /* libPods-RECRU.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RECRU.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C514C6CF20E3A565FA8CD8E /* Pods-RECRU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RECRU.release.xcconfig"; path = "Pods/Target Support Files/Pods-RECRU/Pods-RECRU.release.xcconfig"; sourceTree = "<group>"; };
+		D321196B19F0ACAC0048ACF8 /* RecruAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecruAsync.h; path = "Web Services/RecruAsync.h"; sourceTree = "<group>"; };
+		D321196C19F0ACAC0048ACF8 /* RecruAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecruAsync.m; path = "Web Services/RecruAsync.m"; sourceTree = "<group>"; };
 		D32AD37319E2C98200FA6610 /* RECRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RECRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32AD37719E2C98200FA6610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32AD37819E2C98200FA6610 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -49,6 +53,8 @@
 		D32AD38C19E2C98200FA6610 /* RECRUTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RECRUTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32AD39119E2C98200FA6610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32AD39219E2C98200FA6610 /* RECRUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RECRUTests.m; sourceTree = "<group>"; };
+		D341F2CE19F5388F00530F65 /* InterviewReviewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewReviewDetailViewController.h; path = "View Controllers/InterviewReviewDetailViewController.h"; sourceTree = "<group>"; };
+		D341F2CF19F5388F00530F65 /* InterviewReviewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewReviewDetailViewController.m; path = "View Controllers/InterviewReviewDetailViewController.m"; sourceTree = "<group>"; };
 		D386575F19E660EF009CE996 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = Models/Review.h; sourceTree = "<group>"; };
 		D386576019E660F0009CE996 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = Models/Review.m; sourceTree = "<group>"; };
 		D3ACF1D019E2D80A0013D91C /* RecruAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecruAPIClient.h; path = "Web Services/RecruAPIClient.h"; sourceTree = "<group>"; };
@@ -168,6 +174,8 @@
 				D32AD37E19E2C98200FA6610 /* ViewController.m */,
 				D3F201E019E3CE1400B9EEC8 /* AddReviewFormViewController.h */,
 				D3F201E119E3CE1400B9EEC8 /* AddReviewFormViewController.m */,
+				D341F2CE19F5388F00530F65 /* InterviewReviewDetailViewController.h */,
+				D341F2CF19F5388F00530F65 /* InterviewReviewDetailViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -188,6 +196,8 @@
 			children = (
 				D3ACF1D019E2D80A0013D91C /* RecruAPIClient.h */,
 				D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */,
+				D321196B19F0ACAC0048ACF8 /* RecruAsync.h */,
+				D321196C19F0ACAC0048ACF8 /* RecruAsync.m */,
 			);
 			name = "Web Services";
 			sourceTree = "<group>";
@@ -327,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D321196D19F0ACAC0048ACF8 /* RecruAsync.m in Sources */,
 				D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */,
 				D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */,
 				D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */,
@@ -335,6 +346,7 @@
 				D386576119E660F0009CE996 /* Review.m in Sources */,
 				D3F201DC19E389F200B9EEC8 /* PostViewController.m in Sources */,
 				D3F201DF19E3CC7500B9EEC8 /* AddReviewForm.m in Sources */,
+				D341F2D019F5388F00530F65 /* InterviewReviewDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

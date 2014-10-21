@@ -7,6 +7,8 @@
 //
 
 #import "AFHTTPSessionManager.h"
+#import "BFTask.h"
+#import "BFTaskCompletionSource.h"
 
 @protocol RecruAPIClientDelegate;
 
@@ -17,6 +19,8 @@
 + (RecruAPIClient *)sharedRecruAPIClient;
 - (instancetype)initWithBaseURL:(NSURL *)url;
 - (void)submitNewReview:(NSDictionary *)review;
+- (BFTask *)getReview:(NSString *)reviewId;
+- (BFTask *)submitReivew:(NSDictionary *)parameters;
 
 @end
 

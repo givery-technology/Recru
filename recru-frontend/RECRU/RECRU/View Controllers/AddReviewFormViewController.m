@@ -140,8 +140,8 @@
 */
 
 - (void)recruAPIClient:(RecruAPIClient *)client didSuccessfullyAddReview:(id)review {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Great Success!"
-                                                        message:@"Your review was successfully submitted!"
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review Submitted"
+                                                        message:@"Your review has been submitted!"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil];

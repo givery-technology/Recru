@@ -1,102 +1,90 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UYZ-ZD-Tyy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="WNe-68-ded">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Interview Review Detail View Controller-->
+        <scene sceneID="UMs-Sm-b6W">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="WNe-68-ded" customClass="InterviewReviewDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="yj0-sT-dMs"/>
+                        <viewControllerLayoutGuide type="bottom" id="plg-8g-czP"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Avt-0Z-qdp">
-                                <rect key="frame" x="277" y="285" width="49" height="30"/>
-                                <state key="normal" title="MEOW">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="176" y="285" width="49" height="30"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="176" y="185" width="49" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="loginClicked:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AH2-Rb-Gce"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="Avt-0Z-qdp" secondAttribute="centerX" id="VZp-9D-hnh"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="xdH-dN-cb4" kind="presentation" identifier="loginSuccess" id="eyx-Tc-SHS"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="177" y="136"/>
-        </scene>
-        <!--Post View Controller-->
-        <scene sceneID="SEJ-Om-Wrh">
-            <objects>
-                <viewController id="xdH-dN-cb4" customClass="PostViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Rb9-JQ-qUG"/>
-                        <viewControllerLayoutGuide type="bottom" id="VXg-V9-aLt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cjL-tu-lWk">
+                    <view key="view" contentMode="scaleToFill" id="c0m-2U-U0d">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Input" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IWo-6E-aT1">
-                                <rect key="frame" x="280" y="20" width="40" height="21"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmployerBackground" translatesAutoresizingMaskIntoConstraints="NO" id="n0c-Lj-Wcn">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="AXM-yK-xG1"/>
+                                    <constraint firstAttribute="width" constant="600" id="sLp-jj-KNg"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="EmployerLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NzJ-gI-8uJ">
+                                <rect key="frame" x="16" y="10" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="utK-c9-fSY"/>
+                                    <constraint firstAttribute="height" constant="80" id="vZx-j9-uzm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employer Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ItM-fl-z6d">
+                                <rect key="frame" x="104" y="10" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="180" y="289" width="40" height="21"/>
-                                </variation>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JqM-jl-TeI">
-                                <rect key="frame" x="180" y="49" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-7v-mDO">
-                                <rect key="frame" x="276" y="185" width="49" height="30"/>
-                                <state key="normal" title="Submit">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QWo-eR-Lvx">
+                                <rect key="frame" x="507" y="60" width="77" height="30"/>
+                                <state key="normal" title="Add review">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitData:" destination="xdH-dN-cb4" eventType="touchUpInside" id="Opv-38-fTf"/>
+                                    <segue destination="UYZ-ZD-Tyy" kind="show" id="Vcn-58-Jew"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 reviews" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nr1-71-YBb">
+                                <rect key="frame" x="104" y="28" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4cg-fS-oHI">
+                                <rect key="frame" x="16" y="108" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location ∙ Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BWV-a0-PFZ">
+                                <rect key="frame" x="16" y="137" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="IWo-6E-aT1" secondAttribute="centerX" id="7or-fA-6DO"/>
-                            <constraint firstAttribute="centerX" secondItem="JqM-jl-TeI" secondAttribute="centerX" id="fPT-Jn-GIx"/>
-                            <constraint firstAttribute="centerX" secondItem="Iq5-7v-mDO" secondAttribute="centerX" id="ybj-eb-eXz"/>
+                            <constraint firstItem="Nr1-71-YBb" firstAttribute="top" secondItem="ItM-fl-z6d" secondAttribute="bottom" constant="-3" id="3nP-Tv-oaK"/>
+                            <constraint firstAttribute="trailing" secondItem="QWo-eR-Lvx" secondAttribute="trailing" constant="16" id="4Ql-3J-HSg"/>
+                            <constraint firstItem="ItM-fl-z6d" firstAttribute="leading" secondItem="NzJ-gI-8uJ" secondAttribute="trailing" constant="8" id="BfE-ub-hwP"/>
+                            <constraint firstItem="n0c-Lj-Wcn" firstAttribute="leading" secondItem="c0m-2U-U0d" secondAttribute="leading" id="M4e-tN-bje"/>
+                            <constraint firstItem="Nr1-71-YBb" firstAttribute="leading" secondItem="ItM-fl-z6d" secondAttribute="leading" id="S0c-lo-ack"/>
+                            <constraint firstItem="yj0-sT-dMs" firstAttribute="leading" secondItem="NzJ-gI-8uJ" secondAttribute="trailing" constant="-96" id="VBv-uV-y1X"/>
+                            <constraint firstItem="QWo-eR-Lvx" firstAttribute="bottom" secondItem="NzJ-gI-8uJ" secondAttribute="bottom" id="W4f-Qv-GkU"/>
+                            <constraint firstItem="ItM-fl-z6d" firstAttribute="top" secondItem="NzJ-gI-8uJ" secondAttribute="top" id="iKB-SA-j2x"/>
+                            <constraint firstItem="n0c-Lj-Wcn" firstAttribute="centerY" secondItem="NzJ-gI-8uJ" secondAttribute="centerY" id="ob7-ah-IX5"/>
+                            <constraint firstItem="n0c-Lj-Wcn" firstAttribute="top" secondItem="c0m-2U-U0d" secondAttribute="top" id="t0U-AK-yUi"/>
+                            <constraint firstItem="NzJ-gI-8uJ" firstAttribute="leading" secondItem="c0m-2U-U0d" secondAttribute="leading" constant="16" id="xF2-TM-ECB"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="inputField" destination="JqM-jl-TeI" id="2NB-QX-Q2x"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vpb-X7-2Lf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lBF-SL-eQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="136"/>
+            <point key="canvasLocation" x="-65" y="948"/>
         </scene>
         <!--Add Review-->
         <scene sceneID="5is-tc-ilk">
@@ -136,4 +124,8 @@
             <point key="canvasLocation" x="720" y="948"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="EmployerBackground" width="1632" height="1224"/>
+        <image name="EmployerLogo" width="316" height="314"/>
+    </resources>
 </document>
