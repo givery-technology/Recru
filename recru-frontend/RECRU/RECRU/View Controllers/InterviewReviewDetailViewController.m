@@ -9,16 +9,39 @@
 #import "InterviewReviewDetailViewController.h"
 
 @interface InterviewReviewDetailViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *employerBackgroundImage;
-@property (weak, nonatomic) IBOutlet UIImageView *employerLogoIMage;
-@property (weak, nonatomic) IBOutlet UILabel *employerNameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *reviewCountLabel;
-
+@property (weak, nonatomic) IBOutlet UIImageView *companyLogoImage;
+@property (weak, nonatomic) IBOutlet UIImageView *companyBackgroundImage;
+@property (weak, nonatomic) IBOutlet UILabel *jobTitleLabel;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *jobTitleLabelWidthConstraint;
+@property (weak, nonatomic) IBOutlet UILabel *interviewDetailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *moreDetailLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
 @end
 
 @implementation InterviewReviewDetailViewController
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 - (IBAction)addReviewButton:(UIButton *)sender {
 }
 
+- (IBAction)loadTestReviewButton:(UIButton *)sender {
+    self.jobTitleLabel.text = @"Sofware Engineer";
+    //    [self.jobTitleLabel setNeedsUpdateConstraints];
+//    [self.jobTitleLabel updateConstraints];
+//    [super updateViewConstraints];
+
+    //    self.jobTitleLabel.setNeedsUpdateConstraints;
+//        self.jobTitleLabelWidthConstraint.constant =
+    // We cannot use sizeToFit with autolayout
+    // [self.jobTitleLabel sizeToFit];
+}
 @end
