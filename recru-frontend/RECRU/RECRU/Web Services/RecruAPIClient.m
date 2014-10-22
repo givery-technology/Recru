@@ -33,60 +33,42 @@ static NSString * const RecruURLString = @"http://localhost:3000/";
     return self;
 }
 
-- (void)submitNewReview:(NSDictionary *)review {
-    [self POST:@"/review" parameters:review success:^(NSURLSessionDataTask *task, id responseObject) {
-        //
-        if ([self.delegate respondsToSelector:@selector(recruAPIClient:didSuccessfullyAddReview:)]) {
-            NSLog(@"Success: Delegate responds to selector.");
-            [self.delegate recruAPIClient:self didSuccessfullyAddReview:responseObject];
-        } else {
-            NSLog(@"Success: Delegate does not respond to selector.");
-        }
+- (BFTask *)submitReview:(Review *)review {
+    BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
+    NSDictionary *parameters = @{
+                                 @"format": @"json",
+                                 @"data": @{
+                                         @"company": review.company,
+                                         @"location": [NSNumber numberWithInteger:review.location],
+                                         @"jobPosition": review.jobPosition,
+                                         @"jobField": review.jobField,
+                                         @"additionalInformation": review.additionalInformation,
+//                                         @"difficulty": review.difficulty,
+//                                         @"overallExperience": review.overallExperience,
+//                                         @"interviewOutcome": review.interviewOutcome,
+//                                         @"recommendEmployer": [NSNumber numberWithBool:review.recommendEmployer]
+                                         }};
+    
+    [self POST:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        [deferred setResult:responseObject];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        //
-        if ([self.delegate respondsToSelector:@selector(recruAPIClient:didFailWithError:)]) {
-            NSLog(@"Failure: Delegate responds to selector.");
-            [self.delegate recruAPIClient:self didFailWithError:error];
-        } else {
-            NSLog(@"Failure: Delegate does not respond to selector.");
-        }
+        NSLog(@"Error: %@", error);
+        [deferred setError:error];
     }];
+    
+    return deferred.task;
 }
 
 - (BFTask *)getReview:(NSString *)reviewId {
-    BFTaskCompletionSource *task2 = [BFTaskCompletionSource taskCompletionSource];
+    BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
     NSDictionary *parameters = @{@"id":reviewId};
     
     [self GET:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        // success handler
-        [task2 setResult:responseObject];
+        [deferred setResult:responseObject];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        // failure handler
-        [task2 setError:error];
+        [deferred setError:error];
     }];
-    return task2.task;
+    return deferred.task;
 }
-
-- (BFTask *)submitReivew:(NSDictionary *)parameters {
-    BFTaskCompletionSource *asyncTask = [BFTaskCompletionSource taskCompletionSource];
-    [self POST:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
-        // sucess hanlder
-        [asyncTask setResult:responseObject];
-    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        // failure handler
-        [asyncTask setError:error];
-    }];
-    return asyncTask.task;
-}
-
-//- (NSDictionary *)retrieveReview:(NSInteger *)reviewId {
-//    NSDictionary *test;
-//    [self GET:@"/review" parameters:test success:^(NSURLSessionDataTask *task, id responseObject) {
-//        // success handler
-//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//        // failure handler
-//    }];
-//    return test;
-//}
 
 @end

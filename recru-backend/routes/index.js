@@ -13,16 +13,16 @@ module.exports = function (app) {
       
       var review = new Review({
         // author: req.session.user,
-        company: req.body.company,
-        location: req.body.location,
-        jobPosition: req.body.jobPosition,
-        jobField: req.body.jobField,
-        additionalInformation: req.body.additionalInformation,
-        interviewProcess: req.body.additionalInformation,
-        difficulty: req.body.difficulty,
-        overallExperience: req.body.overallExperience,
-        interviewOutcome: req.body.interviewOutcome,
-        recommendEmployer: req.body.recommendEmployer
+        company: req.body.data.company,
+        location: req.body.data.location,
+        jobPosition: req.body.data.jobPosition,
+        jobField: req.body.data.jobField,
+        additionalInformation: req.body.data.additionalInformation,
+        interviewProcess: req.body.data.additionalInformation,
+        difficulty: req.body.data.difficulty,
+        overallExperience: req.body.data.overallExperience,
+        interviewOutcome: req.body.data.interviewOutcome,
+        recommendEmployer: req.body.data.recommendEmployer
       });
 
       review.save(function(err) {

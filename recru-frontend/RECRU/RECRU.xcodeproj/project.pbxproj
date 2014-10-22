@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3EAC67716081B3D578723D79 /* libPods-RECRU.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 798A6256DE91FD08B2A9457B /* libPods-RECRU.a */; };
-		D321196D19F0ACAC0048ACF8 /* RecruAsync.m in Sources */ = {isa = PBXBuildFile; fileRef = D321196C19F0ACAC0048ACF8 /* RecruAsync.m */; };
 		D32AD37919E2C98200FA6610 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37819E2C98200FA6610 /* main.m */; };
 		D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37B19E2C98200FA6610 /* AppDelegate.m */; };
 		D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD37E19E2C98200FA6610 /* ViewController.m */; };
@@ -38,8 +37,6 @@
 		61A5CB6379600237DB2F2BA7 /* Pods-RECRU.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RECRU.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RECRU/Pods-RECRU.debug.xcconfig"; sourceTree = "<group>"; };
 		798A6256DE91FD08B2A9457B /* libPods-RECRU.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RECRU.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C514C6CF20E3A565FA8CD8E /* Pods-RECRU.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RECRU.release.xcconfig"; path = "Pods/Target Support Files/Pods-RECRU/Pods-RECRU.release.xcconfig"; sourceTree = "<group>"; };
-		D321196B19F0ACAC0048ACF8 /* RecruAsync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecruAsync.h; path = "Web Services/RecruAsync.h"; sourceTree = "<group>"; };
-		D321196C19F0ACAC0048ACF8 /* RecruAsync.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecruAsync.m; path = "Web Services/RecruAsync.m"; sourceTree = "<group>"; };
 		D32AD37319E2C98200FA6610 /* RECRU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RECRU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D32AD37719E2C98200FA6610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D32AD37819E2C98200FA6610 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -196,8 +193,6 @@
 			children = (
 				D3ACF1D019E2D80A0013D91C /* RecruAPIClient.h */,
 				D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */,
-				D321196B19F0ACAC0048ACF8 /* RecruAsync.h */,
-				D321196C19F0ACAC0048ACF8 /* RecruAsync.m */,
 			);
 			name = "Web Services";
 			sourceTree = "<group>";
@@ -337,7 +332,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D321196D19F0ACAC0048ACF8 /* RecruAsync.m in Sources */,
 				D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */,
 				D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */,
 				D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */,

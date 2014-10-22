@@ -53,34 +53,39 @@
                           otherButtonTitles:@"OK", nil] show];
     } else {
         NSLog(@"%@", form.jobField);
-        //                              @"location" : [NSNumber numberWithInteger:form.location],
-        NSDictionary *newData = @{
-                                  @"company" : form.company,
-                                  @"location" : [NSNumber numberWithInteger:form.location],
-                                  @"jobPosition" : form.jobPosition,
-                                  @"jobField" : form.jobField,
-                                  @"additionalInformation" : form.additionalInformation,
-                                  //                    @"interviewProcess" : form.interviewProcess,
-                                  @"difficulty" : @1, // form.difficulty,
-                                  @"overallExperience" : @1, // form.overallExperience,
-                                  //                              @"interviewOutcome" : form.interviewOutcome,
-                                  //                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
-                                  };
-        NSData *jsonBody;
-        NSError *error1 = nil;
-        if ([NSJSONSerialization isValidJSONObject:newData]) {
-            jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
-            
-            if (jsonBody != nil && error1 == nil) {
-                NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
-                
-                NSLog(@"JSON: %@", jsonString);
-            }
-            
-        }
+//        //                              @"location" : [NSNumber numberWithInteger:form.location],
+//        NSDictionary *newData = @{
+//                                  @"company" : form.company,
+//                                  @"location" : [NSNumber numberWithInteger:form.location],
+//                                  @"jobPosition" : form.jobPosition,
+//                                  @"jobField" : form.jobField,
+//                                  @"additionalInformation" : form.additionalInformation,
+//                                  //                    @"interviewProcess" : form.interviewProcess,
+//                                  @"difficulty" : @1, // form.difficulty,
+//                                  @"overallExperience" : @1, // form.overallExperience,
+//                                  //                              @"interviewOutcome" : form.interviewOutcome,
+//                                  //                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
+//                                  };
+//        NSData *jsonBody;
+//        NSError *error1 = nil;
+//        if ([NSJSONSerialization isValidJSONObject:newData]) {
+//            jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
+//            
+//            if (jsonBody != nil && error1 == nil) {
+//                NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
+//                
+//                NSLog(@"JSON: %@", jsonString);
+//            }
+//            
+//        }
+        NSLog(@"Calling client");
         RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
-        client.delegate = self;
-        [client submitNewReview:newData];
+                NSLog(@"Submitting");
+        [client submitReview:form];
+        NSLog(@"Done!");
+        
+//        client.delegate = self;
+//        [client submitNewReview:newData];
     }
 
     // End new
@@ -139,22 +144,22 @@
 }
 */
 
-- (void)recruAPIClient:(RecruAPIClient *)client didSuccessfullyAddReview:(id)review {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review Submitted"
-                                                        message:@"Your review has been submitted!"
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
-}
-
-- (void)recruAPIClient:(RecruAPIClient *)client didFailWithError:(NSError *)error {
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Submitting Review"
-                                                        message:[NSString stringWithFormat:@"%@", error]
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-    [alertView show];
-}
+//- (void)recruAPIClient:(RecruAPIClient *)client didSuccessfullyAddReview:(id)review {
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Review Submitted"
+//                                                        message:@"Your review has been submitted!"
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//    [alertView show];
+//}
+//
+//- (void)recruAPIClient:(RecruAPIClient *)client didFailWithError:(NSError *)error {
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error Submitting Review"
+//                                                        message:[NSString stringWithFormat:@"%@", error]
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OK"
+//                                              otherButtonTitles:nil];
+//    [alertView show];
+//}
 
 @end
