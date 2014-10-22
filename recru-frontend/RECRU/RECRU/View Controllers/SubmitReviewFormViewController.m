@@ -6,17 +6,13 @@
 //  Copyright (c) 2014 Givery Technology. All rights reserved.
 //
 
-#import "AddReviewFormViewController.h"
-#import "AddReviewForm.h"
+#import "SubmitReviewFormViewController.h"
 #import "Review.h"
 
-@interface AddReviewFormViewController ()
-
-
-
+@interface SubmitReviewFormViewController ()
 @end
 
-@implementation AddReviewFormViewController
+@implementation SubmitReviewFormViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,7 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-//- (void)addReview:(UITableViewCell<FXFormFieldCell> *)cell {
 - (void)addReview {
     Review *form = self.formController.form;
     
@@ -53,39 +48,14 @@
                           otherButtonTitles:@"OK", nil] show];
     } else {
         NSLog(@"%@", form.jobField);
-//        //                              @"location" : [NSNumber numberWithInteger:form.location],
-//        NSDictionary *newData = @{
-//                                  @"company" : form.company,
-//                                  @"location" : [NSNumber numberWithInteger:form.location],
-//                                  @"jobPosition" : form.jobPosition,
-//                                  @"jobField" : form.jobField,
-//                                  @"additionalInformation" : form.additionalInformation,
-//                                  //                    @"interviewProcess" : form.interviewProcess,
-//                                  @"difficulty" : @1, // form.difficulty,
-//                                  @"overallExperience" : @1, // form.overallExperience,
-//                                  //                              @"interviewOutcome" : form.interviewOutcome,
-//                                  //                              @"recommendEmployer" : [NSNumber numberWithBool:form.recommendEmployer]
-//                                  };
-//        NSData *jsonBody;
-//        NSError *error1 = nil;
-//        if ([NSJSONSerialization isValidJSONObject:newData]) {
-//            jsonBody = [NSJSONSerialization dataWithJSONObject:newData options:NSJSONWritingPrettyPrinted error:&error1];
-//            
-//            if (jsonBody != nil && error1 == nil) {
-//                NSString *jsonString = [[NSString alloc] initWithData:jsonBody encoding:NSUTF8StringEncoding];
-//                
-//                NSLog(@"JSON: %@", jsonString);
-//            }
-//            
-//        }
         NSLog(@"Calling client");
         RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
                 NSLog(@"Submitting");
-        [client submitReview:form];
+        [[client submitReview:form]continueWithSuccessBlock:^id(BFTask *task) {
+            NSLog(@"%@", task.result);
+            return nil;
+        }];
         NSLog(@"Done!");
-        
-//        client.delegate = self;
-//        [client submitNewReview:newData];
     }
 
     // End new
@@ -161,5 +131,30 @@
 //                                              otherButtonTitles:nil];
 //    [alertView show];
 //}
-
+//- (IBAction)submitData:(id)sender {
+//    
+//    NSString *post = [[NSString alloc] initWithFormat:@"{\"name\":\"test\"}"];
+//    NSURL *url = [NSURL URLWithString:@"http://localhost:3000"];
+//    NSData *postData = [post dataUsingEncoding:NSASCIIStringEncoding allowLossyConversion:YES];
+//    NSString *postLength = [NSString stringWithFormat:@"%lu", (unsigned long)[postData length]];
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//    [request setURL:url];
+//    [request setHTTPMethod:@"POST"];
+//    [request setValue:postLength forHTTPHeaderField:@"Content-Length"];
+//    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+//    [request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+//    [request setHTTPBody:postData];
+//    NSError *error = [[NSError alloc] init];
+//    NSHTTPURLResponse *response = nil;
+//    
+//    NSData *urlData = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+//    
+//    NSLog(@"Response code: %ld", (long)[response statusCode]);
+//    
+//    if ([response statusCode] >= 200 && [response statusCode] < 300) {
+//        NSLog(@"OK");
+//        NSString *responseData = [[NSString alloc] initWithData:urlData encoding:NSUTF8StringEncoding];
+//        NSLog(@"Response: %@", responseData);
+//        self.inputField.text = responseData;
+//    }
 @end

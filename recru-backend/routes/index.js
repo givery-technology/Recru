@@ -34,7 +34,11 @@ module.exports = function (app) {
         }
       });
 
-      res.send({ "result" : "success" });
+      res.send({
+        "code": 200,
+        "status": "success",
+        "data" : review
+      });
     });
 
   app.route('/')

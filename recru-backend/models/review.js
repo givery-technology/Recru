@@ -10,7 +10,7 @@ schema = mongoose.Schema({
     jobField: String,
     additionalInformation: String,
     interviewProcess: String,
-    difficulty: { type: Number, min: 1, max: 10 },
+    difficulty: Number, // { type: Number, min: 1, max: 10 },
     overallExperience: String,
     interviewOutcome: String,
     recommendEmployer: Boolean  

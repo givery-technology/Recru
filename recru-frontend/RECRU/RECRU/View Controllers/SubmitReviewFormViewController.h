@@ -10,6 +10,6 @@
 #import <FXForms.h>
 #import "RecruAPIClient.h"
 
-@interface AddReviewFormViewController : FXFormViewController <RecruAPIClientDelegate>
+@interface SubmitReviewFormViewController : FXFormViewController <RecruAPIClientDelegate>
 
 @end

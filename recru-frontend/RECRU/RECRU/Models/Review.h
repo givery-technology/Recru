@@ -9,7 +9,49 @@
 #import <Foundation/Foundation.h>
 #import <FXForms.h>
 
-// Hard-coded for now, we'll fix this later
+// Overall Experience
+typedef NS_ENUM(NSInteger, OverallExperience) {
+    Positive = 0,
+    Neutral,
+    Negative
+};
+
+// Interview Length
+typedef NS_ENUM(NSInteger, InterviewLength) {
+    FourtyToSixty = 0
+};
+
+// Difficulty
+typedef NS_ENUM(NSInteger, Difficulty) {
+    VeryHard = 0,
+    Hard,
+    Average,
+    Easy,
+    VeryEasy
+};
+
+// Interview Outcome
+typedef NS_ENUM(NSInteger, InterviewOutcome) {
+    Offer,
+    NoOffer,
+    DoNotDisclose
+};
+
+// Steps
+// Multi-select
+
+// Position of Interviewers
+// Drop-down field
+
+// Personality of Interviewers
+// Enum
+
+// Position Applied For
+// String
+
+// Location
+//
+// Hard-coded for now, we'll fix this later and create a class for Locations
 typedef NS_ENUM(NSInteger, Location)
 {
     LocationTokyo = 0,
@@ -19,31 +61,7 @@ typedef NS_ENUM(NSInteger, Location)
     LocationOsaka
 };
 
-typedef NS_ENUM(NSInteger, OverallExperience) {
-    Positive = 0,
-    Neutral,
-    Negative
-};
-
-typedef NS_ENUM(NSInteger, InterviewLength) {
-    FourtyToSixty = 0
-};
-
-typedef NS_ENUM(NSInteger, Difficulty) {
-    VeryHard = 0,
-    Hard,
-    Average,
-    Easy,
-    VeryEasy
-};
-
-typedef NS_ENUM(NSInteger, Competitiveness) {
-    Uncompetitive = 0,
-    SomewhatUncompetitive,
-    MildyComopetitive,
-    SomewhatCompetitive,
-    VeryCompetitive
-};
+// Date of Interview
 
 @interface Review : NSObject <FXForm>
 

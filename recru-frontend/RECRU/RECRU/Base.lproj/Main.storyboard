@@ -194,7 +194,7 @@
         <!--Add Review-->
         <scene sceneID="5is-tc-ilk">
             <objects>
-                <viewController id="Ta1-ev-fEJ" customClass="AddReviewFormViewController" sceneMemberID="viewController">
+                <viewController id="Ta1-ev-fEJ" customClass="SubmitReviewFormViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uhQ-bT-zF3"/>
                         <viewControllerLayoutGuide type="bottom" id="eLq-JE-NTl"/>
