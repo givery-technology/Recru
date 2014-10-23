@@ -34,8 +34,16 @@
 }
 
 - (IBAction)loadTestReviewButton:(UIButton *)sender {
-    self.jobTitleLabel.text = @"Sofware Engineer";
-    //    [self.jobTitleLabel setNeedsUpdateConstraints];
+//    self.jobTitleLabel.text = @"Sofware Engineer";
+    RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
+    [[client getReview:@"544786337e23112ea54a0e17"]continueWithSuccessBlock:^id(BFTask *task) {
+        //
+        NSLog(@"%@", task.result);
+        NSDictionary *jsonData = task.result;
+        self.jobTitleLabel.text = jsonData[@"data"][@"jobPosition"];
+        return nil;
+    }];
+//    [self.jobTitleLabel setNeedsUpdateConstraints];
 //    [self.jobTitleLabel updateConstraints];
 //    [super updateViewConstraints];
 

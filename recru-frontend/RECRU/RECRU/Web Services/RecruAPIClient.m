@@ -11,6 +11,8 @@
 static NSString * const RecruAPIKey = @"LOLNOKEY";
 static NSString * const RecruURLString = @"http://localhost:3000/";
 
+static NSString * const kAPIReview = @"/review";
+
 @implementation RecruAPIClient
 
 + (RecruAPIClient *)sharedRecruAPIClient {

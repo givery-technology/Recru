@@ -7,7 +7,6 @@
 //
 
 #import "SubmitReviewFormViewController.h"
-#import "Review.h"
 
 @interface SubmitReviewFormViewController ()
 @end
@@ -50,7 +49,7 @@
         NSLog(@"%@", form.jobField);
         NSLog(@"Calling client");
         RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
-                NSLog(@"Submitting");
+        NSLog(@"Submitting");
         [[client submitReview:form]continueWithSuccessBlock:^id(BFTask *task) {
             NSLog(@"%@", task.result);
             return nil;

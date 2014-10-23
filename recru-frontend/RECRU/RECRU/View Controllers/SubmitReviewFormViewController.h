@@ -8,6 +8,7 @@
 
 //#import <UIKit/UIKit.h>
 #import <FXForms.h>
+#import "Review.h"
 #import "RecruAPIClient.h"
 
 @interface SubmitReviewFormViewController : FXFormViewController <RecruAPIClientDelegate>
