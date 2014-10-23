@@ -18,7 +18,7 @@
 
 + (RecruAPIClient *)sharedRecruAPIClient;
 - (instancetype)initWithBaseURL:(NSURL *)url;
-- (BFTask *)getReview:(NSString *)reviewId;
+- (BFTask *)getReviewWithId:(NSString *)ID;
 - (BFTask *)submitReview:(Review *)review;
 
 @end

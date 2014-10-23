@@ -78,4 +78,5 @@ typedef NS_ENUM(NSInteger, Location)
 @property (nonatomic, copy) NSString *interviewOutcome;
 @property (nonatomic) BOOL recommendEmployer;
 
+- (instancetype)initWithData:(NSDictionary *)dictionary;
 @end

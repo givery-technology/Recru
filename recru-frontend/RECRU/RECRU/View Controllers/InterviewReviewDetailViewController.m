@@ -17,12 +17,27 @@
 @property (weak, nonatomic) IBOutlet UILabel *stepsLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moreDetailLabel;
 @property (weak, nonatomic) IBOutlet UILabel *commentsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *additionalInformationLabel;
 @end
 
 @implementation InterviewReviewDetailViewController
+
+- (id)initWithReview:(Review *)review {
+    self = [super init];
+    if (self) {
+        self.review = review;
+    }
+    return self;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (void)loadReviewData {
+    self.jobTitleLabel.text = self.review.jobPosition;
+    self.additionalInformationLabel.text = self.review.additionalInformation;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,11 +51,20 @@
 - (IBAction)loadTestReviewButton:(UIButton *)sender {
 //    self.jobTitleLabel.text = @"Sofware Engineer";
     RecruAPIClient *client = [RecruAPIClient sharedRecruAPIClient];
-    [[client getReview:@"544786337e23112ea54a0e17"]continueWithSuccessBlock:^id(BFTask *task) {
+    [[client getReviewWithId:@"5448bb54f320c1a6be1a7d3d"]continueWithSuccessBlock:^id(BFTask *task) {
         //
-        NSLog(@"%@", task.result);
+        NSLog(@"Result: %@", task.result);
+        
+        // Is this fine or should we use NSJSONSerialization
         NSDictionary *jsonData = task.result;
-        self.jobTitleLabel.text = jsonData[@"data"][@"jobPosition"];
+        Review *temp = [[Review alloc] initWithData:jsonData[@"data"]];
+        
+        NSLog(@"Assigning review to self");
+        self.review = temp;
+        NSLog(@"Loading own review");
+//        self.review = jsonData;
+//        self.jobTitleLabel.text = jsonData[@"data"][@"jobPosition"];
+        [self loadReviewData];
         return nil;
     }];
 //    [self.jobTitleLabel setNeedsUpdateConstraints];

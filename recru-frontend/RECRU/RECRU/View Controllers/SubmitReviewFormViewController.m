@@ -7,6 +7,7 @@
 //
 
 #import "SubmitReviewFormViewController.h"
+#import "ReviewFormSubmittedConfirmation.h"
 
 @interface SubmitReviewFormViewController ()
 @end
@@ -22,6 +23,10 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)blah {
+    
 }
 
 - (void)addReview {
@@ -52,10 +57,48 @@
         NSLog(@"Submitting");
         [[client submitReview:form]continueWithSuccessBlock:^id(BFTask *task) {
             NSLog(@"%@", task.result);
+            [self performSegueWithIdentifier:@"shitfuck" sender:self];
+            
+//            ReviewFormSubmittedConfirmation *confirmationScreen = [[ReviewFormSubmittedConfirmation alloc] init];
+//            [self presentViewController:confirmationScreen animated:YES completion:^{
+//                
+////                ReviewFormSubmittedConfirmation *main = [[ReviewFormSubmittedConfirmation alloc] init];
+////                [self presentViewController:main animated:YES completion:^(void) {
+////                    UIWindow *window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
+////                    [window setRootViewController:main];
+////                }];
+//
+//                
+////                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+////                ReviewFormSubmittedConfirmation *viewController = (ReviewFormSubmittedConfirmation *)[storyboard instantiateViewControllerWithIdentifier:@"Shit"];
+//////                [self.navigationController pushViewController:viewController animated:YES];
+////                [self presentViewController:viewController animated:YES completion:nil];
+//                
+////                UIStoryboard *toystory = self.storyboard;
+////                ReviewFormSubmittedConfirmation *svc = [toystory instantiateViewControllerWithIdentifier:@"Shit"];
+////                [self presentViewController:svc animated:YES completion:nil];
+////                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"YourStoryboardName" bundle:nil];
+////                ReviewFormSubmittedConfirmation *shit = [[ReviewFormSubmittedConfirmation alloc] init];
+////                [self presentViewController:shit animated:YES completion:nil];
+////                [self.navigationController pushViewController:shit animated:YES];
+////                [self performSegueWithIdentifier:@"fuck" sender:self];
+//                
+//                
+////                UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main.storyboard" bundle:nil];
+////                ReviewFormSubmittedConfirmation *confirmationScreen = [storyboard instantiateViewControllerWithIdentifier:@"ReviewFormSubmittedConfirmation"];
+////                UIWindow *window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
+////                [window setRootViewController:confirmationScreen];
+//            }];
+
             return nil;
         }];
         NSLog(@"Done!");
     }
+//    GAMainController *main = [[GAMainController alloc]init];
+//    [self presentViewController:main animated:YES completion:^(void) {
+//        UIWindow *window = [[UIWindow alloc]initWithFrame:UIScreen.mainScreen.bounds];
+//        [window setRootViewController:main];
+//    }];
 
     // End new
 //    AddReviewForm *form = self.formController.form;

@@ -12,6 +12,15 @@
 
 @synthesize fields = _fields;
 
+- (instancetype)initWithData:(NSDictionary *)dictionary {
+    self = [super init];
+    if (self) {
+        _jobPosition = [dictionary objectForKey:@"jobPosition"];
+        _additionalInformation = [dictionary objectForKey:@"additionalInformation"];
+    }
+    return self;
+}
+
 - (NSArray *)fields {
     
     _fields = @[@{FXFormFieldKey: @"company",

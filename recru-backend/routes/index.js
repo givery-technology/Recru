@@ -35,14 +35,17 @@ module.exports = function (app) {
         if (err) {
           console.log('Error saving!');
           console.log(err);
+          res.send({
+            "status": "error",
+            "data" : err.message
+          });
         } else {
           console.log('Save OK!');
+          res.send({
+            "status": "success",
+            "data" : review
+          });
         }
-      });
-
-      res.send({
-        "status": "success",
-        "data" : review
       });
     });
 
@@ -50,7 +53,7 @@ module.exports = function (app) {
     .get(function(req, res, next) {
       console.log(req.body);
 
-      Review.find({ '_id': req.params.id }, function(err, review) {
+      Review.findOne({ '_id': req.params.id }, function(err, review) {
         if (err) {
           console.log(err);
           res.send({

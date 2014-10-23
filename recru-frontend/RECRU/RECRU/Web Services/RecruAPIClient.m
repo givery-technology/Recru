@@ -61,11 +61,16 @@ static NSString * const kAPIReview = @"/review";
     return deferred.task;
 }
 
-- (BFTask *)getReview:(NSString *)reviewId {
+- (BFTask *)getReviewWithId:(NSString *)ID {
     BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
-    NSDictionary *parameters = @{@"id":reviewId};
+//    NSDictionary *parameters = @{@"id":ID};
     
-    [self GET:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    NSString *endPoint = @"/review/";
+    endPoint = [endPoint stringByAppendingString:ID];
+    NSLog(@"Endpoint URL: %@", endPoint);
+    
+    [self GET:endPoint parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"OK");
         [deferred setResult:responseObject];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         [deferred setError:error];
