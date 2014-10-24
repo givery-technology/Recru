@@ -11,7 +11,8 @@
 static NSString * const RecruAPIKey = @"LOLNOKEY";
 static NSString * const RecruURLString = @"http://localhost:3000/";
 
-static NSString * const kAPIReview = @"/review";
+static NSString * const kAPIReview = @"/reviews";
+static NSString * const kAPIEndpointCompany = @"/companies";
 
 @implementation RecruAPIClient
 
@@ -26,12 +27,10 @@ static NSString * const kAPIReview = @"/review";
 
 - (instancetype)initWithBaseURL:(NSURL *)url {
     self = [super initWithBaseURL:url];
-    
     if (self) {
         self.responseSerializer = [AFJSONResponseSerializer serializer];
         self.requestSerializer = [AFJSONRequestSerializer serializer];
     }
-    
     return self;
 }
 
@@ -63,9 +62,8 @@ static NSString * const kAPIReview = @"/review";
 
 - (BFTask *)getReviewWithId:(NSString *)ID {
     BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
-//    NSDictionary *parameters = @{@"id":ID};
-    
     NSString *endPoint = @"/reviews/";
+    
     endPoint = [endPoint stringByAppendingString:ID];
     NSLog(@"Endpoint URL: %@", endPoint);
     

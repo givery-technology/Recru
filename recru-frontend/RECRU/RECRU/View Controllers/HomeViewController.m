@@ -67,18 +67,43 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    NSDictionary *tempDictionary = [self.listOfReviews objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [tempDictionary objectForKey:@"_id"];
-    if ([tempDictionary objectForKey:@"company"] != NULL) {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [tempDictionary objectForKey:@"company"]];
-    } else {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"No company field found"];
-    }
+    // Get our prototype cell
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    // Setup prototype cell
+    UIImageView *companyLogo = (UIImageView *)[cell.contentView viewWithTag:1];
+    UILabel *jobTitle = (UILabel *)[cell.contentView viewWithTag:2];
+    
+    companyLogo.image = [UIImage imageNamed:@"CompanyLogo"];
+    jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
     
     return cell;
     
+    // Company logo
+    // Author name
+    // Review date
+    // Job Title
+    // Company name
+    // Overall experience
+    // Likes
+    // Comments
+
+// Tutorial Template (working)
+//    static NSString *CellIdentifier = @"Cell";
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+//    NSDictionary *tempDictionary = [self.listOfReviews objectAtIndex:indexPath.row];
+//    
+//    cell.textLabel.text = [tempDictionary objectForKey:@"jobPosition"];
+//    if ([tempDictionary objectForKey:@"company"] != NULL) {
+//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [tempDictionary objectForKey:@"company"]];
+//    } else {
+//        cell.detailTextLabel.text = [NSString stringWithFormat:@"No company field found"];
+//    }
+//    
+//    return cell;
+    
+// Xcode Template
 //    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
 //    
 //    // Configure the cell...

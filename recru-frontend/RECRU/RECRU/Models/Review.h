@@ -81,4 +81,5 @@ typedef NS_ENUM(NSInteger, Location)
 @property (nonatomic) BOOL recommendEmployer;
 
 - (instancetype)initWithData:(NSDictionary *)dictionary;
+
 @end
