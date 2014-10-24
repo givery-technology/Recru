@@ -23,6 +23,7 @@
 @implementation InterviewReviewDetailViewController
 
 - (id)initWithReview:(Review *)review {
+    NSLog(@"Calling init");
     self = [super init];
     if (self) {
         self.review = review;
@@ -33,6 +34,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    NSLog(@"reviewId: %@", self.review.reviewId);
+    NSLog(@"shit: %@", self.shit);
+    if (self.shit) {
+        RecruAPIClient *recruClient = [RecruAPIClient sharedRecruAPIClient];
+        [[recruClient getReviewWithId:self.shit]continueWithSuccessBlock:^id(BFTask *task) {
+            //
+            NSLog(@"Result: %@", task.result);
+            
+            // Is this fine or should we use NSJSONSerialization
+            NSDictionary *jsonData = task.result;
+            Review *temp = [[Review alloc] initWithData:jsonData[@"data"]];
+            
+            NSLog(@"Assigning review to self");
+            self.review = temp;
+            NSLog(@"Loading own review");
+            //        self.review = jsonData;
+            //        self.jobTitleLabel.text = jsonData[@"data"][@"jobPosition"];
+            [self loadReviewData];
+            return nil;
+        }];
+    } else {
+        NSLog(@"No shit found");
+    }
 }
 
 - (void)loadReviewData {

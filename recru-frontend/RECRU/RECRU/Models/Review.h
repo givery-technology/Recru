@@ -67,6 +67,8 @@ typedef NS_ENUM(NSInteger, Location)
 
 @property (nonatomic, strong, readonly) NSArray *fields;
 
+@property (nonatomic, copy) NSString *reviewId;
+
 @property (nonatomic, copy) NSString *company;
 @property (nonatomic, assign) Location location;
 @property (nonatomic, copy) NSString *jobPosition;

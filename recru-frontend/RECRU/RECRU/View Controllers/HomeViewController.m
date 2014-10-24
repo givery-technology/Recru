@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "InterviewReviewDetailViewController.h"
 #import "RecruAPIClient.h"
 
 @interface HomeViewController ()
@@ -119,14 +120,21 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    InterviewReviewDetailViewController *detailViewController = (InterviewReviewDetailViewController *)segue.destinationViewController;
+    NSLog(@"Setting reviewId: %@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"]);
+    detailViewController.shit = [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"];
+//    detailViewController.review.reviewId = [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"];
+
+//    detailViewController.review = ;
+
 }
-*/
 
 @end

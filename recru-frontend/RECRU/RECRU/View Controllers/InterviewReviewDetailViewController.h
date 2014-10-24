@@ -12,6 +12,7 @@
 @interface InterviewReviewDetailViewController : UIViewController
 
 @property (strong, nonatomic) Review *review;
+@property (strong, nonatomic) NSString *shit;
 
 - (id)initWithReview:(Review *)review;
 

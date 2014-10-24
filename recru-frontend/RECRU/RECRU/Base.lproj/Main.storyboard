@@ -32,6 +32,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="WNe-68-ded" kind="show" id="vVm-4v-sRi"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
