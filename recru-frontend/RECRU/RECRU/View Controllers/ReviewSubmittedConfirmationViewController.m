@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Givery Technology. All rights reserved.
 //
 
-#import "ReviewFormSubmittedConfirmation.h"
+#import "ReviewSubmittedConfirmationViewController.h"
 
-@implementation ReviewFormSubmittedConfirmation
+@implementation ReviewSubmittedConfirmationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

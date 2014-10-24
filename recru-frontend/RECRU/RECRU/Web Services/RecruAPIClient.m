@@ -51,7 +51,7 @@ static NSString * const kAPIReview = @"/review";
 //                                         @"recommendEmployer": [NSNumber numberWithBool:review.recommendEmployer]
                                          }};
     
-    [self POST:@"/review" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+    [self POST:@"/reviews" parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
         [deferred setResult:responseObject];
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         NSLog(@"Error: %@", error);
@@ -65,7 +65,7 @@ static NSString * const kAPIReview = @"/review";
     BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
 //    NSDictionary *parameters = @{@"id":ID};
     
-    NSString *endPoint = @"/review/";
+    NSString *endPoint = @"/reviews/";
     endPoint = [endPoint stringByAppendingString:ID];
     NSLog(@"Endpoint URL: %@", endPoint);
     
@@ -78,4 +78,18 @@ static NSString * const kAPIReview = @"/review";
     return deferred.task;
 }
 
+- (BFTask *)getListOfReviews {
+    BFTaskCompletionSource *deferred = [BFTaskCompletionSource taskCompletionSource];
+    NSString *endPoint = @"/reviews";
+    
+    [self GET:endPoint parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"OK");
+        NSLog(@"Result: %@", responseObject);
+        [deferred setResult:responseObject];
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"Error");
+        [deferred setError:error];
+    }];
+    return deferred.task;
+}
 @end

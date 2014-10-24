@@ -16,11 +16,12 @@
 		D32AD38719E2C98200FA6610 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32AD38519E2C98200FA6610 /* LaunchScreen.xib */; };
 		D32AD39319E2C98200FA6610 /* RECRUTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D32AD39219E2C98200FA6610 /* RECRUTests.m */; };
 		D341F2D019F5388F00530F65 /* InterviewReviewDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D341F2CF19F5388F00530F65 /* InterviewReviewDetailViewController.m */; };
-		D36DDE8D19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.m in Sources */ = {isa = PBXBuildFile; fileRef = D36DDE8C19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.m */; };
+		D36DDE8D19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D36DDE8C19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.m */; };
 		D36DDE8F19F8FB74004513B9 /* fuji.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D36DDE8E19F8FB74004513B9 /* fuji.jpg */; };
 		D386576119E660F0009CE996 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = D386576019E660F0009CE996 /* Review.m */; };
 		D38C073C19F8D5ED0061E64B /* ConfirmationBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D38C073B19F8D5ED0061E64B /* ConfirmationBaseViewController.m */; };
 		D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */; };
+		D3E458A419F9F09B004F5A86 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3E458A319F9F09B004F5A86 /* HomeViewController.m */; };
 		D3F201E219E3CE1400B9EEC8 /* SubmitReviewFormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3F201E119E3CE1400B9EEC8 /* SubmitReviewFormViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -53,8 +54,8 @@
 		D32AD39219E2C98200FA6610 /* RECRUTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RECRUTests.m; sourceTree = "<group>"; };
 		D341F2CE19F5388F00530F65 /* InterviewReviewDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InterviewReviewDetailViewController.h; path = "View Controllers/InterviewReviewDetailViewController.h"; sourceTree = "<group>"; };
 		D341F2CF19F5388F00530F65 /* InterviewReviewDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InterviewReviewDetailViewController.m; path = "View Controllers/InterviewReviewDetailViewController.m"; sourceTree = "<group>"; };
-		D36DDE8B19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewFormSubmittedConfirmation.h; path = "View Controllers/ReviewFormSubmittedConfirmation.h"; sourceTree = "<group>"; };
-		D36DDE8C19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewFormSubmittedConfirmation.m; path = "View Controllers/ReviewFormSubmittedConfirmation.m"; sourceTree = "<group>"; };
+		D36DDE8B19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReviewSubmittedConfirmationViewController.h; path = "View Controllers/ReviewSubmittedConfirmationViewController.h"; sourceTree = "<group>"; };
+		D36DDE8C19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReviewSubmittedConfirmationViewController.m; path = "View Controllers/ReviewSubmittedConfirmationViewController.m"; sourceTree = "<group>"; };
 		D36DDE8E19F8FB74004513B9 /* fuji.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fuji.jpg; sourceTree = "<group>"; };
 		D386575F19E660EF009CE996 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Review.h; path = Models/Review.h; sourceTree = "<group>"; };
 		D386576019E660F0009CE996 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Review.m; path = Models/Review.m; sourceTree = "<group>"; };
@@ -62,6 +63,8 @@
 		D38C073B19F8D5ED0061E64B /* ConfirmationBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ConfirmationBaseViewController.m; path = "View Controllers/ConfirmationBaseViewController.m"; sourceTree = "<group>"; };
 		D3ACF1D019E2D80A0013D91C /* RecruAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecruAPIClient.h; path = "Web Services/RecruAPIClient.h"; sourceTree = "<group>"; };
 		D3ACF1D119E2D80A0013D91C /* RecruAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecruAPIClient.m; path = "Web Services/RecruAPIClient.m"; sourceTree = "<group>"; };
+		D3E458A219F9F09B004F5A86 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = "View Controllers/HomeViewController.h"; sourceTree = "<group>"; };
+		D3E458A319F9F09B004F5A86 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = "View Controllers/HomeViewController.m"; sourceTree = "<group>"; };
 		D3F201E019E3CE1400B9EEC8 /* SubmitReviewFormViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SubmitReviewFormViewController.h; path = "View Controllers/SubmitReviewFormViewController.h"; sourceTree = "<group>"; };
 		D3F201E119E3CE1400B9EEC8 /* SubmitReviewFormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SubmitReviewFormViewController.m; path = "View Controllers/SubmitReviewFormViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -168,6 +171,7 @@
 		D3ACF1C819E2CC660013D91C /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D3E4589E19F9EF71004F5A86 /* Home */,
 				D38C073A19F8D5ED0061E64B /* ConfirmationBaseViewController.h */,
 				D38C073B19F8D5ED0061E64B /* ConfirmationBaseViewController.m */,
 				D32AD37D19E2C98200FA6610 /* ViewController.h */,
@@ -210,10 +214,19 @@
 			children = (
 				D3F201E019E3CE1400B9EEC8 /* SubmitReviewFormViewController.h */,
 				D3F201E119E3CE1400B9EEC8 /* SubmitReviewFormViewController.m */,
-				D36DDE8B19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.h */,
-				D36DDE8C19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.m */,
+				D36DDE8B19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.h */,
+				D36DDE8C19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.m */,
 			);
 			name = "Submit Review Form";
+			sourceTree = "<group>";
+		};
+		D3E4589E19F9EF71004F5A86 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				D3E458A219F9F09B004F5A86 /* HomeViewController.h */,
+				D3E458A319F9F09B004F5A86 /* HomeViewController.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -352,9 +365,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36DDE8D19F8DFC8004513B9 /* ReviewFormSubmittedConfirmation.m in Sources */,
+				D36DDE8D19F8DFC8004513B9 /* ReviewSubmittedConfirmationViewController.m in Sources */,
 				D32AD37F19E2C98200FA6610 /* ViewController.m in Sources */,
 				D3ACF1D219E2D80A0013D91C /* RecruAPIClient.m in Sources */,
+				D3E458A419F9F09B004F5A86 /* HomeViewController.m in Sources */,
 				D32AD37C19E2C98200FA6610 /* AppDelegate.m in Sources */,
 				D3F201E219E3CE1400B9EEC8 /* SubmitReviewFormViewController.m in Sources */,
 				D38C073C19F8D5ED0061E64B /* ConfirmationBaseViewController.m in Sources */,

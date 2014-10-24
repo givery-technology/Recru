@@ -8,6 +8,6 @@
 
 #import "ConfirmationBaseViewController.h"
 
-@interface ReviewFormSubmittedConfirmation : ConfirmationBaseViewController
+@interface ReviewSubmittedConfirmationViewController : ConfirmationBaseViewController
 
 @end

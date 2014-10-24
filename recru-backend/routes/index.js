@@ -1,17 +1,23 @@
 var Review = require('../models/review');
 
 module.exports = function (app) {
-  app.route('/review')
+  app.route('/reviews')
     .get(function(req, res, next) {
       console.log(req.body);
-
-      Review.findOne({}, function(err, review) {
-        console.log(review);
+      Review.find({}, '_id company jobPosition', function(err, results) {
+        console.log(results);
         res.send({
           "status": "success",
-          "data": review
+          "data": results
         });
       });
+      // Review.findOne({}, function(err, review) {
+      //   console.log(review);
+      //   res.send({
+      //     "status": "success",
+      //     "data": review
+      //   });
+      // });
     })
 
     .post(function(req, res, next) {
@@ -49,7 +55,7 @@ module.exports = function (app) {
       });
     });
 
-  app.route('/review/:id')
+  app.route('/reviews/:id')
     .get(function(req, res, next) {
       console.log(req.body);
 
