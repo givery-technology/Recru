@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "InterviewReviewDetailViewController.h"
 #import "RecruAPIClient.h"
+#import "HomeTableViewCell.h"
 
 @interface HomeViewController ()
 @property (strong, nonatomic) NSArray *listOfReviews;
@@ -18,6 +19,9 @@
 @implementation HomeViewController
 
 - (void)viewDidLoad {
+    self.tableView.estimatedRowHeight = 100.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
     RecruAPIClient *recruClient = [RecruAPIClient sharedRecruAPIClient];
     [super viewDidLoad];
     
@@ -68,15 +72,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"Cell";
     
-    // Get our prototype cell
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    HomeTableViewCell *cell = (HomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSDictionary *review = [self.listOfReviews objectAtIndex:indexPath.row];
     
-    // Setup prototype cell
-    UIImageView *companyLogo = (UIImageView *)[cell.contentView viewWithTag:1];
-    UILabel *jobTitle = (UILabel *)[cell.contentView viewWithTag:2];
-    
-    companyLogo.image = [UIImage imageNamed:@"CompanyLogo"];
-    jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
+    if ([review objectForKey:@"author"] != NULL) {
+        cell.author.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"author"]];
+    } else {
+        cell.author.text = @"Anonymous";
+    }
+    cell.jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
+    cell.companyName.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"company"]];
     
     return cell;
     
@@ -88,6 +93,21 @@
     // Overall experience
     // Likes
     // Comments
+    
+// Prototype Cell Template (working)
+//    static NSString *CellIdentifier = @"Cell";
+//    
+//    // Get our prototype cell
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+//    
+//    // Setup prototype cell
+//    UIImageView *companyLogo = (UIImageView *)[cell.contentView viewWithTag:1];
+//    UILabel *jobTitle = (UILabel *)[cell.contentView viewWithTag:2];
+//    
+//    companyLogo.image = [UIImage imageNamed:@"CompanyLogo"];
+//    jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
+//    
+//    return cell;
 
 // Tutorial Template (working)
 //    static NSString *CellIdentifier = @"Cell";
