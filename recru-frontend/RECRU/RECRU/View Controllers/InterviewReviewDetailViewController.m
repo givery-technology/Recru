@@ -36,10 +36,10 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.edgesForExtendedLayout = UIRectEdgeNone;
     NSLog(@"reviewId: %@", self.review.reviewId);
-    NSLog(@"shit: %@", self.shit);
-    if (self.shit) {
+    NSLog(@"tempId: %@", self.tempId);
+    if (self.tempId) {
         RecruAPIClient *recruClient = [RecruAPIClient sharedRecruAPIClient];
-        [[recruClient getReviewWithId:self.shit]continueWithSuccessBlock:^id(BFTask *task) {
+        [[recruClient getReviewWithId:self.tempId]continueWithSuccessBlock:^id(BFTask *task) {
             //
             NSLog(@"Result: %@", task.result);
             
@@ -56,7 +56,7 @@
             return nil;
         }];
     } else {
-        NSLog(@"No shit found");
+        NSLog(@"No review found");
     }
 }
 

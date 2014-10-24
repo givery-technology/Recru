@@ -12,8 +12,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    NSLog(@"This shit loaded");
+    NSLog(@"ReviewSubmittedConfirmation viewDidLoad.");
 }
 
 @end

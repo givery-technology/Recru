@@ -18,6 +18,16 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="24h-MR-zmf" id="wA0-ic-c6A">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Job Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wq-Ar-Xja">
+                                            <rect key="frame" x="100" y="24" width="492" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="A5G-so-mT3"/>
+                                                <constraint firstAttribute="width" constant="492" id="GcT-0L-xCS"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                         <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CompanyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NT5-51-JIR">
                                             <rect key="frame" x="8" y="8" width="84" height="84"/>
                                             <constraints>
@@ -25,29 +35,45 @@
                                                 <constraint firstAttribute="height" constant="84" id="vly-zV-Xys"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrZ-Id-EYZ">
-                                            <rect key="frame" x="99" y="8" width="57" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FrZ-Id-EYZ">
+                                            <rect key="frame" x="100" y="9" width="246" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="246" id="lKf-o1-LBh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-Ms-Q6c">
+                                            <rect key="frame" x="100" y="44" width="492" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="492" id="EaZ-Ng-o38"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Company" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGG-Ms-Q6c">
-                                            <rect key="frame" x="99" y="71" width="287" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Job Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7wq-Ar-Xja">
-                                            <rect key="frame" x="99" y="39" width="133" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUu-zS-vmx">
+                                            <rect key="frame" x="344" y="9" width="246" height="12"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="246" id="Dp6-ZY-011"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="NT5-51-JIR" firstAttribute="top" secondItem="wA0-ic-c6A" secondAttribute="top" constant="8" id="AUD-Aq-1lo"/>
+                                        <constraint firstItem="FrZ-Id-EYZ" firstAttribute="leading" secondItem="wA0-ic-c6A" secondAttribute="leading" constant="100" id="CxV-ZK-zyd"/>
                                         <constraint firstAttribute="bottom" secondItem="NT5-51-JIR" secondAttribute="bottom" constant="7" id="H71-9U-EX5"/>
+                                        <constraint firstItem="VGG-Ms-Q6c" firstAttribute="top" secondItem="7wq-Ar-Xja" secondAttribute="bottom" constant="-1" id="Hkd-Nb-1pZ"/>
                                         <constraint firstItem="NT5-51-JIR" firstAttribute="leading" secondItem="wA0-ic-c6A" secondAttribute="leading" constant="8" id="c66-Fk-A4K"/>
+                                        <constraint firstItem="7wq-Ar-Xja" firstAttribute="leading" secondItem="wA0-ic-c6A" secondAttribute="leading" constant="100" id="dra-fe-cZl"/>
+                                        <constraint firstItem="7wq-Ar-Xja" firstAttribute="top" secondItem="wA0-ic-c6A" secondAttribute="top" constant="24" id="f7R-eq-sBP"/>
+                                        <constraint firstItem="FrZ-Id-EYZ" firstAttribute="top" secondItem="wA0-ic-c6A" secondAttribute="top" constant="9" id="ntd-DE-G9I"/>
+                                        <constraint firstItem="zUu-zS-vmx" firstAttribute="top" secondItem="wA0-ic-c6A" secondAttribute="top" constant="9" id="oPT-0x-wcC"/>
+                                        <constraint firstAttribute="trailing" secondItem="zUu-zS-vmx" secondAttribute="trailing" constant="10" id="quD-MR-pnf"/>
+                                        <constraint firstItem="VGG-Ms-Q6c" firstAttribute="leading" secondItem="wA0-ic-c6A" secondAttribute="leading" constant="100" id="vhp-Wy-RRk"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -64,11 +90,18 @@
                             <outlet property="delegate" destination="GH0-Ut-KVc" id="Okd-by-qA4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="SY0-nl-DAR"/>
+                    <navigationItem key="navigationItem" id="SY0-nl-DAR">
+                        <barButtonItem key="rightBarButtonItem" title="Add Review" id="ijv-ep-tbW">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="Ta1-ev-fEJ" kind="show" id="USg-Ps-zxm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ubM-k4-nty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="941"/>
+            <point key="canvasLocation" x="817" y="937"/>
         </scene>
         <!--Interview Review-->
         <scene sceneID="UMs-Sm-b6W">
@@ -248,7 +281,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Interview Review" id="5Fo-an-tAJ">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="DQq-fD-hQY"/>
+                        <barButtonItem key="backBarButtonItem" id="DQq-fD-hQY"/>
                     </navigationItem>
                     <connections>
                         <outlet property="additionalInformationLabel" destination="3E7-ph-jR7" id="6LL-YO-VHw"/>
@@ -262,7 +295,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lBF-SL-eQk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1559" y="948"/>
+            <point key="canvasLocation" x="817" y="1651"/>
         </scene>
         <!--Add Review-->
         <scene sceneID="5is-tc-ilk">
@@ -284,12 +317,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJS-MF-tNT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2296" y="948"/>
+            <point key="canvasLocation" x="1538" y="937"/>
         </scene>
         <!--Review Submitted Confirmation View Controller-->
         <scene sceneID="jca-wT-eB6">
             <objects>
-                <viewController storyboardIdentifier="Shit" id="7jr-vk-NIj" customClass="ReviewSubmittedConfirmationViewController" sceneMemberID="viewController">
+                <viewController id="7jr-vk-NIj" customClass="ReviewSubmittedConfirmationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="f8F-E8-MuV"/>
                         <viewControllerLayoutGuide type="bottom" id="75M-r6-1L8"/>
@@ -330,7 +363,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rG4-dh-PeN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3013" y="948"/>
+            <point key="canvasLocation" x="1538" y="1651"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="96I-nZ-mNB">
@@ -352,11 +385,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dA4-uO-vFK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5" y="948"/>
+            <point key="canvasLocation" x="115" y="937"/>
         </scene>
     </scenes>
     <resources>
         <image name="CompanyBackground" width="1632" height="1224"/>
         <image name="CompanyLogo" width="316" height="314"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="USg-Ps-zxm"/>
+    </inferredMetricsTieBreakers>
 </document>

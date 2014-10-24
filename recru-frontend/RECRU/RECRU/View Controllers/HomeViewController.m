@@ -74,61 +74,34 @@
     
     HomeTableViewCell *cell = (HomeTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     NSDictionary *review = [self.listOfReviews objectAtIndex:indexPath.row];
+
+    // Company logo
+    if ([review objectForKey:@"companyLogoURL"] != NULL) {
+    } else {
+        cell.companyLogo.image = [UIImage imageNamed:@"CompanyLogo"];
+    }
     
+    // Author name
     if ([review objectForKey:@"author"] != NULL) {
         cell.author.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"author"]];
     } else {
         cell.author.text = @"Anonymous";
     }
+    
+    // Job Title
     cell.jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
+    
+    // Company name
     cell.companyName.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"company"]];
+
+    // Review date
+    cell.reviewDate.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"reviewDate"]];
     
     return cell;
-    
-    // Company logo
-    // Author name
-    // Review date
-    // Job Title
-    // Company name
+
     // Overall experience
     // Likes
     // Comments
-    
-// Prototype Cell Template (working)
-//    static NSString *CellIdentifier = @"Cell";
-//    
-//    // Get our prototype cell
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-//    
-//    // Setup prototype cell
-//    UIImageView *companyLogo = (UIImageView *)[cell.contentView viewWithTag:1];
-//    UILabel *jobTitle = (UILabel *)[cell.contentView viewWithTag:2];
-//    
-//    companyLogo.image = [UIImage imageNamed:@"CompanyLogo"];
-//    jobTitle.text = [NSString stringWithFormat:@"%@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"jobPosition"]];
-//    
-//    return cell;
-
-// Tutorial Template (working)
-//    static NSString *CellIdentifier = @"Cell";
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-//    NSDictionary *tempDictionary = [self.listOfReviews objectAtIndex:indexPath.row];
-//    
-//    cell.textLabel.text = [tempDictionary objectForKey:@"jobPosition"];
-//    if ([tempDictionary objectForKey:@"company"] != NULL) {
-//        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", [tempDictionary objectForKey:@"company"]];
-//    } else {
-//        cell.detailTextLabel.text = [NSString stringWithFormat:@"No company field found"];
-//    }
-//    
-//    return cell;
-    
-// Xcode Template
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-//    
-//    // Configure the cell...
-//    
-//    return cell;
 }
 
 /*
@@ -172,13 +145,17 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    InterviewReviewDetailViewController *detailViewController = (InterviewReviewDetailViewController *)segue.destinationViewController;
-    NSLog(@"Setting reviewId: %@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"]);
-    detailViewController.shit = [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"];
-//    detailViewController.review.reviewId = [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"];
-
-//    detailViewController.review = ;
+    
+    // If the sender is the "Add Review" button
+    if ([sender isKindOfClass:[UIBarButtonItem class]]) {
+        
+    } else {
+        // If the sender is one of the elements in the list
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        InterviewReviewDetailViewController *detailViewController = (InterviewReviewDetailViewController *)segue.destinationViewController;
+        NSLog(@"Setting reviewId: %@", [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"]);
+        detailViewController.tempId = [[self.listOfReviews objectAtIndex:indexPath.row] objectForKey:@"_id"];
+    }
 
 }
 

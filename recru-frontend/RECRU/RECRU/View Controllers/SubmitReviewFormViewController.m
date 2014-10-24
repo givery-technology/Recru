@@ -25,10 +25,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)blah {
-    
-}
-
 - (void)addReview {
     Review *form = self.formController.form;
     

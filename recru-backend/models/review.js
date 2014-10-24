@@ -13,7 +13,8 @@ schema = mongoose.Schema({
     difficulty: Number, // { type: Number, min: 1, max: 10 },
     overallExperience: String,
     interviewOutcome: String,
-    recommendEmployer: Boolean  
+    recommendEmployer: Boolean,
+    reviewDate: { type: Date, default: Date.now }
 });
 
 schema.statics.findByCompany = function(companyName, cb) {
